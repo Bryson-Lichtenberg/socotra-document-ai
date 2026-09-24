@@ -1,0 +1,44 @@
+[
+  {
+    "op": "replace_item_schema",
+    "node": "forms_and_endorsements",
+    "before": [
+      {
+        "name": "display_name",
+        "value_type": "string"
+      },
+      {
+        "name": "form_code",
+        "value_type": "string"
+      },
+      {
+        "name": "edition_date",
+        "value_type": "string"
+      }
+    ],
+    "after": [
+      {
+        "name": "display_name",
+        "value_type": "string"
+      },
+      {
+        "name": "form_number",
+        "value_type": "string"
+      }
+    ],
+    "reason": "Keep the raw form identifier (e.g. SAIC HO3 11 16). The AI split into form_code and edition_date is plausible but unverified, so downstream logic must not depend on it yet."
+  },
+  {
+    "op": "set_format_hint",
+    "node": "insureds",
+    "after": {
+      "layout": "inline",
+      "separator": " & "
+    },
+    "reason": "The reference prints all named insureds on one line joined by an ampersand."
+  },
+  {
+    "op": "add_question",
+    "text": "Forms and Endorsements: The AI proposed splitting the form identifier into form_code and edition_date. Deferred until the carrier's form numbering convention is confirmed."
+  }
+]

@@ -1,0 +1,74 @@
+{
+  "reviewer": "Prototype reviewer (acting as implementation lead; not legal counsel)",
+  "date": "2026-09-23",
+  "scope": "Declarations-page rules for the FL HO-3 sample. Out-of-scope rules are kept for the rules library but not approved for this document.",
+  "rules": {
+    "FL_DECLARATIONS_HURRICANE_DEDUCTIBLE_DISPLAY": {
+      "approve": true,
+      "note": "Statute gives no mechanical definition of 'prominently'. The carrier's current form prints the amount at 13.7pt bold against 11.4pt body text; treat 'larger and bold than body text' as the working interpretation, pending legal confirmation."
+    },
+    "FL_DECLARATIONS_HURRICANE_PREMIUM_SEPARATE": {
+      "approve": true,
+      "note": "Hurricane and non-hurricane portions are separate labeled amounts on the current form."
+    },
+    "FL_DECLARATIONS_OTHER_DEDUCTIBLES_INDICATED": {
+      "approve": true,
+      "note": "AOP and sinkhole deductibles map to document fields. Flood deductible only applies when flood coverage is provided (not on this policy); no product field exists for other special deductibles."
+    },
+    "FL_DECLARATIONS_AGENT_SIGNATURE": {
+      "approve": true,
+      "note": "Model mapped 'signed by a Florida licensed agent' to agent name and license number. A name is not a countersignature; how countersignature is satisfied (wet, electronic, facsimile) is a carrier process question.",
+      "requirement": {"kind": "text_mention", "fields": []},
+      "add_unresolved": ["agent countersignature is not represented in the document model"]
+    },
+    "FL_DECLARATIONS_PHONE_NUMBER_NOTICE": {
+      "approve": true,
+      "note": "627.4131 requires the insurer's number and its purpose (inquiries, complaints). The agent phone does not satisfy it. The checklist allows it elsewhere, e.g. the policy jacket.",
+      "requirement": {"kind": "text_mention", "fields": []},
+      "add_unresolved": ["insurer inquiry/complaint phone number and purpose statement not in document model"]
+    },
+    "FL_DECLARATIONS_FLOOD_EXCLUSION_STATEMENT": {
+      "approve": true,
+      "note": "Applies (HO-3, no flood coverage). The DFS sample page does not show it; it may be on another page of the issued packet. Do not auto-insert regulatory language; carrier legal confirms placement and text."
+    },
+    "FL_DECLARATIONS_HURRICANE_DEDUCTIBLE_STATEMENT": {
+      "approve": true,
+      "note": "Statute says 'on its face'. Not on the DFS sample page. Same handling as the flood statement."
+    },
+    "FL_DECLARATIONS_SINKHOLE_EXCLUSION_STATEMENT": {
+      "approve": true,
+      "note": "Derived applicability: sinkhole shows 'Not Included' and no sinkhole element exists. Not on the DFS sample page. Same handling as the flood statement."
+    },
+    "FL_DECLARATIONS_LAW_AND_ORDINANCE_STATEMENT": {
+      "approve": true,
+      "note": "Statute says 'with the policy documents'; checklist says 'typically on declarations page'. Kept as policy_form until the carrier confirms placement."
+    },
+    "FL_DECLARATIONS_LEGISLATIVE_DISCOUNTS": {
+      "approve": true,
+    "note": "Date-bounded (10/1/24 to 9/30/25). Not applicable to the 2020 sample policy; would apply to policies in that window. The three discounts are named through concept qualifiers so an unrelated discount row (roof update, wind mitigation) does not satisfy the rule.",
+    "requirement": {
+      "concept_refs": [
+        {"concept_id": "discount_surcharge", "qualifiers": {"name": "legislative_premium_tax_discount"}},
+        {"concept_id": "discount_surcharge", "qualifiers": {"name": "legislative_fire_marshal_assessment_discount"}},
+        {"concept_id": "discount_surcharge", "qualifiers": {"name": "legislative_flood_premium_tax_discount"}}
+      ]
+    }
+  },
+    "FL_DECLARATIONS_ROOF_DEDUCTIBLE_DISPLAY": {
+      "approve": true,
+      "note": "Applicability unknown: the product model has no roof deductible field. Product question, not a template question."
+    },
+    "FL_DECLARATIONS_HURRICANE_DEDUCTIBLE_INFLATION_GUARD_NOTICE": {
+      "approve": true,
+      "note": "Applicability unknown: no inflation guard element or field in policy data."
+    },
+    "FL_DECLARATIONS_FLOOD_DEDUCTIBLE_LIMITS_PROMINENT": {
+      "approve": true,
+      "note": "Not applicable to this policy (no flood coverage). No document fields exist yet for flood limits/deductible."
+    },
+    "FL_AOB_ASSIGNMENT_PROHIBITION": {"approve": false, "note": "Policy form content, not declarations."},
+    "FL_AOP_DEDUCTIBLE_OFFER_NOTICE": {"approve": false, "note": "Separate notice, not declarations."},
+    "FL_APPLICATION_DISPLAY_CARRIER_AGENT": {"approve": false, "note": "Applies to applications (627.4085), not declarations."},
+    "FL_BINDER_COVERAGE_ID_NUMBER": {"approve": false, "note": "Applies to binders, not declarations."}
+  }
+}

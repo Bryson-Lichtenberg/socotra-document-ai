@@ -1,0 +1,1672 @@
+{
+  "status": "research audit; not read by the pipeline. No implementation code changed.",
+  "conceptual_model": {
+    "rule_classes": [
+      "document_applicability",
+      "form_version_or_effective_date",
+      "content_requirement",
+      "presentation_requirement",
+      "calculation_requirement",
+      "eligibility_underwriting",
+      "workflow_review"
+    ],
+    "implementation_sinks": [
+      "document_selection",
+      "resource_configuration",
+      "template",
+      "data_snapshot",
+      "underwriting",
+      "human_review"
+    ],
+    "validation_obligations": [
+      "content_presence",
+      "value_correctness",
+      "presentation_prominence",
+      "correct_document_selection",
+      "correct_form_version",
+      "calculation_correctness",
+      "underwriting_outcome",
+      "provenance_traceability"
+    ],
+    "proposed_extra_sink": {
+      "product_configuration": "Offer/make-available requirements (deductible options, optional coverages). None of the six sinks fits."
+    }
+  },
+  "current_router": "src/rules/traceability.py: check_document() routes on requirement.document and requirement.kind only; presentation_hints() routes on approved + kind + document. rule_type is never read for routing.",
+  "inputs": {
+    "approved_rules": "sample/rules/regulatory/fl-declarations-rules.approved.json",
+    "review_decisions": "sample/rules/regulatory/fl-checklist.review-decisions.json",
+    "checklist_rows": "sample/rules/regulatory/report/checklist-rows.json",
+    "selection_rules": "sample/rules/selection-rules.approved.json",
+    "traceability_run": "runs/generated-20260924T034326Z/validation/regulatory.json"
+  },
+  "verdict_values": {
+    "correct": "Right class and sink.",
+    "mislabeled": "Right sink today, wrong rule_type.",
+    "misrouted": "Current target or rule_type points at the wrong sink.",
+    "partially_routed": "One obligation reaches a sink; another (usually a calculation) reaches none.",
+    "unrouted": "Kept off the declarations page correctly, but no sink receives it."
+  },
+  "summary": {
+    "florida_rules": 17,
+    "by_verdict": {
+      "misrouted": [
+        "FL_AOB_ASSIGNMENT_PROHIBITION",
+        "FL_BINDER_COVERAGE_ID_NUMBER",
+        "FL_DECLARATIONS_PHONE_NUMBER_NOTICE"
+      ],
+      "unrouted": [
+        "FL_AOP_DEDUCTIBLE_OFFER_NOTICE",
+        "FL_DECLARATIONS_LAW_AND_ORDINANCE_STATEMENT"
+      ],
+      "correct": [
+        "FL_APPLICATION_DISPLAY_CARRIER_AGENT",
+        "FL_DECLARATIONS_FLOOD_DEDUCTIBLE_LIMITS_PROMINENT",
+        "FL_DECLARATIONS_HURRICANE_DEDUCTIBLE_INFLATION_GUARD_NOTICE",
+        "FL_DECLARATIONS_OTHER_DEDUCTIBLES_INDICATED"
+      ],
+      "mislabeled": [
+        "FL_DECLARATIONS_AGENT_SIGNATURE",
+        "FL_DECLARATIONS_FLOOD_EXCLUSION_STATEMENT",
+        "FL_DECLARATIONS_HURRICANE_DEDUCTIBLE_STATEMENT",
+        "FL_DECLARATIONS_SINKHOLE_EXCLUSION_STATEMENT"
+      ],
+      "partially_routed": [
+        "FL_DECLARATIONS_HURRICANE_PREMIUM_SEPARATE",
+        "FL_DECLARATIONS_HURRICANE_DEDUCTIBLE_DISPLAY",
+        "FL_DECLARATIONS_ROOF_DEDUCTIBLE_DISPLAY",
+        "FL_DECLARATIONS_LEGISLATIVE_DISCOUNTS"
+      ]
+    },
+    "by_primary_class": {
+      "document_applicability": [
+        "FL_AOP_DEDUCTIBLE_OFFER_NOTICE",
+        "FL_BINDER_COVERAGE_ID_NUMBER"
+      ],
+      "content_requirement": [
+        "FL_AOB_ASSIGNMENT_PROHIBITION",
+        "FL_DECLARATIONS_FLOOD_EXCLUSION_STATEMENT",
+        "FL_DECLARATIONS_HURRICANE_PREMIUM_SEPARATE",
+        "FL_DECLARATIONS_PHONE_NUMBER_NOTICE",
+        "FL_DECLARATIONS_HURRICANE_DEDUCTIBLE_STATEMENT",
+        "FL_DECLARATIONS_HURRICANE_DEDUCTIBLE_INFLATION_GUARD_NOTICE",
+        "FL_DECLARATIONS_OTHER_DEDUCTIBLES_INDICATED",
+        "FL_DECLARATIONS_SINKHOLE_EXCLUSION_STATEMENT",
+        "FL_DECLARATIONS_LAW_AND_ORDINANCE_STATEMENT"
+      ],
+      "presentation_requirement": [
+        "FL_APPLICATION_DISPLAY_CARRIER_AGENT",
+        "FL_DECLARATIONS_FLOOD_DEDUCTIBLE_LIMITS_PROMINENT"
+      ],
+      "calculation_requirement": [
+        "FL_DECLARATIONS_HURRICANE_DEDUCTIBLE_DISPLAY",
+        "FL_DECLARATIONS_ROOF_DEDUCTIBLE_DISPLAY",
+        "FL_DECLARATIONS_LEGISLATIVE_DISCOUNTS"
+      ],
+      "workflow_review": [
+        "FL_DECLARATIONS_AGENT_SIGNATURE"
+      ]
+    },
+    "by_primary_sink": {
+      "document_selection": [
+        "FL_AOP_DEDUCTIBLE_OFFER_NOTICE",
+        "FL_BINDER_COVERAGE_ID_NUMBER"
+      ],
+      "template": [
+        "FL_APPLICATION_DISPLAY_CARRIER_AGENT",
+        "FL_DECLARATIONS_FLOOD_DEDUCTIBLE_LIMITS_PROMINENT",
+        "FL_DECLARATIONS_FLOOD_EXCLUSION_STATEMENT",
+        "FL_DECLARATIONS_HURRICANE_PREMIUM_SEPARATE",
+        "FL_DECLARATIONS_HURRICANE_DEDUCTIBLE_STATEMENT",
+        "FL_DECLARATIONS_HURRICANE_DEDUCTIBLE_INFLATION_GUARD_NOTICE",
+        "FL_DECLARATIONS_OTHER_DEDUCTIBLES_INDICATED",
+        "FL_DECLARATIONS_SINKHOLE_EXCLUSION_STATEMENT"
+      ],
+      "data_snapshot": [
+        "FL_DECLARATIONS_HURRICANE_DEDUCTIBLE_DISPLAY",
+        "FL_DECLARATIONS_ROOF_DEDUCTIBLE_DISPLAY",
+        "FL_DECLARATIONS_LEGISLATIVE_DISCOUNTS"
+      ],
+      "human_review": [
+        "FL_AOB_ASSIGNMENT_PROHIBITION",
+        "FL_DECLARATIONS_AGENT_SIGNATURE",
+        "FL_DECLARATIONS_PHONE_NUMBER_NOTICE",
+        "FL_DECLARATIONS_LAW_AND_ORDINANCE_STATEMENT"
+      ]
+    },
+    "genuinely_ambiguous": [
+      "FL_AOB_ASSIGNMENT_PROHIBITION",
+      "FL_BINDER_COVERAGE_ID_NUMBER",
+      "FL_DECLARATIONS_AGENT_SIGNATURE",
+      "FL_DECLARATIONS_PHONE_NUMBER_NOTICE",
+      "FL_DECLARATIONS_ROOF_DEDUCTIBLE_DISPLAY",
+      "FL_DECLARATIONS_SINKHOLE_EXCLUSION_STATEMENT",
+      "FL_DECLARATIONS_LAW_AND_ORDINANCE_STATEMENT",
+      "FL_DECLARATIONS_LEGISLATIVE_DISCOUNTS"
+    ]
+  },
+  "florida_rules": [
+    {
+      "rule_id": "FL_AOB_ASSIGNMENT_PROHIBITION",
+      "provenance": {
+        "source_id": "fl-oir-residential-checklist",
+        "source_type": "regulator_checklist",
+        "source_row": "p1-r1",
+        "source_location": "floir-residential-property-checklist-may-2025.pdf p.1, row p1-r1 (Assignment of Benefits (AOB))",
+        "source_quote": "Except as provided in s. 627.7152(11), a policyholder may not assign, in whole or in part, any post-loss insurance benefit under any residential or commercial property insurance policy, issued on or after January 1, 2023. Any attempt to assign post-loss property insurance benefits under such a policy is void, invalid, and unenforceable.",
+        "statute_citations": [
+          "627.7152(13)"
+        ]
+      },
+      "current": {
+        "authority": "legal_regulatory",
+        "rule_type": "document_applicability",
+        "target_document": "policy_form",
+        "kind": "field_value",
+        "fields": [],
+        "presentation": {},
+        "applies_when": {
+          "jurisdiction": "FL",
+          "product_family": "personal_residential_property",
+          "effective_date_on_or_after": "2023-01-01"
+        },
+        "approved": false,
+        "reviewer_note": "Policy form content, not declarations.",
+        "traceability": {
+          "applicability": "not_applicable",
+          "candidate": "out_of_scope",
+          "verdict": "not_applicable",
+          "probable_layer": null
+        }
+      },
+      "rule_class": "content_requirement",
+      "secondary_classes": [
+        "form_version_or_effective_date"
+      ],
+      "primary_sink": "human_review",
+      "secondary_sinks": [
+        "resource_configuration"
+      ],
+      "validation_obligations": [
+        "correct_form_version",
+        "provenance_traceability"
+      ],
+      "applicability": {
+        "product_level": [
+          "jurisdiction=FL",
+          "product_family"
+        ],
+        "policy_level": [],
+        "note": "The 2023-01-01 date bounds which policies the prohibition governs, i.e. which policy-form edition must carry compliant language. It is not a document-generation condition."
+      },
+      "verdict": "misrouted",
+      "current_routing": "rule_type document_applicability; target policy_form; out_of_scope; unapproved for declarations.",
+      "why": "This is language in the filed policy form. The implementation question is whether the attached form edition for policies issued on or after 2023-01-01 has compliant assignment language: a form-filing review plus a form-edition binding. Labelling it document_applicability would, if routed, make Document Selection gate a document on it.",
+      "schema_fit": "partial",
+      "schema_gaps": [
+        "requirement.kind 'field_value' with no fields is the only way to say 'form language'; no kind for contract text in a static form",
+        "no way to name the form edition the requirement binds to"
+      ],
+      "ambiguity": "content_requirement vs form_version_or_effective_date: the obligation is on the form's text, but the date turns it into an edition choice."
+    },
+    {
+      "rule_id": "FL_AOP_DEDUCTIBLE_OFFER_NOTICE",
+      "provenance": {
+        "source_id": "fl-oir-residential-checklist",
+        "source_type": "regulator_checklist",
+        "source_row": "p1-r2",
+        "source_location": "floir-residential-property-checklist-may-2025.pdf p.1, row p1-r2 (All Other Perils Deductible)",
+        "source_quote": "“All Other Perils” (AOP) or “other than hurricane” deductible option of $500 is required to be offered Insurer must provide notice of the availability of the $500 AOP deductible at least once every 3 years in a form approved by OIR Most special deductibles are subject to this statute—e.g., any Windstorm Other-Than- Hurricane Deductible must offer a $500 option or be offered on an opt-in basis to the insured",
+        "statute_citations": [
+          "627.701(7)"
+        ]
+      },
+      "current": {
+        "authority": "legal_regulatory",
+        "rule_type": "offer_or_notice",
+        "target_document": "notice",
+        "kind": "text_mention",
+        "fields": [],
+        "presentation": {},
+        "applies_when": {
+          "jurisdiction": "FL",
+          "product_family": "personal_residential_property"
+        },
+        "approved": false,
+        "reviewer_note": "Separate notice, not declarations.",
+        "traceability": {
+          "applicability": "applicable",
+          "candidate": "out_of_scope",
+          "verdict": "out_of_scope",
+          "probable_layer": null
+        }
+      },
+      "rule_class": "document_applicability",
+      "secondary_classes": [
+        "form_version_or_effective_date"
+      ],
+      "primary_sink": "document_selection",
+      "secondary_sinks": [
+        "resource_configuration",
+        "product_configuration"
+      ],
+      "validation_obligations": [
+        "correct_document_selection",
+        "correct_form_version",
+        "provenance_traceability"
+      ],
+      "applicability": {
+        "product_level": [
+          "jurisdiction=FL",
+          "product_family"
+        ],
+        "policy_level": [
+          "new business or first renewal; then at least once every 3 years (needs last-notice date)"
+        ]
+      },
+      "verdict": "unrouted",
+      "current_routing": "rule_type offer_or_notice; target notice; out_of_scope. Correctly kept off the declarations page, but routed nowhere.",
+      "why": "Two obligations in one row. (1) Produce a separate notice on a schedule, in an OIR-approved form: Document Selection plus a resource bound to the approved form. (2) Offer a $500 AOP deductible option: a product-configuration fact (available deductible values). Neither is template content.",
+      "schema_fit": "partial",
+      "schema_gaps": [
+        "no recurrence/cadence condition ('once every 3 years') in the predicate vocabulary",
+        "offer_or_notice rule_type fuses an offer (product) with a notice (document)",
+        "no sink for product configuration in the proposed model"
+      ],
+      "ambiguity": null
+    },
+    {
+      "rule_id": "FL_APPLICATION_DISPLAY_CARRIER_AGENT",
+      "provenance": {
+        "source_id": "fl-oir-residential-checklist",
+        "source_type": "regulator_checklist",
+        "source_row": "p1-r7",
+        "source_location": "floir-residential-property-checklist-may-2025.pdf p.1, row p1-r7 (Applications)",
+        "source_quote": "Must prominently display the name of the insuring entity on the first page Must disclose the name and license number of the agent (typed, printed, stamped, or legibly handwritten)",
+        "statute_citations": [
+          "627.4085(1)"
+        ]
+      },
+      "current": {
+        "authority": "legal_regulatory",
+        "rule_type": "presentation",
+        "target_document": "application",
+        "kind": "field_value",
+        "fields": [
+          "carrier_name",
+          "agent_name",
+          "agent_license_number"
+        ],
+        "presentation": {
+          "prominent": true,
+          "first_page": true
+        },
+        "applies_when": {
+          "jurisdiction": "FL",
+          "product_family": "personal_residential_property"
+        },
+        "approved": false,
+        "reviewer_note": "Applies to applications (627.4085), not declarations.",
+        "traceability": {
+          "applicability": "applicable",
+          "candidate": "out_of_scope",
+          "verdict": "out_of_scope",
+          "probable_layer": null
+        }
+      },
+      "rule_class": "presentation_requirement",
+      "secondary_classes": [
+        "content_requirement"
+      ],
+      "primary_sink": "template",
+      "secondary_sinks": [],
+      "validation_obligations": [
+        "content_presence",
+        "presentation_prominence",
+        "provenance_traceability"
+      ],
+      "applicability": {
+        "product_level": [
+          "jurisdiction=FL",
+          "product_family"
+        ],
+        "policy_level": [],
+        "note": "Target document is the application, not declarations."
+      },
+      "verdict": "correct",
+      "current_routing": "target application; out_of_scope for the declarations pipeline; unapproved for declarations.",
+      "why": "Correctly routed to a different document's template. Latent risk: requirement.fields reuses the declarations contract keys (carrier_name, agent_name, agent_license_number). If the target were ever mislabelled, presentation_hints would put application prominence on the declarations header.",
+      "schema_fit": "partial",
+      "schema_gaps": [
+        "requirement.fields are semantic keys of one DocumentModel; a rule about another document has to borrow them (concept refs would not)"
+      ],
+      "ambiguity": null
+    },
+    {
+      "rule_id": "FL_BINDER_COVERAGE_ID_NUMBER",
+      "provenance": {
+        "source_id": "fl-oir-residential-checklist",
+        "source_type": "regulator_checklist",
+        "source_row": "p3-r1",
+        "source_location": "floir-residential-property-checklist-may-2025.pdf p.3, row p3-r1 (Binders)",
+        "source_quote": "Coverage identification number required",
+        "statute_citations": [
+          "627.4205"
+        ]
+      },
+      "current": {
+        "authority": "legal_regulatory",
+        "rule_type": "document_content",
+        "target_document": "policy_form",
+        "kind": "field_value",
+        "fields": [
+          "policy_number"
+        ],
+        "presentation": {},
+        "applies_when": {
+          "jurisdiction": "FL",
+          "product_family": "personal_residential_property"
+        },
+        "approved": false,
+        "reviewer_note": "Applies to binders, not declarations.",
+        "traceability": {
+          "applicability": "applicable",
+          "candidate": "out_of_scope",
+          "verdict": "out_of_scope",
+          "probable_layer": null
+        }
+      },
+      "rule_class": "document_applicability",
+      "secondary_classes": [
+        "content_requirement",
+        "workflow_review"
+      ],
+      "primary_sink": "document_selection",
+      "secondary_sinks": [
+        "human_review"
+      ],
+      "validation_obligations": [
+        "correct_document_selection",
+        "content_presence",
+        "provenance_traceability"
+      ],
+      "applicability": {
+        "product_level": [
+          "jurisdiction=FL",
+          "product_family"
+        ],
+        "policy_level": [
+          "at or before coverage effective time"
+        ]
+      },
+      "verdict": "misrouted",
+      "current_routing": "target policy_form (should be binder); field policy_number; out_of_scope.",
+      "why": "627.4205 obliges the insurer to give the named insured a coverage identification number no later than when coverage is effective. That is a delivery-timing obligation: some document carrying the number must be issued at bind. The target 'policy_form' is a mislabel forced by the TargetDocument enum.",
+      "schema_fit": "partial",
+      "schema_gaps": [
+        "TargetDocument has no binder/ID-card value",
+        "no timing condition (by effective time)"
+      ],
+      "ambiguity": "document_applicability vs workflow_review: whether the obligation is satisfied by a generated document or by a delivery process is a carrier choice."
+    },
+    {
+      "rule_id": "FL_DECLARATIONS_AGENT_SIGNATURE",
+      "provenance": {
+        "source_id": "fl-oir-residential-checklist",
+        "source_type": "regulator_checklist",
+        "source_row": "p7-r4",
+        "source_location": "floir-residential-property-checklist-may-2025.pdf p.7, row p7-r4 (Declarations)",
+        "source_quote": "Must be signed by a Florida licensed agent",
+        "statute_citations": [
+          "624.425"
+        ]
+      },
+      "current": {
+        "authority": "legal_regulatory",
+        "rule_type": "presentation",
+        "target_document": "declarations",
+        "kind": "text_mention",
+        "fields": [],
+        "presentation": {},
+        "applies_when": {
+          "jurisdiction": "FL",
+          "product_family": "personal_residential_property"
+        },
+        "approved": true,
+        "reviewer_note": "Model mapped 'signed by a Florida licensed agent' to agent name and license number. A name is not a countersignature; how countersignature is satisfied (wet, electronic, facsimile) is a carrier process question.",
+        "traceability": {
+          "applicability": "applicable",
+          "candidate": "needs_review",
+          "verdict": "REVIEW",
+          "probable_layer": "human_review"
+        }
+      },
+      "rule_class": "workflow_review",
+      "secondary_classes": [
+        "content_requirement"
+      ],
+      "primary_sink": "human_review",
+      "secondary_sinks": [
+        "template"
+      ],
+      "validation_obligations": [
+        "provenance_traceability"
+      ],
+      "applicability": {
+        "product_level": [
+          "jurisdiction=FL",
+          "product_family"
+        ],
+        "policy_level": []
+      },
+      "verdict": "mislabeled",
+      "current_routing": "rule_type presentation; target declarations text_mention; approved; traceability REVIEW (human_review).",
+      "why": "Countersignature by a Florida-licensed agent is an execution process (wet, electronic, facsimile). It is not a presentation requirement. The traceability outcome (REVIEW) happens to be right because text_mention has no mechanical check; the label is wrong, and a future presentation-hint consumer would misuse it.",
+      "schema_fit": "partial",
+      "schema_gaps": [
+        "no rule_type for execution/workflow; 'presentation' was the nearest"
+      ],
+      "ambiguity": "If the carrier satisfies it with a printed countersignature block, it gains a template obligation (content_presence). Until then it is workflow only."
+    },
+    {
+      "rule_id": "FL_DECLARATIONS_FLOOD_DEDUCTIBLE_LIMITS_PROMINENT",
+      "provenance": {
+        "source_id": "fl-oir-residential-checklist",
+        "source_type": "regulator_checklist",
+        "source_row": "p7-r5",
+        "source_location": "floir-residential-property-checklist-may-2025.pdf p.7, row p7-r5 (Declarations)",
+        "source_quote": "If flood coverage is provided, flood deductible and coverage limits must be prominently noted on the declarations page",
+        "statute_citations": [
+          "627.715(2)"
+        ]
+      },
+      "current": {
+        "authority": "legal_regulatory",
+        "rule_type": "presentation",
+        "target_document": "declarations",
+        "kind": "field_value",
+        "fields": [],
+        "presentation": {
+          "prominent": true
+        },
+        "applies_when": {
+          "jurisdiction": "FL",
+          "product_family": "personal_residential_property",
+          "flood_coverage_provided": true
+        },
+        "approved": true,
+        "reviewer_note": "Not applicable to this policy (no flood coverage). No document fields exist yet for flood limits/deductible.",
+        "traceability": {
+          "applicability": "not_applicable",
+          "candidate": "needs_review",
+          "verdict": "not_applicable",
+          "probable_layer": null
+        }
+      },
+      "rule_class": "presentation_requirement",
+      "secondary_classes": [
+        "content_requirement"
+      ],
+      "primary_sink": "template",
+      "secondary_sinks": [
+        "data_snapshot"
+      ],
+      "validation_obligations": [
+        "content_presence",
+        "value_correctness",
+        "presentation_prominence",
+        "provenance_traceability"
+      ],
+      "applicability": {
+        "product_level": [
+          "jurisdiction=FL",
+          "product_family"
+        ],
+        "policy_level": [
+          "flood_coverage_provided=true"
+        ]
+      },
+      "verdict": "correct",
+      "current_routing": "rule_type presentation; target declarations; approved; not_applicable to the sample policy.",
+      "why": "Right sink. The per-policy condition (flood provided) must become a template conditional or snapshot flag at runtime; today it is only evaluated by traceability against one sample policy.",
+      "schema_fit": "partial",
+      "schema_gaps": [
+        "fields empty: flood limit and flood deductible have no semantic key in any model (concept refs coverage_limit{coverage:flood}, deductible{peril:flood} would express it)"
+      ],
+      "ambiguity": null
+    },
+    {
+      "rule_id": "FL_DECLARATIONS_FLOOD_EXCLUSION_STATEMENT",
+      "provenance": {
+        "source_id": "fl-oir-residential-checklist",
+        "source_type": "regulator_checklist",
+        "source_row": "p7-r6",
+        "source_location": "floir-residential-property-checklist-may-2025.pdf p.7, row p7-r6 (Declarations)",
+        "source_quote": "If flood coverage is excluded, a prescribed statement is required on the declarations page in bold type, no smaller than 18-point font (requirement only applies to Homeowners policies)",
+        "statute_citations": [
+          "627.7011(4)(b)"
+        ]
+      },
+      "current": {
+        "authority": "legal_regulatory",
+        "rule_type": "presentation",
+        "target_document": "declarations",
+        "kind": "prescribed_statement",
+        "fields": [],
+        "presentation": {
+          "bold": true,
+          "min_font_pt": 18.0
+        },
+        "applies_when": {
+          "jurisdiction": "FL",
+          "product_family": "personal_residential_property",
+          "policy_type": "homeowners",
+          "flood_coverage_provided": false
+        },
+        "approved": true,
+        "reviewer_note": "Applies (HO-3, no flood coverage). The DFS sample page does not show it; it may be on another page of the issued packet. Do not auto-insert regulatory language; carrier legal confirms placement and text.",
+        "traceability": {
+          "applicability": "applicable",
+          "candidate": "absent",
+          "verdict": "REVIEW",
+          "probable_layer": "rule_logic"
+        }
+      },
+      "rule_class": "content_requirement",
+      "secondary_classes": [
+        "presentation_requirement"
+      ],
+      "primary_sink": "template",
+      "secondary_sinks": [
+        "data_snapshot",
+        "human_review"
+      ],
+      "validation_obligations": [
+        "content_presence",
+        "presentation_prominence",
+        "provenance_traceability"
+      ],
+      "applicability": {
+        "product_level": [
+          "jurisdiction=FL",
+          "policy_type=homeowners"
+        ],
+        "policy_level": [
+          "flood_coverage_provided=false"
+        ]
+      },
+      "verdict": "mislabeled",
+      "current_routing": "rule_type presentation (fallback: 'prescribed_statement' not in taxonomy); target declarations prescribed_statement; approved; REVIEW (rule_logic) because neither page shows it.",
+      "why": "Primarily content (a prescribed sentence), with a presentation constraint (bold, 18pt). The routing to template validation is right; the label is a fallback. Text must be confirmed by carrier legal before generation (existing principle).",
+      "schema_fit": "representable",
+      "schema_gaps": [
+        "rule_type cannot say 'content with a presentation constraint'"
+      ],
+      "ambiguity": null
+    },
+    {
+      "rule_id": "FL_DECLARATIONS_HURRICANE_PREMIUM_SEPARATE",
+      "provenance": {
+        "source_id": "fl-oir-residential-checklist",
+        "source_type": "regulator_checklist",
+        "source_row": "p7-r7",
+        "source_location": "floir-residential-property-checklist-may-2025.pdf p.7, row p7-r7 (Declarations)",
+        "source_quote": "Premium for hurricane coverage must be indicated separately from premium for all other coverages (may be on declarations page or premium notice)",
+        "statute_citations": [
+          "627.0629(4)"
+        ]
+      },
+      "current": {
+        "authority": "legal_regulatory",
+        "rule_type": "presentation",
+        "target_document": "declarations_or_premium_notice",
+        "kind": "field_value",
+        "fields": [
+          "hurricane_portion_of_premium",
+          "non_hurricane_portion_of_premium"
+        ],
+        "presentation": {},
+        "applies_when": {
+          "jurisdiction": "FL",
+          "product_family": "personal_residential_property"
+        },
+        "approved": true,
+        "reviewer_note": "Hurricane and non-hurricane portions are separate labeled amounts on the current form.",
+        "traceability": {
+          "applicability": "applicable",
+          "candidate": "present",
+          "verdict": "PASS",
+          "probable_layer": null
+        }
+      },
+      "rule_class": "content_requirement",
+      "secondary_classes": [
+        "calculation_requirement"
+      ],
+      "primary_sink": "template",
+      "secondary_sinks": [
+        "data_snapshot"
+      ],
+      "validation_obligations": [
+        "content_presence",
+        "value_correctness",
+        "provenance_traceability"
+      ],
+      "applicability": {
+        "product_level": [
+          "jurisdiction=FL",
+          "product_family"
+        ],
+        "policy_level": [],
+        "note": "Target is 'declarations_or_premium_notice': satisfying it on either document is a packet-level choice."
+      },
+      "verdict": "partially_routed",
+      "current_routing": "rule_type presentation; fields hurricane/non-hurricane portions; approved; PASS.",
+      "why": "The obligation is separation of two amounts, not prominence, so 'presentation' is a mislabel. The amounts are rating output: the split must come from the snapshot, and nothing checks that the two portions agree with rating.",
+      "schema_fit": "partial",
+      "schema_gaps": [
+        "no way to say the values are produced by a calculation owned elsewhere"
+      ],
+      "ambiguity": null
+    },
+    {
+      "rule_id": "FL_DECLARATIONS_PHONE_NUMBER_NOTICE",
+      "provenance": {
+        "source_id": "fl-oir-residential-checklist",
+        "source_type": "regulator_checklist",
+        "source_row": "p7-r8",
+        "source_location": "floir-residential-property-checklist-may-2025.pdf p.7, row p7-r8 (Declarations)",
+        "source_quote": "Phone number and its purpose must be made available to present inquiries or obtain information about coverage and to provide assistance in resolving complaints (may be located elsewhere—e.g., on policy jacket)",
+        "statute_citations": [
+          "627.4131"
+        ]
+      },
+      "current": {
+        "authority": "legal_regulatory",
+        "rule_type": "document_content",
+        "target_document": "declarations",
+        "kind": "text_mention",
+        "fields": [],
+        "presentation": {},
+        "applies_when": {
+          "jurisdiction": "FL",
+          "product_family": "personal_residential_property"
+        },
+        "approved": true,
+        "reviewer_note": "627.4131 requires the insurer's number and its purpose (inquiries, complaints). The agent phone does not satisfy it. The checklist allows it elsewhere, e.g. the policy jacket.",
+        "traceability": {
+          "applicability": "applicable",
+          "candidate": "needs_review",
+          "verdict": "REVIEW",
+          "probable_layer": "human_review"
+        }
+      },
+      "rule_class": "content_requirement",
+      "secondary_classes": [
+        "workflow_review"
+      ],
+      "primary_sink": "human_review",
+      "secondary_sinks": [
+        "resource_configuration",
+        "template"
+      ],
+      "validation_obligations": [
+        "content_presence",
+        "provenance_traceability"
+      ],
+      "applicability": {
+        "product_level": [
+          "jurisdiction=FL",
+          "product_family"
+        ],
+        "policy_level": []
+      },
+      "verdict": "misrouted",
+      "current_routing": "rule_type document_content; target declarations text_mention; approved; REVIEW (human_review).",
+      "why": "The source says the number and purpose may be elsewhere, e.g. the policy jacket. It is a packet-level content obligation whose sink (static jacket vs declarations template) is a carrier decision. Targeting 'declarations' presumes the answer.",
+      "schema_fit": "partial",
+      "schema_gaps": [
+        "TargetDocument has no 'any document in the issued packet' value"
+      ],
+      "ambiguity": "Sink is undecided by design: resource_configuration (static insert) or template, chosen in review."
+    },
+    {
+      "rule_id": "FL_DECLARATIONS_HURRICANE_DEDUCTIBLE_STATEMENT",
+      "provenance": {
+        "source_id": "fl-oir-residential-checklist",
+        "source_type": "regulator_checklist",
+        "source_row": "p7-r9",
+        "source_location": "floir-residential-property-checklist-may-2025.pdf p.7, row p7-r9 (Declarations)",
+        "source_quote": "Hurricane deductible statement is required in boldfaced type, no smaller than 18-point font (see statute for prescribed language)",
+        "statute_citations": [
+          "627.701(4)(a)"
+        ]
+      },
+      "current": {
+        "authority": "legal_regulatory",
+        "rule_type": "presentation",
+        "target_document": "declarations",
+        "kind": "prescribed_statement",
+        "fields": [],
+        "presentation": {
+          "bold": true,
+          "min_font_pt": 18.0
+        },
+        "applies_when": {
+          "jurisdiction": "FL",
+          "product_family": "personal_residential_property",
+          "has_separate_hurricane_deductible": true
+        },
+        "approved": true,
+        "reviewer_note": "Statute says 'on its face'. Not on the DFS sample page. Same handling as the flood statement.",
+        "traceability": {
+          "applicability": "applicable",
+          "candidate": "absent",
+          "verdict": "REVIEW",
+          "probable_layer": "rule_logic"
+        }
+      },
+      "rule_class": "content_requirement",
+      "secondary_classes": [
+        "presentation_requirement"
+      ],
+      "primary_sink": "template",
+      "secondary_sinks": [
+        "data_snapshot",
+        "human_review"
+      ],
+      "validation_obligations": [
+        "content_presence",
+        "presentation_prominence",
+        "provenance_traceability"
+      ],
+      "applicability": {
+        "product_level": [
+          "jurisdiction=FL",
+          "product_family"
+        ],
+        "policy_level": [
+          "has_separate_hurricane_deductible=true"
+        ]
+      },
+      "verdict": "mislabeled",
+      "current_routing": "rule_type presentation (fallback); prescribed_statement; approved; REVIEW (rule_logic).",
+      "why": "Same shape as the flood exclusion statement: prescribed text on the policy face with bold/18pt, conditional on policy data.",
+      "schema_fit": "representable",
+      "schema_gaps": [
+        "rule_type fallback as above"
+      ],
+      "ambiguity": null
+    },
+    {
+      "rule_id": "FL_DECLARATIONS_HURRICANE_DEDUCTIBLE_DISPLAY",
+      "provenance": {
+        "source_id": "fl-oir-residential-checklist",
+        "source_type": "regulator_checklist",
+        "source_row": "p7-r10",
+        "source_location": "floir-residential-property-checklist-may-2025.pdf p.7, row p7-r10 (Declarations)",
+        "source_quote": "Actual dollar value of Hurricane deductible must be computed and “prominently displayed” (for renewals, may be on declarations page or renewal premium notice)",
+        "statute_citations": [
+          "627.701(4)(b) & (c)",
+          "627.701(4)(b) & (c)",
+          "69O-167.013(2)"
+        ]
+      },
+      "current": {
+        "authority": "legal_regulatory",
+        "rule_type": "presentation",
+        "target_document": "declarations_or_renewal_notice",
+        "kind": "field_value",
+        "fields": [
+          "hurricane_deductible_amount"
+        ],
+        "presentation": {
+          "prominent": true
+        },
+        "applies_when": {
+          "jurisdiction": "FL",
+          "product_family": "personal_residential_property",
+          "has_separate_hurricane_deductible": true
+        },
+        "approved": true,
+        "reviewer_note": "Statute gives no mechanical definition of 'prominently'. The carrier's current form prints the amount at 13.7pt bold against 11.4pt body text; treat 'larger and bold than body text' as the working interpretation, pending legal confirmation.",
+        "traceability": {
+          "applicability": "applicable",
+          "candidate": "present",
+          "verdict": "PASS",
+          "probable_layer": null
+        }
+      },
+      "rule_class": "calculation_requirement",
+      "secondary_classes": [
+        "presentation_requirement"
+      ],
+      "primary_sink": "data_snapshot",
+      "secondary_sinks": [
+        "template"
+      ],
+      "validation_obligations": [
+        "calculation_correctness",
+        "value_correctness",
+        "presentation_prominence",
+        "provenance_traceability"
+      ],
+      "applicability": {
+        "product_level": [
+          "jurisdiction=FL",
+          "product_family"
+        ],
+        "policy_level": [
+          "has_separate_hurricane_deductible=true"
+        ]
+      },
+      "verdict": "partially_routed",
+      "current_routing": "rule_type presentation; field hurricane_deductible_amount; approved; PASS; feeds presentation_hints (prominent).",
+      "why": "'Must be computed and prominently displayed' is two obligations. The template half is routed (prominence hint, traceability). The calculation half (percent x Coverage A, and the inflation-guard-adjusted value under (4)(c)) is done by a Workstream 2 transform that no rule references, and nothing checks it.",
+      "schema_fit": "partial",
+      "schema_gaps": [
+        "no calculation obligation (inputs, formula owner) on the rule",
+        "one rule_type per rule cannot hold compute + display"
+      ],
+      "ambiguity": null
+    },
+    {
+      "rule_id": "FL_DECLARATIONS_HURRICANE_DEDUCTIBLE_INFLATION_GUARD_NOTICE",
+      "provenance": {
+        "source_id": "fl-oir-residential-checklist",
+        "source_type": "regulator_checklist",
+        "source_row": "p7-r11",
+        "source_location": "floir-residential-property-checklist-may-2025.pdf p.7, row p7-r11 (Declarations)",
+        "source_quote": "Policy with inflation guard must notify policyholder of possibility that hurricane deductible may be higher than indicated when loss occurs due to application of the inflation guard (may be on declarations page or renewal premium notice)",
+        "statute_citations": [
+          "627.701(4)(c)"
+        ]
+      },
+      "current": {
+        "authority": "legal_regulatory",
+        "rule_type": "offer_or_notice",
+        "target_document": "declarations_or_renewal_notice",
+        "kind": "text_mention",
+        "fields": [],
+        "presentation": {},
+        "applies_when": {
+          "jurisdiction": "FL",
+          "product_family": "personal_residential_property",
+          "has_separate_hurricane_deductible": true,
+          "has_inflation_guard": true
+        },
+        "approved": true,
+        "reviewer_note": "Applicability unknown: no inflation guard element or field in policy data.",
+        "traceability": {
+          "applicability": "unknown",
+          "candidate": "needs_review",
+          "verdict": "REVIEW",
+          "probable_layer": "human_review"
+        }
+      },
+      "rule_class": "content_requirement",
+      "secondary_classes": [],
+      "primary_sink": "template",
+      "secondary_sinks": [
+        "human_review"
+      ],
+      "validation_obligations": [
+        "content_presence",
+        "provenance_traceability"
+      ],
+      "applicability": {
+        "product_level": [
+          "jurisdiction=FL",
+          "product_family"
+        ],
+        "policy_level": [
+          "has_separate_hurricane_deductible=true",
+          "has_inflation_guard=true"
+        ]
+      },
+      "verdict": "correct",
+      "current_routing": "rule_type offer_or_notice; target declarations_or_renewal_notice text_mention; approved; REVIEW (applicability unknown).",
+      "why": "A notice sentence (wording not prescribed) on declarations or renewal notice. Applicability is unknown because the product has no inflation-guard element; that is a product question, correctly surfaced as REVIEW.",
+      "schema_fit": "representable",
+      "schema_gaps": [],
+      "ambiguity": null
+    },
+    {
+      "rule_id": "FL_DECLARATIONS_ROOF_DEDUCTIBLE_DISPLAY",
+      "provenance": {
+        "source_id": "fl-oir-residential-checklist",
+        "source_type": "regulator_checklist",
+        "source_row": "p8-r1",
+        "source_location": "floir-residential-property-checklist-may-2025.pdf p.8, row p8-r1 (Declarations)",
+        "source_quote": "Any personal residential policy including a separate roof deductible must prominently display the actual dollar value of the roof deductible on the declarations page or on the renewal premium notice",
+        "statute_citations": [
+          "627.701(4)(e)2."
+        ]
+      },
+      "current": {
+        "authority": "legal_regulatory",
+        "rule_type": "presentation",
+        "target_document": "declarations_or_renewal_notice",
+        "kind": "field_value",
+        "fields": [],
+        "presentation": {
+          "prominent": true
+        },
+        "applies_when": {
+          "jurisdiction": "FL",
+          "product_family": "personal_residential_property",
+          "has_roof_deductible": true
+        },
+        "approved": true,
+        "reviewer_note": "Applicability unknown: the product model has no roof deductible field. Product question, not a template question.",
+        "traceability": {
+          "applicability": "unknown",
+          "candidate": "needs_review",
+          "verdict": "REVIEW",
+          "probable_layer": "human_review"
+        }
+      },
+      "rule_class": "calculation_requirement",
+      "secondary_classes": [
+        "presentation_requirement",
+        "document_applicability"
+      ],
+      "primary_sink": "data_snapshot",
+      "secondary_sinks": [
+        "template",
+        "document_selection"
+      ],
+      "validation_obligations": [
+        "calculation_correctness",
+        "value_correctness",
+        "presentation_prominence",
+        "correct_document_selection",
+        "provenance_traceability"
+      ],
+      "applicability": {
+        "product_level": [
+          "jurisdiction=FL",
+          "product_family",
+          "product offers a roof deductible (unknown)"
+        ],
+        "policy_level": [
+          "has_roof_deductible=true"
+        ]
+      },
+      "verdict": "partially_routed",
+      "current_routing": "rule_type presentation; no fields; approved; REVIEW (applicability unknown).",
+      "why": "Compute and prominently display the roof deductible's dollar value (the checklist row, (4)(e)2.). The statute excerpt attached as evidence is actually (4)(e)1.: a prescribed bold 18pt roof-deductible statement, alone on the page immediately behind the declarations page. That is a second rule (prescribed content plus document composition) that exists only inside this rule's evidence and has no rule of its own.",
+      "schema_fit": "partial",
+      "schema_gaps": [
+        "calculation half unrepresented",
+        "evidence excerpt belongs to a different subsection than the cited one; nothing detects the mismatch"
+      ],
+      "ambiguity": "The (e)1 page-behind-declarations statement: page_after_declarations is an in-scope target, so it could be a template rule, or a document_applicability rule if the page is a separate resource."
+    },
+    {
+      "rule_id": "FL_DECLARATIONS_OTHER_DEDUCTIBLES_INDICATED",
+      "provenance": {
+        "source_id": "fl-oir-residential-checklist",
+        "source_type": "regulator_checklist",
+        "source_row": "p8-r2",
+        "source_location": "floir-residential-property-checklist-may-2025.pdf p.8, row p8-r2 (Declarations)",
+        "source_quote": "Other applicable deductible amounts must be indicated, including “other than hurricane” or “all other perils” deductible, sinkhole, flood, or other deductibles",
+        "statute_citations": [
+          "627.701(7)",
+          "627.715(2)",
+          "627.706(1)(b)"
+        ]
+      },
+      "current": {
+        "authority": "legal_regulatory",
+        "rule_type": "document_content",
+        "target_document": "declarations",
+        "kind": "field_value",
+        "fields": [
+          "all_other_perils_deductible",
+          "sinkhole_deductible"
+        ],
+        "presentation": {},
+        "applies_when": {
+          "jurisdiction": "FL",
+          "product_family": "personal_residential_property"
+        },
+        "approved": true,
+        "reviewer_note": "AOP and sinkhole deductibles map to document fields. Flood deductible only applies when flood coverage is provided (not on this policy); no product field exists for other special deductibles.",
+        "traceability": {
+          "applicability": "applicable",
+          "candidate": "partial",
+          "verdict": "REVIEW",
+          "probable_layer": "human_review"
+        }
+      },
+      "rule_class": "content_requirement",
+      "secondary_classes": [],
+      "primary_sink": "template",
+      "secondary_sinks": [
+        "data_snapshot"
+      ],
+      "validation_obligations": [
+        "content_presence",
+        "value_correctness",
+        "provenance_traceability"
+      ],
+      "applicability": {
+        "product_level": [
+          "jurisdiction=FL",
+          "product_family"
+        ],
+        "policy_level": [
+          "per deductible: applies only if that deductible exists on the policy"
+        ]
+      },
+      "verdict": "correct",
+      "current_routing": "rule_type document_content; fields AOP + sinkhole; approved; REVIEW (partial).",
+      "why": "Right class and sink. The list is open-ended ('or other deductibles'), so it can only be partially enumerated. Statute evidence is weak: 627.701(7) is the $500 AOP offer, not a display rule.",
+      "schema_fit": "partial",
+      "schema_gaps": [
+        "open-ended item lists; per-item conditional applicability"
+      ],
+      "ambiguity": null
+    },
+    {
+      "rule_id": "FL_DECLARATIONS_SINKHOLE_EXCLUSION_STATEMENT",
+      "provenance": {
+        "source_id": "fl-oir-residential-checklist",
+        "source_type": "regulator_checklist",
+        "source_row": "p8-r3",
+        "source_location": "floir-residential-property-checklist-may-2025.pdf p.8, row p8-r3 (Declarations)",
+        "source_quote": "If sinkhole coverage is excluded, bold type statement in at least 14-point font is required (see statute)",
+        "statute_citations": [
+          "627.706(3)"
+        ]
+      },
+      "current": {
+        "authority": "legal_regulatory",
+        "rule_type": "presentation",
+        "target_document": "declarations",
+        "kind": "prescribed_statement",
+        "fields": [],
+        "presentation": {
+          "bold": true,
+          "min_font_pt": 14.0
+        },
+        "applies_when": {
+          "jurisdiction": "FL",
+          "product_family": "personal_residential_property",
+          "sinkhole_coverage_excluded": true
+        },
+        "approved": true,
+        "reviewer_note": "Derived applicability: sinkhole shows 'Not Included' and no sinkhole element exists. Not on the DFS sample page. Same handling as the flood statement.",
+        "traceability": {
+          "applicability": "applicable",
+          "candidate": "absent",
+          "verdict": "REVIEW",
+          "probable_layer": "rule_logic"
+        }
+      },
+      "rule_class": "content_requirement",
+      "secondary_classes": [
+        "presentation_requirement"
+      ],
+      "primary_sink": "template",
+      "secondary_sinks": [
+        "data_snapshot",
+        "human_review"
+      ],
+      "validation_obligations": [
+        "content_presence",
+        "presentation_prominence",
+        "provenance_traceability"
+      ],
+      "applicability": {
+        "product_level": [
+          "jurisdiction=FL",
+          "product_family"
+        ],
+        "policy_level": [
+          "sinkhole_coverage_excluded=true"
+        ]
+      },
+      "verdict": "mislabeled",
+      "current_routing": "rule_type presentation (fallback); prescribed_statement; approved; REVIEW (rule_logic).",
+      "why": "Prescribed text with a presentation constraint. The statute says 'inform policyholders', not 'on the declarations page'; placement is the checklist's.",
+      "schema_fit": "representable",
+      "schema_gaps": [
+        "rule_type fallback"
+      ],
+      "ambiguity": "Placement (declarations vs separate notice) is not fixed by the statute."
+    },
+    {
+      "rule_id": "FL_DECLARATIONS_LAW_AND_ORDINANCE_STATEMENT",
+      "provenance": {
+        "source_id": "fl-oir-residential-checklist",
+        "source_type": "regulator_checklist",
+        "source_row": "p8-r4",
+        "source_location": "floir-residential-property-checklist-may-2025.pdf p.8, row p8-r4 (Declarations)",
+        "source_quote": "Law and Ordinance statement required (only required for Homeowners policies)",
+        "statute_citations": [
+          "627.7011(4)(a)"
+        ]
+      },
+      "current": {
+        "authority": "legal_regulatory",
+        "rule_type": "document_content",
+        "target_document": "policy_form",
+        "kind": "prescribed_statement",
+        "fields": [],
+        "presentation": {
+          "bold": true,
+          "min_font_pt": 18.0
+        },
+        "applies_when": {
+          "jurisdiction": "FL",
+          "product_family": "personal_residential_property",
+          "policy_type": "homeowners"
+        },
+        "approved": true,
+        "reviewer_note": "Statute says 'with the policy documents'; checklist says 'typically on declarations page'. Kept as policy_form until the carrier confirms placement.",
+        "traceability": {
+          "applicability": "applicable",
+          "candidate": "out_of_scope",
+          "verdict": "out_of_scope",
+          "probable_layer": null
+        }
+      },
+      "rule_class": "content_requirement",
+      "secondary_classes": [
+        "presentation_requirement"
+      ],
+      "primary_sink": "human_review",
+      "secondary_sinks": [
+        "resource_configuration",
+        "template"
+      ],
+      "validation_obligations": [
+        "content_presence",
+        "presentation_prominence",
+        "provenance_traceability"
+      ],
+      "applicability": {
+        "product_level": [
+          "jurisdiction=FL",
+          "policy_type=homeowners"
+        ],
+        "policy_level": [
+          "new business and every renewal"
+        ]
+      },
+      "verdict": "unrouted",
+      "current_routing": "rule_type document_content; target policy_form; approved; out_of_scope, so an approved rule is validated nowhere.",
+      "why": "'With the policy documents' in bold 18pt at issuance and renewal. Reviewer correctly declined to force it onto the declarations page, but choosing policy_form drops it from every check. It needs a packet-level target and a placement decision.",
+      "schema_fit": "partial",
+      "schema_gaps": [
+        "no packet-level target",
+        "approval is global, so 'approved but not for declarations' is indistinguishable from 'approved for declarations'"
+      ],
+      "ambiguity": "Sink is a carrier choice: static insert (resource_configuration) or declarations template."
+    },
+    {
+      "rule_id": "FL_DECLARATIONS_LEGISLATIVE_DISCOUNTS",
+      "provenance": {
+        "source_id": "fl-oir-residential-checklist",
+        "source_type": "regulator_checklist",
+        "source_row": "p8-r5",
+        "source_location": "floir-residential-property-checklist-may-2025.pdf p.8, row p8-r5 (Declarations)",
+        "source_quote": "For property insurance policies with an effective date between 10/1/24 and 9/30/25, the declarations must reflect the following discounts (if applicable): (a) Legislative Premium Tax Discount (b) Legislative Fire Marshal Assessment Discount (c) Legislative Flood Premium Tax Discount",
+        "statute_citations": [
+          "624.5108(1) & 69O-ER24"
+        ]
+      },
+      "current": {
+        "authority": "legal_regulatory",
+        "rule_type": "document_content",
+        "target_document": "declarations",
+        "kind": "field_value",
+        "fields": [
+          "discounts_and_surcharges"
+        ],
+        "presentation": {},
+        "applies_when": {
+          "jurisdiction": "FL",
+          "product_family": "personal_residential_property",
+          "effective_date_on_or_after": "2024-10-01",
+          "effective_date_on_or_before": "2025-09-30"
+        },
+        "approved": true,
+        "reviewer_note": "Date-bounded (10/1/24 to 9/30/25). Not applicable to the 2020 sample policy; would apply to policies in that window.",
+        "traceability": {
+          "applicability": "not_applicable",
+          "candidate": "present",
+          "verdict": "not_applicable",
+          "probable_layer": null
+        }
+      },
+      "rule_class": "calculation_requirement",
+      "secondary_classes": [
+        "content_requirement",
+        "form_version_or_effective_date"
+      ],
+      "primary_sink": "data_snapshot",
+      "secondary_sinks": [
+        "template",
+        "resource_configuration"
+      ],
+      "validation_obligations": [
+        "calculation_correctness",
+        "value_correctness",
+        "content_presence",
+        "provenance_traceability"
+      ],
+      "applicability": {
+        "product_level": [
+          "jurisdiction=FL",
+          "product_family"
+        ],
+        "policy_level": [
+          "effective date 2024-10-01 .. 2025-09-30",
+          "each discount 'if applicable'"
+        ]
+      },
+      "verdict": "partially_routed",
+      "current_routing": "rule_type document_content; field discounts_and_surcharges; approved; not_applicable to the 2020 sample, but the candidate check reports 'present'.",
+      "why": "624.5108(1): the insurer must deduct specific amounts from the total charged. That is rating; the declarations obligation is to reflect three named discounts. The rule's only field is the whole discounts collection, so any discount row makes the check report 'present': value_correctness can't be expressed. The date window is a policy-effective-date bound that could equally be met by a dated resource version.",
+      "schema_fit": "partial",
+      "schema_gaps": [
+        "no expected item labels (three named discounts)",
+        "calculation half unrepresented"
+      ],
+      "ambiguity": "Date window as template conditional vs versioned resource (form_version_or_effective_date)."
+    }
+  ],
+  "selection_rulebook": [
+    {
+      "rule_id": "sr1",
+      "source_quote": "Homeowners Declarations must be generated when a Homeowners policy is issued.",
+      "source_location": "sample-rulebook.md line 3",
+      "stored_as": "selection_rule",
+      "rule_class": "document_applicability",
+      "primary_sink": "document_selection",
+      "secondary_sinks": [],
+      "validation_obligations": [
+        "correct_document_selection"
+      ],
+      "verdict": "correct",
+      "why": "Generate declarations when a Homeowners policy is issued. This is what the Document Selection plugin is for."
+    },
+    {
+      "rule_id": "sr2",
+      "source_quote": "Use the Florida declarations resource for policies with jurisdiction FL.",
+      "source_location": "sample-rulebook.md line 4",
+      "stored_as": "selection_rule",
+      "rule_class": "document_applicability",
+      "primary_sink": "resource_configuration",
+      "secondary_sinks": [],
+      "validation_obligations": [
+        "correct_document_selection"
+      ],
+      "verdict": "misrouted",
+      "why": "'Use the Florida declarations resource for FL' binds a resource to a jurisdiction; it is resource-manifest config, not a generate action. The review note already says so. Modelled as generate, it is what makes the broken rulebook's 'do not generate for FL' look like a selection conflict instead of a resource question."
+    },
+    {
+      "rule_id": "cr1",
+      "source_quote": "Include the Water Backup optional coverage row only when Water Backup coverage is selected.",
+      "source_location": "sample-rulebook.md line 5",
+      "stored_as": "content_rule",
+      "rule_class": "content_requirement",
+      "primary_sink": "data_snapshot",
+      "secondary_sinks": [
+        "template"
+      ],
+      "validation_obligations": [
+        "content_presence"
+      ],
+      "verdict": "misrouted",
+      "why": "Row-level inclusion inside a document. The review note says it is satisfied by data shape (rows come from policy elements). It sits in the selection RuleSet and is evaluated by the rules checker, but no Document Selection plugin would ever run it."
+    }
+  ],
+  "triage_coverage": {
+    "rows_parsed": 150,
+    "triage_counts": {
+      "document_content": {
+        "maybe": 16,
+        "no": 30,
+        "yes": 1
+      },
+      "offer_or_notice": {
+        "maybe": 7,
+        "no": 14
+      },
+      "filing_process": {
+        "no": 9
+      },
+      "underwriting_eligibility": {
+        "no": 16
+      },
+      "presentation": {
+        "maybe": 7,
+        "no": 8,
+        "yes": 5
+      },
+      "document_applicability": {
+        "no": 2
+      },
+      "claims_or_process": {
+        "no": 35
+      }
+    },
+    "note": "Only rows triaged yes/maybe for declarations were structured into rules. The 16 underwriting_eligibility, 9 filing_process and 35 claims_or_process rows (all 'no') were never stored as rules: not misrouted to the template, but routed nowhere.",
+    "relevant_rows_without_rule": [
+      {
+        "row_id": "p8-r12",
+        "citations": [
+          "627.715(2)"
+        ],
+        "topic": "Flood",
+        "text": "Flood deductibles and coverage limits must be prominently noted on the declarations page",
+        "finding": "duplicate",
+        "detail": "FL_DECLARATIONS_FLOOD_DEDUCTIBLE_LIMITS_PROMINENT"
+      },
+      {
+        "row_id": "p13-r2",
+        "citations": [
+          "627.701(4)(e)2."
+        ],
+        "topic": "Renewal Premium Notice",
+        "text": "The actual dollar value of any roof deductible must be prominently displayed on the declarations page or on the renewal premium notice",
+        "finding": "duplicate",
+        "detail": "FL_DECLARATIONS_ROOF_DEDUCTIBLE_DISPLAY"
+      },
+      {
+        "row_id": "p12-r8",
+        "citations": [
+          "627.4131"
+        ],
+        "topic": "Phone Number",
+        "text": "Phone number and its purpose must be made available to present inquiries or obtain information about coverage and to provide assistance in resolving complaints",
+        "finding": "duplicate",
+        "detail": "FL_DECLARATIONS_PHONE_NUMBER_NOTICE"
+      },
+      {
+        "row_id": "p10-r1",
+        "citations": [
+          "627.7011(4)"
+        ],
+        "topic": "Law & Ordinance Coverage",
+        "text": "Law and Ordinance statement required on Homeowners policies (typically on declarations page)",
+        "finding": "duplicate",
+        "detail": "FL_DECLARATIONS_LAW_AND_ORDINANCE_STATEMENT"
+      },
+      {
+        "row_id": "p13-r1",
+        "citations": [
+          "627.0629(4)"
+        ],
+        "topic": "Renewal Premium Notice",
+        "text": "Premium for hurricane coverage must be indicated separately from premium for all other coverages",
+        "finding": "duplicate",
+        "detail": "FL_DECLARATIONS_HURRICANE_PREMIUM_SEPARATE"
+      },
+      {
+        "row_id": "p7-r2",
+        "citations": [
+          "627.413"
+        ],
+        "topic": "Contents of Policies",
+        "text": "Every policy shall specify: the names of the parties to the contract; the subject of the insurance; risks (perils) insured against; effective date and time; the premium; conditions; and form numbers and edition dates of all endorsements attached to the policy",
+        "finding": "new_class",
+        "detail": "content_requirement + form_version_or_effective_date: policy must specify parties, subject, perils, effective date AND time, premium, and form numbers with edition dates (627.413). Closest Florida analogue of the NFIP effective-time rule."
+      },
+      {
+        "row_id": "p13-r6",
+        "citations": [
+          "627.701(10)"
+        ],
+        "topic": "Roof Deductible",
+        "text": "Such roof deductible may not exceed the lesser of 2% of the Coverage A limit or 50% of the cost to replace the roof, and it can only apply to claims adjusted on a replacement cost basis. If a roof deductible is applied, no other deductible may be applied to the loss or to any other loss to the property caused by the same covered peril (see statute for details and exceptions)",
+        "finding": "new_class",
+        "detail": "calculation_requirement + eligibility constraint on product config: roof deductible capped at the lesser of 2% of Coverage A or 50% of roof replacement cost (627.701(10))."
+      },
+      {
+        "row_id": "p12-r10",
+        "citations": [
+          "627.4133(7)(a)1."
+        ],
+        "topic": "Renewal Premium Notice",
+        "text": "Dollar amounts recouped for assessments by Florida Hurricane Catastrophe Fund, Citizens Property Insurance Corporation, and Florida Insurance Guaranty Association must be specified",
+        "finding": "new_class",
+        "detail": "calculation_requirement on the renewal premium notice: assessment recoupment amounts (627.4133(7)(a)1.)."
+      },
+      {
+        "row_id": "p12-r11",
+        "citations": [
+          "627.4133(7)(a)2."
+        ],
+        "topic": "Renewal Premium Notice",
+        "text": "Dollar amount of any premium increase due to an approved rate increase must be specified Total dollar amount due to coverage changes must be specified",
+        "finding": "new_class",
+        "detail": "calculation_requirement on the renewal premium notice: rate-increase and coverage-change amounts (627.4133(7)(a)2.)."
+      },
+      {
+        "row_id": "p12-r12",
+        "citations": [
+          "627.0629(2)(c)"
+        ],
+        "topic": "Renewal Premium Notice",
+        "text": "Amount by which the rate is adjusted as the result of BCEGS, including the maximum possible positive and negative adjustments shall be specified (does not apply to Mobile Home policies)",
+        "finding": "new_class",
+        "detail": "calculation_requirement on the renewal premium notice: BCEGS adjustment range (627.0629(2)(c))."
+      },
+      {
+        "row_id": "p13-r8",
+        "citations": [
+          "627.706(1)(b)"
+        ],
+        "topic": "Sinkhole",
+        "text": "Insurer must make available, for an appropriate additional premium, coverage for sinkhole losses (not required on tenant policies) Insurer may include a sinkhole deductible of 1%, 2%, 5% or 10% of policy dwelling limits",
+        "finding": "product_configuration",
+        "detail": "Offer sinkhole coverage; sinkhole deductible options 1/2/5/10% (627.706(1)(b))."
+      },
+      {
+        "row_id": "p12-r6",
+        "citations": [
+          "627.7011(3)(b)"
+        ],
+        "topic": "Personal Property",
+        "text": "Insurer must offer Personal Property Replacement Cost coverage (see “Loss Settlement”)",
+        "finding": "product_configuration",
+        "detail": "Offer personal property replacement cost (627.7011(3)(b))."
+      },
+      {
+        "row_id": "p12-r7",
+        "citations": [
+          "627.712(3)"
+        ],
+        "topic": "Personal Property",
+        "text": "Insurer must make available an exclusion of coverage for personal property at the option of the policyholder (see “Contents Exclusion”)",
+        "finding": "product_configuration",
+        "detail": "Make available a personal property exclusion (627.712(3))."
+      },
+      {
+        "row_id": "p13-r3",
+        "citations": [
+          "627.7011"
+        ],
+        "topic": "Replacement Cost",
+        "text": "Must offer on Homeowners policies (statute does not apply to Mobile Home or Dwelling policies)",
+        "finding": "product_configuration",
+        "detail": "Offer replacement cost on Homeowners (627.7011)."
+      },
+      {
+        "row_id": "p14-r14",
+        "citations": [
+          "627.712 (1) & (2)"
+        ],
+        "topic": "Windstorm Exclusion",
+        "text": "Insurer must make available, at the option of the insured, an exclusion of windstorm coverage (see statute for exceptions)",
+        "finding": "product_configuration",
+        "detail": "Make available a windstorm exclusion (627.712(1)-(2))."
+      },
+      {
+        "row_id": "p4-r10",
+        "citations": [
+          "627.706(1)"
+        ],
+        "topic": "Catastrophic Ground Cover Collapse",
+        "text": "Coverage shall be provided (not required on tenant policies)",
+        "finding": "policy_form",
+        "detail": "Catastrophic ground cover collapse coverage must be provided (627.706(1))."
+      },
+      {
+        "row_id": "p6-r4",
+        "citations": [
+          "627.714(1)"
+        ],
+        "topic": "Condominium",
+        "text": "Condominium unit owner policy must include at least $2,000 property loss assessment coverage Restriction on deductible amount for loss assessment coverage",
+        "finding": "policy_form",
+        "detail": "Condominium loss assessment coverage minimum (627.714(1))."
+      },
+      {
+        "row_id": "p13-r4",
+        "citations": [
+          "627.7011(2)",
+          "69O-167.011(4)"
+        ],
+        "topic": "Replacement Cost",
+        "text": "Disclosure/explanation of replacement cost coverage",
+        "finding": "policy_form",
+        "detail": "Replacement cost disclosure (627.7011(2); 69O-167.011(4))."
+      },
+      {
+        "row_id": "p14-r13",
+        "citations": [
+          "627.702"
+        ],
+        "topic": "Valued Policy Law",
+        "text": "In the event of a total loss to a building or structure, the insurer’s liability under the policy shall be the amount of money for which the property was insured and for which premium has been paid (see statute for exceptions)",
+        "finding": "policy_form",
+        "detail": "Valued policy law (627.702)."
+      }
+    ]
+  },
+  "nfip_manual_rule": {
+    "id": "NFIP_DECLARATIONS_LOAN_CLOSING_EFFECTIVE_TIME",
+    "modelled_by_hand": true,
+    "purpose": "Test whether the rule representation describes a non-Florida manual rule without source-specific fields. Not NFIP support.",
+    "source": {
+      "id": "fema-nfip-flood-insurance-manual-2025-10",
+      "source_type_needed": "program_manual",
+      "source_type_today": null,
+      "title": "NFIP Flood Insurance Manual",
+      "edition": "October 2025",
+      "issuer": "FEMA, National Flood Insurance Program",
+      "jurisdiction": "US (national program; not a state)",
+      "path": "../references/corpus-triage/downloads/discovered/fema/fema_rsl_national-flood-insurance-manual_06032025.pdf",
+      "note": "The local filename carries 06032025; the cover reads 'October 2025'."
+    },
+    "provenance": [
+      {
+        "location": "Section 2 'Before You Start', C. Loan Exception (No Waiting Period); printed page 2 • 17 (PDF page 28)",
+        "excerpt": "If the effective date is the date and time of the loan closing, the declarations page should state the effective date and specify that the coverage is effective “at the time of loan closing” (versus 12:01 a.m.).",
+        "strength_word": "should"
+      },
+      {
+        "location": "Appendix I: Policyholder Communications, E. Requirements, Table 2: Declarations Page Requirements, row ID 2 'Policy Term'; printed page I • 12 (PDF page 333)",
+        "excerpt": "Display: Always shown. Policy Effective Time: “12:01am,” “at the time of loan closing” ... For loan exception policies, indicate the Policy Effective Time as “at the time of loan closing.” For non-loan exception policies, indicate the Policy Effective Time as “12:01am.” For all policies indicate the Policy Expiration Time as “12:01am.”",
+        "strength_word": "indicate (table marked 'Always shown')"
+      },
+      {
+        "location": "Section 2, C. Loan Exception, footnote 13; printed page 2 • 16 (PDF page 27)",
+        "excerpt": "42 USC 4013(c)(2)(C); 44 CFR § 61.11(b)",
+        "strength_word": null,
+        "role": "legal basis for the loan exception (the effective-date rule), not for the declarations wording"
+      }
+    ],
+    "decomposition": [
+      {
+        "part": "effective date/time determination",
+        "rule_class": "calculation_requirement",
+        "primary_sink": "data_snapshot",
+        "secondary_sinks": [
+          "human_review"
+        ],
+        "summary": "Table 10: if the loan exception applies (purchase tied to a loan, application and full premium received within the stated window), the effective date and time is the loan closing; otherwise 12:01 a.m. after the waiting period.",
+        "validation_obligations": [
+          "calculation_correctness",
+          "provenance_traceability"
+        ],
+        "note": "Upstream of documents. The insurer only needs the actual closing time if a loss occurs that day: a claims workflow, out of scope."
+      },
+      {
+        "part": "declarations wording",
+        "rule_class": "content_requirement",
+        "primary_sink": "template",
+        "secondary_sinks": [
+          "data_snapshot"
+        ],
+        "summary": "Policy Effective Time shows 'at the time of loan closing' for loan-exception policies and '12:01am' otherwise; expiration time is always '12:01am'.",
+        "validation_obligations": [
+          "content_presence",
+          "value_correctness",
+          "provenance_traceability"
+        ]
+      }
+    ],
+    "as_current_schema": {
+      "id": "NFIP_DECLARATIONS_LOAN_CLOSING_EFFECTIVE_TIME",
+      "source": "NFIP Flood Insurance Manual, October 2025",
+      "source_type": "<no fitting value: regulator_checklist | statute_or_rule | carrier_rulebook | legacy_export | policy_document>",
+      "source_id": "fema-nfip-flood-insurance-manual-2025-10",
+      "source_row": "Appendix I, Table 2, row ID 2 (Policy Term)",
+      "source_quote": "For loan exception policies, indicate the Policy Effective Time as “at the time of loan closing.” For non-loan exception policies, indicate the Policy Effective Time as “12:01am.”",
+      "source_location": "fema_rsl_national-flood-insurance-manual_06032025.pdf p.333 (printed I • 12); corroborated p.28 (printed 2 • 17)",
+      "authority": "legal_regulatory",
+      "rule_type": "document_content",
+      "applies_when": {
+        "product_family": "<no value for NFIP flood>",
+        "effective_time_basis": "loan_closing"
+      },
+      "requirement": {
+        "document": "declarations",
+        "kind": "field_value",
+        "description": "Policy Effective Time reads 'at the time of loan closing' for loan-exception policies and '12:01am' otherwise; expiration time '12:01am'.",
+        "fields": [
+          "<no semantic key: needs concept policy_period{facet: effective_time}>"
+        ],
+        "presentation": {},
+        "prescribed_text": null
+      },
+      "statute_evidence": [
+        {
+          "citation": "42 USC 4013(c)(2)(C); 44 CFR § 61.11(b)",
+          "note": "Basis for the loan exception, not for the wording."
+        }
+      ],
+      "confidence": 0.9,
+      "requires_human_review": true,
+      "unresolved_terms": [
+        "no policy field records whether the loan exception applies",
+        "no effective-time field in any DocumentModel"
+      ],
+      "approved": false
+    },
+    "fit": {
+      "non_florida_source": "partial: RuleSource.jurisdiction is free text, so 'US' fits; RegulatoryRuleSet.jurisdiction is one value per set, so an NFIP rule can't sit in the FL set.",
+      "manual_not_checklist_statute": "partial: no source_type value; source_row is a required field named for checklists but holds 'Table 2, row ID 2' fine. StatuteEvidence works for federal citations. No field for source edition.",
+      "conditional_applicability": "vocabulary gap, not schema gap: applies_when is an open dict; the predicate registry needs 'effective_time_basis' (a generic policy fact) and a flood product family.",
+      "document_content_consequence": "partial: requirement.document='declarations', kind='field_value' works. fields must be semantic keys of one DocumentModel; the right reference is a concept (policy_period, qualifier facet=effective_time).",
+      "source_provenance": "partial: two locations in one manual plus a legal-basis citation; source_location is one string. Fits, but only as prose.",
+      "human_review": "fits: requires_human_review, approved, reviewer_note.",
+      "source_specific_fields_needed": "none",
+      "additions_needed": [
+        "source_type 'program_manual' (vocabulary)",
+        "RuleSource.edition (every source has one)",
+        "Requirement concept refs",
+        "rule_class + routes (to split the calculation from the wording)",
+        "predicate 'effective_time_basis' and a flood product family (vocabulary)"
+      ],
+      "strength_note": "Narrative says 'should'; the table says 'indicate' and 'Always shown'. RegulatoryRule has no strength field (SelectionRule does). Recorded here, not proposed as minimal."
+    }
+  }
+}

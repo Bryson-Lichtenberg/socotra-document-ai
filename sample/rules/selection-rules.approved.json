@@ -1,0 +1,96 @@
+{
+  "source": "sample-rulebook.md",
+  "synthetic": true,
+  "selection_rules": [
+    {
+      "id": "sr1",
+      "document_static_name": "homeownersDeclarations",
+      "conditions": [
+        {
+          "field": "policy.productName",
+          "operator": "eq",
+          "value": "Homeowners"
+        },
+        {
+          "field": "trigger",
+          "operator": "eq",
+          "value": "issued"
+        }
+      ],
+      "action": "generate",
+      "strength": "must",
+      "jurisdictions": [],
+      "effective_from": null,
+      "effective_to": null,
+      "source_quote": "Homeowners Declarations must be generated when a Homeowners policy is issued.",
+      "source_location": "line 3",
+      "confidence": 1.0,
+      "requires_human_review": false,
+      "unresolved_terms": [],
+      "grounding_notes": [],
+      "approved": true
+    },
+    {
+      "id": "sr2",
+      "document_static_name": "homeownersDeclarations",
+      "conditions": [
+        {
+          "field": "policy.jurisdiction",
+          "operator": "eq",
+          "value": "FL"
+        }
+      ],
+      "action": "generate",
+      "strength": "must",
+      "jurisdictions": [
+        "FL"
+      ],
+      "effective_from": null,
+      "effective_to": null,
+      "source_quote": "Use the Florida declarations resource for policies with jurisdiction FL.",
+      "source_location": "line 4",
+      "confidence": 1.0,
+      "requires_human_review": false,
+      "unresolved_terms": [],
+      "grounding_notes": [],
+      "approved": true
+    }
+  ],
+  "content_rules": [
+    {
+      "id": "cr1",
+      "document_static_name": "homeownersDeclarations",
+      "target": "optionalCoverages",
+      "row_match": "Water Backup",
+      "effect": "include_when",
+      "conditions": [
+        {
+          "field": "policy.elements.type",
+          "operator": "contains",
+          "value": "WaterBackup"
+        }
+      ],
+      "strength": "must",
+      "source_quote": "Include the Water Backup optional coverage row only when Water Backup coverage is selected.",
+      "source_location": "line 5",
+      "confidence": 1.0,
+      "requires_human_review": false,
+      "unresolved_terms": [],
+      "grounding_notes": [],
+      "approved": true
+    }
+  ],
+  "not_rules": [
+    {
+      "source_quote": "SYNTHETIC DEMO RULEBOOK — not a carrier filing.",
+      "source_location": "[line 1]",
+      "reason": "Descriptive disclaimer, not an applicability requirement."
+    }
+  ],
+  "rejected": [],
+  "review_notes": [
+    "Reviewed in this prototype session against sample/rules/sample-rulebook.md. All three drafts approved.",
+    "sr2 is really a resource binding (the FL resource serves FL policies). It is kept as a generate rule scoped to FL and mirrored in resource-manifest.json jurisdictions.",
+    "cr1 is satisfied by data shape today: optional coverage rows come from the elements present on the policy."
+  ]
+}

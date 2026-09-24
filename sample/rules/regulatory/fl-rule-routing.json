@@ -1,0 +1,208 @@
+{
+  "description": "Routing overlay for the approved Florida rules. rules.routing.normalize() applies it to fl-declarations-rules.approved.json and writes fl-rules.normalized.json. Classifications come from RULE_ROUTING_AUDIT.md.",
+  "reviewer": "Prototype reviewer (acting as implementation lead; not legal counsel)",
+  "date": "2026-09-23",
+  "route_approval_policy": "A route is approved only where the 2026-09-23 review decided that question: the declarations template route of a rule approved for declarations. Every other route is unapproved until its owner approves it. Route approval does not change the legacy `approved` flag, which the pipeline still reads.",
+  "normalization_policy": "Several implementation responsibilities for one normative requirement are routes on one rule. Distinct normative requirements bundled into one source row become separate rules that keep the row's provenance.",
+  "rules": {
+    "FL_AOB_ASSIGNMENT_PROHIBITION": {
+      "rule_class": "content_requirement",
+      "routes": [
+        {"sink": "human_review", "target": "policy form filing review", "validation_obligations": ["provenance_traceability"],
+         "reviewer_note": "Contract language in the filed policy form, not a document-generation condition. Confirm the assignment clause of the form used for policies issued on or after 2023-01-01."},
+        {"sink": "resource_configuration", "target": "policy form edition for policies issued on or after 2023-01-01", "validation_obligations": ["correct_form_version"]}
+      ]
+    },
+    "FL_APPLICATION_DISPLAY_CARRIER_AGENT": {
+      "rule_class": "presentation_requirement",
+      "concept_refs": [{"concept_id": "insurer_identity"}, {"concept_id": "producer", "qualifiers": {"facet": "name_license_contact"}}],
+      "routes": [
+        {"sink": "template", "target": "application", "validation_obligations": ["content_presence", "presentation_prominence", "provenance_traceability"],
+         "reviewer_note": "Application template, not declarations. Rejected for the declarations scope, never reviewed for the application."}
+      ]
+    },
+    "FL_BINDER_COVERAGE_ID_NUMBER": {
+      "rule_class": "document_applicability",
+      "concept_refs": [{"concept_id": "policy_number"}],
+      "routes": [
+        {"sink": "human_review", "target": "coverage ID delivery at bind", "validation_obligations": ["provenance_traceability"],
+         "reviewer_note": "A generated binder or a delivery process could satisfy this; carrier decision. Legacy target policy_form is a mislabel."},
+        {"sink": "document_selection", "target": "binder", "validation_obligations": ["correct_document_selection", "content_presence"]}
+      ]
+    },
+    "FL_DECLARATIONS_AGENT_SIGNATURE": {
+      "rule_class": "workflow_review",
+      "routes": [
+        {"sink": "human_review", "target": "agent countersignature process", "validation_obligations": ["provenance_traceability"],
+         "reviewer_note": "Wet, electronic or facsimile countersignature is an execution process."},
+        {"sink": "template", "target": "declarations", "validation_obligations": ["content_presence"],
+         "reviewer_note": "Only if the carrier prints a countersignature block. The legacy approval was for declarations scope; this route is not approved."}
+      ]
+    },
+    "FL_DECLARATIONS_FLOOD_DEDUCTIBLE_LIMITS_PROMINENT": {
+      "rule_class": "presentation_requirement",
+      "concept_refs": [{"concept_id": "coverage_limit", "qualifiers": {"coverage": "flood"}}, {"concept_id": "deductible", "qualifiers": {"peril": "flood"}}],
+      "routes": [
+        {"sink": "template", "target": "declarations", "approved": true,
+         "validation_obligations": ["content_presence", "value_correctness", "presentation_prominence", "provenance_traceability"]},
+        {"sink": "data_snapshot", "target": "flood limit and flood deductible values", "validation_obligations": ["value_correctness"]}
+      ]
+    },
+    "FL_DECLARATIONS_FLOOD_EXCLUSION_STATEMENT": {
+      "rule_class": "content_requirement",
+      "routes": [
+        {"sink": "template", "target": "declarations", "approved": true,
+         "validation_obligations": ["content_presence", "presentation_prominence", "provenance_traceability"],
+         "reviewer_note": "Carrier legal confirms text and placement before it is added; regulatory language is not auto-inserted."}
+      ]
+    },
+    "FL_DECLARATIONS_HURRICANE_PREMIUM_SEPARATE": {
+      "rule_class": "content_requirement",
+      "concept_refs": [{"concept_id": "premium_breakdown", "qualifiers": {"basis": "hurricane_split"}}],
+      "routes": [
+        {"sink": "template", "target": "declarations_or_premium_notice", "approved": true,
+         "validation_obligations": ["content_presence", "value_correctness", "provenance_traceability"]},
+        {"sink": "data_snapshot", "target": "hurricane / non-hurricane premium split from rating", "validation_obligations": ["calculation_correctness"]}
+      ]
+    },
+    "FL_DECLARATIONS_PHONE_NUMBER_NOTICE": {
+      "rule_class": "content_requirement",
+      "routes": [
+        {"sink": "human_review", "target": "placement in the issued packet", "validation_obligations": ["provenance_traceability"],
+         "reviewer_note": "The source allows the number elsewhere, e.g. the policy jacket."},
+        {"sink": "resource_configuration", "target": "policy_packet", "validation_obligations": ["content_presence"]},
+        {"sink": "template", "target": "declarations", "validation_obligations": ["content_presence"],
+         "reviewer_note": "Legacy approval assumed declarations; placement is undecided, so this route is not approved."}
+      ]
+    },
+    "FL_DECLARATIONS_HURRICANE_DEDUCTIBLE_STATEMENT": {
+      "rule_class": "content_requirement",
+      "routes": [
+        {"sink": "template", "target": "declarations", "approved": true,
+         "validation_obligations": ["content_presence", "presentation_prominence", "provenance_traceability"],
+         "reviewer_note": "Carrier legal confirms text and placement before it is added; regulatory language is not auto-inserted."}
+      ]
+    },
+    "FL_DECLARATIONS_HURRICANE_DEDUCTIBLE_DISPLAY": {
+      "rule_class": "calculation_requirement",
+      "concept_refs": [{"concept_id": "deductible", "qualifiers": {"peril": "hurricane", "facet": "amount"}}],
+      "routes": [
+        {"sink": "data_snapshot", "target": "hurricane deductible dollar amount (percent of Coverage A; inflation-guard adjusted value)",
+         "validation_obligations": ["calculation_correctness", "value_correctness"],
+         "reviewer_note": "Computed today by a mapping transform that no rule references."},
+        {"sink": "template", "target": "declarations_or_renewal_notice", "approved": true,
+         "validation_obligations": ["content_presence", "presentation_prominence", "provenance_traceability"]}
+      ]
+    },
+    "FL_DECLARATIONS_HURRICANE_DEDUCTIBLE_INFLATION_GUARD_NOTICE": {
+      "rule_class": "content_requirement",
+      "routes": [
+        {"sink": "template", "target": "declarations_or_renewal_notice", "approved": true,
+         "validation_obligations": ["content_presence", "provenance_traceability"]},
+        {"sink": "human_review", "target": "notice wording (not prescribed by statute)", "validation_obligations": []}
+      ]
+    },
+    "FL_DECLARATIONS_OTHER_DEDUCTIBLES_INDICATED": {
+      "rule_class": "content_requirement",
+      "concept_refs": [{"concept_id": "deductible", "qualifiers": {"peril": "all_other_perils"}}, {"concept_id": "deductible", "qualifiers": {"peril": "sinkhole"}}, {"concept_id": "deductible", "qualifiers": {"peril": "flood"}}],
+      "routes": [
+        {"sink": "template", "target": "declarations", "approved": true,
+         "validation_obligations": ["content_presence", "value_correctness", "provenance_traceability"]},
+        {"sink": "data_snapshot", "target": "deductible values present on the policy", "validation_obligations": ["value_correctness"]}
+      ]
+    },
+    "FL_DECLARATIONS_SINKHOLE_EXCLUSION_STATEMENT": {
+      "rule_class": "content_requirement",
+      "routes": [
+        {"sink": "human_review", "target": "placement: declarations or separate notice", "validation_obligations": [],
+         "reviewer_note": "The statute says 'inform policyholders'; declarations placement comes from the checklist."},
+        {"sink": "template", "target": "declarations", "approved": true,
+         "validation_obligations": ["content_presence", "presentation_prominence", "provenance_traceability"]}
+      ]
+    },
+    "FL_DECLARATIONS_LAW_AND_ORDINANCE_STATEMENT": {
+      "rule_class": "content_requirement",
+      "routes": [
+        {"sink": "human_review", "target": "placement: static insert or declarations", "validation_obligations": ["provenance_traceability"],
+         "reviewer_note": "'With the policy documents' at issuance and renewal. Legacy target policy_form leaves an approved rule validated nowhere."},
+        {"sink": "resource_configuration", "target": "policy_packet", "validation_obligations": ["content_presence", "presentation_prominence"]},
+        {"sink": "template", "target": "declarations", "validation_obligations": ["content_presence", "presentation_prominence"]}
+      ]
+    },
+    "FL_DECLARATIONS_LEGISLATIVE_DISCOUNTS": {
+      "rule_class": "calculation_requirement",
+      "routes": [
+        {"sink": "human_review", "target": "date window: template conditional or dated resource version", "validation_obligations": [],
+         "reviewer_note": "Effective 2024-10-01 to 2025-09-30. The window could be a template condition or a resource effective range."},
+        {"sink": "data_snapshot", "target": "legislative discount amounts deducted by rating (624.5108(1))",
+         "validation_obligations": ["calculation_correctness", "value_correctness"]},
+        {"sink": "template", "target": "declarations", "approved": true,
+         "validation_obligations": ["content_presence", "value_correctness", "provenance_traceability"],
+         "reviewer_note": "The three discounts are named by concept qualifiers on the requirement; other discount rows do not satisfy it."}
+      ]
+    }
+  },
+  "splits": {
+    "FL_AOP_DEDUCTIBLE_OFFER_NOTICE": [
+      {
+        "id": "FL_AOP_DEDUCTIBLE_OFFER",
+        "rule_class": "product_offering_requirement",
+        "requirement": {
+          "document": "other", "kind": "text_mention",
+          "description": "Before issuing a policy or before its first renewal, offer a $500 deductible for losses from perils other than hurricane.",
+          "concept_refs": [{"concept_id": "deductible", "qualifiers": {"peril": "all_other_perils"}}]
+        },
+        "routes": [
+          {"sink": "product_configuration", "target": "available all-other-perils deductible values", "validation_obligations": ["provenance_traceability"],
+           "reviewer_note": "A product fact (which deductible values can be chosen), not a document and not an underwriting decision."}
+        ],
+        "note": "Normalized from FL_AOP_DEDUCTIBLE_OFFER_NOTICE: the offer half of the row."
+      },
+      {
+        "id": "FL_AOP_DEDUCTIBLE_NOTICE",
+        "rule_class": "document_applicability",
+        "requirement": {
+          "document": "notice", "kind": "text_mention",
+          "description": "Notice of the availability of the $500 all-other-perils deductible, in a form approved by OIR, at least once every 3 years."
+        },
+        "routes": [
+          {"sink": "document_selection", "target": "AOP deductible availability notice", "validation_obligations": ["correct_document_selection", "provenance_traceability"],
+           "reviewer_note": "The 3-year cadence needs a last-notice date; no predicate expresses it."},
+          {"sink": "resource_configuration", "target": "OIR-approved notice form", "validation_obligations": ["correct_form_version"]}
+        ],
+        "note": "Normalized from FL_AOP_DEDUCTIBLE_OFFER_NOTICE: the recurring-notice half of the row."
+      }
+    ],
+    "FL_DECLARATIONS_ROOF_DEDUCTIBLE_DISPLAY": [
+      {
+        "id": "FL_DECLARATIONS_ROOF_DEDUCTIBLE_DISPLAY",
+        "rule_class": "calculation_requirement",
+        "routes": [
+          {"sink": "data_snapshot", "target": "roof deductible dollar amount", "validation_obligations": ["calculation_correctness", "value_correctness"],
+           "reviewer_note": "The product has no roof deductible, so applicability is unknown; that is a product question."},
+          {"sink": "template", "target": "declarations_or_renewal_notice", "approved": true,
+           "validation_obligations": ["content_presence", "presentation_prominence", "provenance_traceability"]}
+        ]
+      },
+      {
+        "id": "FL_DECLARATIONS_ROOF_DEDUCTIBLE_STATEMENT",
+        "rule_type": "presentation",
+        "rule_class": "content_requirement",
+        "requirement": {
+          "document": "page_after_declarations", "kind": "prescribed_statement",
+          "description": "Prescribed roof-deductible statement in boldface type no smaller than 18 point, on the page immediately behind the declarations page, with no other policy language on that page (627.701(4)(e)1.).",
+          "presentation": {"bold": true, "min_font_pt": 18, "separate_page": true}
+        },
+        "unresolved_terms": ["prescribed language is in the attached 627.701(4)(e)1. excerpt; not copied into the rule pending legal review"],
+        "routes": [
+          {"sink": "human_review", "target": "confirm scope of 627.701(4)(e)1.", "validation_obligations": ["provenance_traceability"],
+           "reviewer_note": "The row cites (4)(e)2.; this requirement comes from the (4)(e)1. excerpt attached as its evidence."},
+          {"sink": "template", "target": "page_after_declarations", "validation_obligations": ["content_presence", "presentation_prominence"]},
+          {"sink": "document_selection", "target": "roof deductible statement page", "validation_obligations": ["correct_document_selection"],
+           "reviewer_note": "Alternative to the template route if the page is a separate resource."}
+        ],
+        "note": "Normalized from FL_DECLARATIONS_ROOF_DEDUCTIBLE_DISPLAY: a distinct requirement found in the row's statute evidence."
+      }
+    ]
+  }
+}

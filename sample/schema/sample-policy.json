@@ -1,0 +1,167 @@
+{
+  "policy": {
+    "productName": "Homeowners",
+    "policyNumber": "FHO295000",
+    "jurisdiction": "FL",
+    "currency": "USD",
+    "data": {
+      "policyNumber": "FHO295000",
+      "policyForm": "HO-3",
+      "effectiveDate": "2020-03-28",
+      "expirationDate": "2021-03-28",
+      "totalAnnualPremium": "854.00",
+      "hurricanePremium": "297.00",
+      "nonHurricanePremium": "505.00",
+      "coverageALimit": "160000",
+      "namedInsureds": [
+        {
+          "firstName": "Estelle",
+          "lastName": "Clarion"
+        },
+        {
+          "firstName": "James",
+          "lastName": "Delaney"
+        }
+      ],
+      "insuredStreet": "596 Crossover Way",
+      "insuredCity": "Clay",
+      "insuredState": "FL",
+      "insuredPostalCode": "17189-2021",
+      "mortgageeName": "Apollo Savings Mortgage Co",
+      "mortgagees": [
+        {
+          "name": "Apollo Savings Mortgage Co",
+          "street": "P.O. Box 120140, Dept. 12",
+          "city": "Leto",
+          "state": "TX",
+          "postalCode": "22231"
+        }
+      ],
+      "agent": {
+        "name": "Tony Prize",
+        "licenseNumber": "194722",
+        "street": "2047 Octavia Way",
+        "city": "Tiptree",
+        "state": "FL",
+        "postalCode": "10112-1312",
+        "phone": "(123) 456-7891"
+      },
+      "aopDeductible": "1000",
+      "hurricaneDeductiblePercent": "2",
+      "hurricaneDeductibleBasis": "Coverage A",
+      "sinkholeDeductible": "Not Included",
+      "discounts": [
+        {
+          "name": "Proof of Updates - Roof Only"
+        },
+        {
+          "name": "Windstorm Loss Mitigation"
+        }
+      ],
+      "discountTotal": "-2083.00",
+      "fees": [
+        {
+          "name": "Managing General Agency (MGA) Fee",
+          "amount": "25.00"
+        },
+        {
+          "name": "Emergency Management Preparedness and Assistance Surcharge",
+          "amount": "2.00"
+        }
+      ],
+      "mgaFee": "25.00",
+      "empaSurcharge": "2.00",
+      "constructionType": "Masonry",
+      "yearBuilt": "1971",
+      "dwellingType": "Single Family",
+      "forms": [
+        {
+          "name": "Homeowners 3 Special Form (HO-3)",
+          "formNumber": "SAIC HO3 11 16"
+        },
+        {
+          "name": "Limited Water Damage Coverage",
+          "formNumber": "SAIC WBU 11 14"
+        },
+        {
+          "name": "Water Backup and Sump Overflow Coverage",
+          "formNumber": "SAIC WBU 05 17"
+        }
+      ]
+    },
+    "elements": [
+      {
+        "category": "property",
+        "type": "Dwelling",
+        "data": {
+          "displayName": "Coverage A - Dwelling",
+          "limit": "160000",
+          "premium": "859.00"
+        }
+      },
+      {
+        "category": "property",
+        "type": "OtherStructures",
+        "data": {
+          "displayName": "Coverage B - Other Structures",
+          "limit": "3200",
+          "premium": "Included"
+        }
+      },
+      {
+        "category": "property",
+        "type": "PersonalProperty",
+        "data": {
+          "displayName": "Coverage C - Personal Property",
+          "limit": "104250",
+          "premium": "Included"
+        }
+      },
+      {
+        "category": "property",
+        "type": "LossOfUse",
+        "data": {
+          "displayName": "Coverage D - Loss of Use",
+          "limit": "20850",
+          "premium": "Included"
+        }
+      },
+      {
+        "category": "property",
+        "type": "OrdinanceOrLaw",
+        "data": {
+          "displayName": "Ordinance or Law: 25% of Coverage A",
+          "limit": "40000",
+          "premium": "-57.00"
+        }
+      },
+      {
+        "category": "liability",
+        "type": "PersonalLiability",
+        "data": {
+          "displayName": "Coverage E - Personal Liability",
+          "limit": "100000",
+          "premium": "Included"
+        }
+      },
+      {
+        "category": "liability",
+        "type": "MedicalPayments",
+        "data": {
+          "displayName": "Coverage F - Medical Payments",
+          "limit": "1000",
+          "premium": "Included"
+        }
+      },
+      {
+        "category": "optional",
+        "type": "WaterBackup",
+        "data": {
+          "displayName": "Water Backup and Sump Overflow",
+          "limit": "5000",
+          "premium": "25.00"
+        }
+      }
+    ]
+  }
+}

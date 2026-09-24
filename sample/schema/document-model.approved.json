@@ -1,0 +1,915 @@
+{
+  "document_type": "homeowners_policy_declarations",
+  "title": "Homeowners Policy Declarations",
+  "pages": 1,
+  "nodes": [
+    {
+      "id": "carrier_name",
+      "kind": "configured_value",
+      "label": "Carrier Name",
+      "text": null,
+      "semantic_key": "carrier_name",
+      "value_type": "string",
+      "item_schema": [],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          158.14,
+          51.55,
+          457.79,
+          75.17
+        ],
+        "text_excerpt": "SAFE ALL INSURANCE COMPANY"
+      },
+      "format_hint": {},
+      "confidence": 0.9,
+      "notes": []
+    },
+    {
+      "id": "carrier_address",
+      "kind": "configured_value",
+      "label": "Carrier Address",
+      "text": null,
+      "semantic_key": "carrier_address",
+      "value_type": "address",
+      "item_schema": [],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          103.41,
+          98.69,
+          249.99,
+          152.13
+        ],
+        "text_excerpt": "SAFE ALL INS CO P.O. Box 1075 Thiston, FL 12345-6789 (123) 456-7891"
+      },
+      "format_hint": {},
+      "confidence": 0.9,
+      "notes": []
+    },
+    {
+      "id": "agent_name",
+      "kind": "dynamic_field",
+      "label": "Agent Name",
+      "text": null,
+      "semantic_key": "agent_name",
+      "value_type": "string",
+      "item_schema": [],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          311.49,
+          98.69,
+          453.02,
+          151.71
+        ],
+        "text_excerpt": "AGENT: TONY PRIZE, #194722 2047 Octavia Way Tiptree, FL 10112-1312 (123) 456-7891"
+      },
+      "format_hint": {},
+      "confidence": 0.9,
+      "notes": [
+        "Agent name is parsed from a compound block."
+      ]
+    },
+    {
+      "id": "agent_license_number",
+      "kind": "dynamic_field",
+      "label": "Agent License Number",
+      "text": null,
+      "semantic_key": "agent_license_number",
+      "value_type": "string",
+      "item_schema": [],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          311.49,
+          98.69,
+          453.02,
+          151.71
+        ],
+        "text_excerpt": "AGENT: TONY PRIZE, #194722 2047 Octavia Way Tiptree, FL 10112-1312 (123) 456-7891"
+      },
+      "format_hint": {},
+      "confidence": 0.9,
+      "notes": [
+        "Agent license number is parsed from a compound block."
+      ]
+    },
+    {
+      "id": "agent_address",
+      "kind": "dynamic_field",
+      "label": "Agent Address",
+      "text": null,
+      "semantic_key": "agent_address",
+      "value_type": "address",
+      "item_schema": [],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          311.49,
+          98.69,
+          453.02,
+          151.71
+        ],
+        "text_excerpt": "2047 Octavia Way Tiptree, FL 10112-1312"
+      },
+      "format_hint": {},
+      "confidence": 0.9,
+      "notes": []
+    },
+    {
+      "id": "agent_phone",
+      "kind": "dynamic_field",
+      "label": "Agent Phone",
+      "text": null,
+      "semantic_key": "agent_phone",
+      "value_type": "phone",
+      "item_schema": [],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          311.49,
+          98.69,
+          453.02,
+          151.71
+        ],
+        "text_excerpt": "(123) 456-7891"
+      },
+      "format_hint": {},
+      "confidence": 0.9,
+      "notes": []
+    },
+    {
+      "id": "insureds",
+      "kind": "repeating_group",
+      "label": "Named Insureds",
+      "text": null,
+      "semantic_key": "insureds",
+      "value_type": null,
+      "item_schema": [
+        {
+          "name": "name",
+          "value_type": "string"
+        }
+      ],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          103.41,
+          164.64,
+          285.99,
+          217.66
+        ],
+        "text_excerpt": "INSURED NAME AND ADDRESS: Estelle Clarion & James Delaney 596 Crossover Way Clay, FL 17189-2021"
+      },
+      "format_hint": {
+        "layout": "inline",
+        "separator": " & "
+      },
+      "confidence": 0.8,
+      "notes": [
+        "Multiple insureds inferred from sample; may vary."
+      ]
+    },
+    {
+      "id": "insured_mailing_address",
+      "kind": "dynamic_field",
+      "label": "Insured Mailing Address",
+      "text": null,
+      "semantic_key": "insured_mailing_address",
+      "value_type": "address",
+      "item_schema": [],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          103.41,
+          164.64,
+          285.99,
+          217.66
+        ],
+        "text_excerpt": "596 Crossover Way Clay, FL 17189-2021"
+      },
+      "format_hint": {},
+      "confidence": 0.9,
+      "notes": []
+    },
+    {
+      "id": "mortgagees",
+      "kind": "repeating_group",
+      "label": "Mortgagees",
+      "text": null,
+      "semantic_key": "mortgagees",
+      "value_type": null,
+      "item_schema": [
+        {
+          "name": "name",
+          "value_type": "string"
+        },
+        {
+          "name": "address",
+          "value_type": "address"
+        }
+      ],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          311.49,
+          164.64,
+          443.8,
+          217.66
+        ],
+        "text_excerpt": "MORTGAGE INFORMATION: Apollo Savings Mortgage Co P.O. Box 120140, Dept. 12 Leto, TX, 22231"
+      },
+      "format_hint": {},
+      "confidence": 0.8,
+      "notes": [
+        "Multiple mortgagees is an inference needing review."
+      ]
+    },
+    {
+      "id": "policy_number",
+      "kind": "dynamic_field",
+      "label": "Policy Number",
+      "text": null,
+      "semantic_key": "policy_number",
+      "value_type": "string",
+      "item_schema": [],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          62.4,
+          227.23,
+          532.08,
+          243.06
+        ],
+        "text_excerpt": "POLICY NO. FHO295000 POLICY FORM: HO-3\tPOLICY EFFECTIVE DATE: 3/28/20 to 3/28/2021"
+      },
+      "format_hint": {},
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "id": "policy_form",
+      "kind": "dynamic_field",
+      "label": "Policy Form",
+      "text": null,
+      "semantic_key": "policy_form",
+      "value_type": "string",
+      "item_schema": [],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          62.4,
+          227.23,
+          532.08,
+          243.06
+        ],
+        "text_excerpt": "POLICY FORM: HO-3"
+      },
+      "format_hint": {},
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "id": "effective_date",
+      "kind": "dynamic_field",
+      "label": "Policy Effective Date",
+      "text": null,
+      "semantic_key": "effective_date",
+      "value_type": "date",
+      "item_schema": [],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          62.4,
+          227.23,
+          532.08,
+          243.06
+        ],
+        "text_excerpt": "POLICY EFFECTIVE DATE: 3/28/20 to 3/28/2021"
+      },
+      "format_hint": {},
+      "confidence": 0.9,
+      "notes": [
+        "Decomposed from combined policy period string."
+      ]
+    },
+    {
+      "id": "expiration_date",
+      "kind": "dynamic_field",
+      "label": "Policy Expiration Date",
+      "text": null,
+      "semantic_key": "expiration_date",
+      "value_type": "date",
+      "item_schema": [],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          62.4,
+          227.23,
+          532.08,
+          243.06
+        ],
+        "text_excerpt": "POLICY EFFECTIVE DATE: 3/28/20 to 3/28/2021"
+      },
+      "format_hint": {},
+      "confidence": 0.9,
+      "notes": [
+        "Decomposed from combined policy period string."
+      ]
+    },
+    {
+      "id": "total_annual_policy_premium",
+      "kind": "dynamic_field",
+      "label": "Total Annual Policy Premium",
+      "text": null,
+      "semantic_key": "total_annual_policy_premium",
+      "value_type": "money",
+      "item_schema": [],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          73.66,
+          252.54,
+          494.64,
+          298.08
+        ],
+        "text_excerpt": "TOTAL ANNUAL POLICY PREMIUM: $854.00"
+      },
+      "format_hint": {},
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "id": "hurricane_portion_of_premium",
+      "kind": "dynamic_field",
+      "label": "Hurricane Portion of Premium",
+      "text": null,
+      "semantic_key": "hurricane_portion_of_premium",
+      "value_type": "money",
+      "item_schema": [],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          73.66,
+          252.54,
+          494.64,
+          298.08
+        ],
+        "text_excerpt": "HURRICANE PORTION OF PREMIUM: $297.00"
+      },
+      "format_hint": {},
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "id": "non_hurricane_portion_of_premium",
+      "kind": "dynamic_field",
+      "label": "Non-Hurricane Portion of Premium",
+      "text": null,
+      "semantic_key": "non_hurricane_portion_of_premium",
+      "value_type": "money",
+      "item_schema": [],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          73.66,
+          252.54,
+          494.64,
+          298.08
+        ],
+        "text_excerpt": "NON-HURRICANE PORTION OF PREMIUM: $505.00"
+      },
+      "format_hint": {},
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "id": "coverage_provided_text",
+      "kind": "static_text",
+      "label": "Coverage Provided Text",
+      "text": "Coverage is provided where a premium or limit of liability is shown for the coverage.",
+      "semantic_key": null,
+      "value_type": null,
+      "item_schema": [],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          70.99,
+          280.84,
+          424.87,
+          323.69
+        ],
+        "text_excerpt": "Coverage is provided where a premium or limit of liability is shown for the coverage."
+      },
+      "format_hint": {},
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "id": "property_coverages",
+      "kind": "repeating_group",
+      "label": "Section I Property Coverages",
+      "text": null,
+      "semantic_key": "property_coverages",
+      "value_type": null,
+      "item_schema": [
+        {
+          "name": "display_name",
+          "value_type": "string"
+        },
+        {
+          "name": "limit",
+          "value_type": "money"
+        },
+        {
+          "name": "premium",
+          "value_type": "money_or_included"
+        }
+      ],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          105.26,
+          324.86,
+          503.07,
+          401.48
+        ],
+        "text_excerpt": "SECTION I – PROPERTY COVERAGES LIMIT OF LIABILITY PREMIUM Coverage A - Dwelling $160,000 $859.00 Coverage B - Other Structures $3,200 Included Coverage C - Personal Property $104,250 Included Coverage D - Loss of Use $20,850 Included Ordinance or Law: 25% of Coverage A $40,000 -57.00"
+      },
+      "format_hint": {},
+      "confidence": 0.8,
+      "notes": [
+        "Row count on this sample is not the schema."
+      ]
+    },
+    {
+      "id": "section_i_deductibles_text",
+      "kind": "static_text",
+      "label": "Section I Deductibles Text",
+      "text": "SECTION I- DEDUCTIBLES: In case of a property loss, we only cover that part of loss over the deductible(s) stated:",
+      "semantic_key": null,
+      "value_type": null,
+      "item_schema": [],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          105.03,
+          406.83,
+          416.41,
+          475.19
+        ],
+        "text_excerpt": "SECTION I- DEDUCTIBLES: In case of a property loss, we only cover that part of loss over the deductible(s) stated:"
+      },
+      "format_hint": {},
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "id": "all_other_perils_deductible",
+      "kind": "dynamic_field",
+      "label": "All Other Perils Deductible",
+      "text": null,
+      "semantic_key": "all_other_perils_deductible",
+      "value_type": "money",
+      "item_schema": [],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          105.03,
+          406.83,
+          416.41,
+          475.19
+        ],
+        "text_excerpt": "All Other Perils (other than Hurricane): $1,000"
+      },
+      "format_hint": {},
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "id": "hurricane_deductible",
+      "kind": "structured_group",
+      "label": "Hurricane Deductible",
+      "text": null,
+      "semantic_key": "hurricane_deductible",
+      "value_type": null,
+      "item_schema": [],
+      "children": [
+        {
+          "id": "hurricane_deductible_percentage",
+          "kind": "dynamic_field",
+          "label": "Hurricane Deductible Percentage",
+          "text": null,
+          "semantic_key": "hurricane_deductible_percentage",
+          "value_type": "percentage",
+          "item_schema": [],
+          "children": [],
+          "source": {
+            "page": 1,
+            "bbox": [
+              105.03,
+              406.83,
+              416.41,
+              475.19
+            ],
+            "text_excerpt": "HURRICANE: 2% OF Coverage A $3,200"
+          },
+          "format_hint": {},
+          "confidence": 1.0,
+          "notes": []
+        },
+        {
+          "id": "hurricane_deductible_basis",
+          "kind": "dynamic_field",
+          "label": "Hurricane Deductible Basis",
+          "text": null,
+          "semantic_key": "hurricane_deductible_basis",
+          "value_type": "string",
+          "item_schema": [],
+          "children": [],
+          "source": {
+            "page": 1,
+            "bbox": [
+              105.03,
+              406.83,
+              416.41,
+              475.19
+            ],
+            "text_excerpt": "HURRICANE: 2% OF Coverage A $3,200"
+          },
+          "format_hint": {},
+          "confidence": 1.0,
+          "notes": []
+        },
+        {
+          "id": "hurricane_deductible_amount",
+          "kind": "dynamic_field",
+          "label": "Hurricane Deductible Amount",
+          "text": null,
+          "semantic_key": "hurricane_deductible_amount",
+          "value_type": "money",
+          "item_schema": [],
+          "children": [],
+          "source": {
+            "page": 1,
+            "bbox": [
+              105.03,
+              406.83,
+              416.41,
+              475.19
+            ],
+            "text_excerpt": "HURRICANE: 2% OF Coverage A $3,200"
+          },
+          "format_hint": {},
+          "confidence": 1.0,
+          "notes": []
+        }
+      ],
+      "source": {
+        "page": 1,
+        "bbox": [
+          105.03,
+          406.83,
+          416.41,
+          475.19
+        ],
+        "text_excerpt": "HURRICANE: 2% OF Coverage A $3,200"
+      },
+      "format_hint": {},
+      "confidence": 0.9,
+      "notes": [
+        "Modeled as structured group with percentage, basis, and amount."
+      ]
+    },
+    {
+      "id": "sinkhole_deductible",
+      "kind": "dynamic_field",
+      "label": "Sinkhole Deductible",
+      "text": null,
+      "semantic_key": "sinkhole_deductible",
+      "value_type": "money_or_status",
+      "item_schema": [],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          105.03,
+          406.83,
+          416.41,
+          475.19
+        ],
+        "text_excerpt": "Sinkhole: Not Included"
+      },
+      "format_hint": {},
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "id": "liability_coverages",
+      "kind": "repeating_group",
+      "label": "Section II Liability Coverages",
+      "text": null,
+      "semantic_key": "liability_coverages",
+      "value_type": null,
+      "item_schema": [
+        {
+          "name": "display_name",
+          "value_type": "string"
+        },
+        {
+          "name": "limit",
+          "value_type": "money"
+        },
+        {
+          "name": "premium",
+          "value_type": "money_or_included"
+        }
+      ],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          105.03,
+          478.05,
+          502.69,
+          519.38
+        ],
+        "text_excerpt": "SECTION II-  LIABILITY COVERAGES Coverage E - Personal Liability $100,000 Included Coverage F - Medical Payments $1,000 Included"
+      },
+      "format_hint": {},
+      "confidence": 0.8,
+      "notes": [
+        "Row count on this sample is not the schema."
+      ]
+    },
+    {
+      "id": "optional_coverages",
+      "kind": "repeating_group",
+      "label": "Optional Coverages",
+      "text": null,
+      "semantic_key": "optional_coverages",
+      "value_type": null,
+      "item_schema": [
+        {
+          "name": "display_name",
+          "value_type": "string"
+        },
+        {
+          "name": "limit",
+          "value_type": "money"
+        },
+        {
+          "name": "premium",
+          "value_type": "money"
+        }
+      ],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          105.26,
+          525.57,
+          503.05,
+          553.21
+        ],
+        "text_excerpt": "OPTIONAL COVERAGES: Water Backup and Sump Overflow $5,000 $25.00"
+      },
+      "format_hint": {},
+      "confidence": 0.8,
+      "notes": [
+        "Row count on this sample is not the schema."
+      ]
+    },
+    {
+      "id": "discounts_and_surcharges",
+      "kind": "repeating_group",
+      "label": "Discounts and Surcharges",
+      "text": null,
+      "semantic_key": "discounts_and_surcharges",
+      "value_type": null,
+      "item_schema": [
+        {
+          "name": "display_name",
+          "value_type": "string"
+        }
+      ],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          105.26,
+          555.94,
+          503.06,
+          608.07
+        ],
+        "text_excerpt": "DISCOUNTS AND SURCHARGES Proof of Updates - Roof Only Windstorm Loss Mitigation Total discounts and/or surcharges applied: -2,083.00"
+      },
+      "format_hint": {},
+      "confidence": 0.8,
+      "notes": [
+        "Row count on this sample is not the schema."
+      ]
+    },
+    {
+      "id": "total_discounts_and_surcharges",
+      "kind": "dynamic_field",
+      "label": "Total Discounts and/or Surcharges Applied",
+      "text": null,
+      "semantic_key": "total_discounts_and_surcharges",
+      "value_type": "money",
+      "item_schema": [],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          105.26,
+          555.94,
+          503.06,
+          608.07
+        ],
+        "text_excerpt": "Total discounts and/or surcharges applied: -2,083.00"
+      },
+      "format_hint": {},
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "id": "policy_fees",
+      "kind": "repeating_group",
+      "label": "Policy Fees",
+      "text": null,
+      "semantic_key": "policy_fees",
+      "value_type": null,
+      "item_schema": [
+        {
+          "name": "display_name",
+          "value_type": "string"
+        },
+        {
+          "name": "amount",
+          "value_type": "money"
+        }
+      ],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          105.03,
+          612.57,
+          502.71,
+          653.9
+        ],
+        "text_excerpt": "POLICY FEES: Managing General Agency (MGA) Fee $25.00 Emergency Management Preparedness and Assistance Surcharge $2.00"
+      },
+      "format_hint": {},
+      "confidence": 0.8,
+      "notes": [
+        "Row count on this sample is not the schema."
+      ]
+    },
+    {
+      "id": "forms_and_endorsements",
+      "kind": "repeating_group",
+      "label": "Forms and Endorsements",
+      "text": null,
+      "semantic_key": "forms_and_endorsements",
+      "value_type": null,
+      "item_schema": [
+        {
+          "name": "display_name",
+          "value_type": "string"
+        },
+        {
+          "name": "form_number",
+          "value_type": "string"
+        }
+      ],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          105.26,
+          658.54,
+          506.86,
+          710.67
+        ],
+        "text_excerpt": "FORMS AND ENDORSEMENTS Homeowners 3 Special Form (HO-3) SAIC HO3 11 16 Limited Water Damage Coverage SAIC WBU 11 14 Water Backup and Sump Overflow Coverage SAIC WBU 05 17"
+      },
+      "format_hint": {},
+      "confidence": 0.8,
+      "notes": [
+        "Row count on this sample is not the schema.",
+        "Human review: Keep the raw form identifier (e.g. SAIC HO3 11 16). The AI split into form_code and edition_date is plausible but unverified, so downstream logic must not depend on it yet."
+      ]
+    },
+    {
+      "id": "construction_type",
+      "kind": "dynamic_field",
+      "label": "Construction Type",
+      "text": null,
+      "semantic_key": "construction_type",
+      "value_type": "string",
+      "item_schema": [],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          70.09,
+          725.19,
+          542.47,
+          741.01
+        ],
+        "text_excerpt": "Construction Type: Masonry"
+      },
+      "format_hint": {},
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "id": "year_built",
+      "kind": "dynamic_field",
+      "label": "Year Built",
+      "text": null,
+      "semantic_key": "year_built",
+      "value_type": "year",
+      "item_schema": [],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          70.09,
+          725.19,
+          542.47,
+          741.01
+        ],
+        "text_excerpt": "Year Built: 1971"
+      },
+      "format_hint": {},
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "id": "dwelling_type",
+      "kind": "dynamic_field",
+      "label": "Dwelling Type",
+      "text": null,
+      "semantic_key": "dwelling_type",
+      "value_type": "string",
+      "item_schema": [],
+      "children": [],
+      "source": {
+        "page": 1,
+        "bbox": [
+          70.09,
+          725.19,
+          542.47,
+          741.01
+        ],
+        "text_excerpt": "Dwelling Type: Single Family"
+      },
+      "format_hint": {},
+      "confidence": 1.0,
+      "notes": []
+    }
+  ],
+  "assumptions": [
+    "Structure was inferred from one reference document. Repeating groups, configured values, and optional blocks need confirmation against more policies of this type.",
+    "Agent Name: Agent name is parsed from a compound block.",
+    "Agent License Number: Agent license number is parsed from a compound block.",
+    "Policy Effective Date: Decomposed from combined policy period string.",
+    "Policy Expiration Date: Decomposed from combined policy period string.",
+    "Section I Property Coverages: Row count on this sample is not the schema.",
+    "Hurricane Deductible: Modeled as structured group with percentage, basis, and amount.",
+    "Section II Liability Coverages: Row count on this sample is not the schema.",
+    "Optional Coverages: Row count on this sample is not the schema.",
+    "Discounts and Surcharges: Row count on this sample is not the schema.",
+    "Policy Fees: Row count on this sample is not the schema.",
+    "Forms and Endorsements: Row count on this sample is not the schema."
+  ],
+  "unresolved_questions": [
+    "Named Insureds: Multiple insureds inferred from sample; may vary.",
+    "Mortgagees: Multiple mortgagees is an inference needing review.",
+    "Forms and Endorsements: The AI proposed splitting the form identifier into form_code and edition_date. Deferred until the carrier's form numbering convention is confirmed."
+  ]
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <style>
+    body { font-family: Helvetica, Arial, sans-serif; font-size: 10px; color: #1a1a1a; margin: 0; }
+    h1 { font-size: 14px; margin: 0 0 2px; }
+    h2 { font-size: 12px; margin: 8px 0 2px; }
+    p { margin: 2px 0; }
+    .muted { color: #444; }
+    table { width: 100%; border-collapse: collapse; margin-top: 6px; }
+    th, td { text-align: left; padding: 3px 4px; border-bottom: 1px solid #ddd; }
+    th { font-size: 10px; }
+    .right { text-align: right; }
+  </style>
+</head>
+<body>
+  <p class="muted">SAMPLE DECLARATIONS PAGE</p>
+  <h1>HOMEOWNERS POLICY DECLARATIONS</h1>
+  <p>Policy Number: {{ data.policyNumber }}</p>
+  <p>Policy Form: {{ data.policyForm }}</p>
+  <p>Policy Effective Date: {{ data.effectivePeriodDisplay }}</p>
+  <p>Insured Name and Address: {{ data.insuredNamesDisplay }}</p>
+  <p>{{ data.insuredAddressDisplay }}</p>
+  <p>Mortgage: {{ data.mortgageeName }}</p>
+
+  <h2>SECTION I – PROPERTY COVERAGES</h2>
+  <p>Coverage is provided where a premium or limit of liability is shown for the coverage.</p>
+  <table>
+    <thead>
+      <tr><th>Coverage</th><th class="right">Limit of Liability</th><th class="right">Premium</th></tr>
+    </thead>
+    <tbody>
+      {% for coverage in data.propertyCoverages %}
+      <tr>
+        <td>{{ coverage.name }}</td>
+        <td class="right">{{ coverage.limitDisplay }}</td>
+        <td class="right">{{ coverage.premiumDisplay }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p>TOTAL ANNUAL POLICY PREMIUM: {{ data.totalAnnualPremiumDisplay }}</p>
+  <p>HURRICANE PORTION OF PREMIUM: {{ data.hurricanePremiumDisplay }}</p>
+  <p>NON-HURRICANE PORTION OF PREMIUM: {{ data.nonHurricanePremiumDisplay }}</p>
+
+  <h2>SECTION I- DEDUCTIBLES</h2>
+  <p>All Other Perils (other than Hurricane): {{ data.aopDeductibleDisplay }}</p>
+  <p>HURRICANE: 2% OF Coverage A {{ data.hurricaneDeductibleDisplay }}</p>
+  <p>Sinkhole: {{ data.sinkholeDeductibleDisplay }}</p>
+
+  <h2>SECTION II- LIABILITY COVERAGES</h2>
+  <table>
+    {% for coverage in data.liabilityCoverages %}
+    <tr>
+      <td>{{ coverage.name }}</td>
+      <td class="right">{{ coverage.limitDisplay }}</td>
+      <td class="right">{{ coverage.premiumDisplay }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <h2>OPTIONAL COVERAGES</h2>
+  <table>
+    {% for coverage in data.optionalCoverages %}
+    <tr>
+      <td>{{ coverage.name }}</td>
+      <td class="right">{{ coverage.limitDisplay }}</td>
+      <td class="right">{{ coverage.premiumDisplay }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <p>Total discounts and/or surcharges applied: {{ data.discountTotalDisplay }}</p>
+  <h2>POLICY FEES</h2>
+  <p>Managing General Agency (MGA) Fee {{ data.mgaFeeDisplay }}</p>
+  <p>Emergency Management Preparedness and Assistance Surcharge {{ data.empaSurchargeDisplay }}</p>
+
+  <h2>FORMS AND ENDORSEMENTS</h2>
+  <table>
+    {% for form in data.forms %}
+    <tr>
+      <td>{{ form.name }}</td>
+      <td>{{ form.formNumber }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <p>RATING INFORMATION Construction Type: {{ data.constructionType }} Year Built: {{ data.yearBuilt }} Dwelling Type: {{ data.dwellingType }}</p>
+</body>
+</html>

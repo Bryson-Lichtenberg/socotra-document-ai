@@ -1,0 +1,1541 @@
+{
+  "model": "gpt-4.1",
+  "started": "20260924T051811Z",
+  "cases": {
+    "golden_semantic_visual": {
+      "summary": {
+        "overall": "REVIEW",
+        "deterministic": {
+          "status": "PASS",
+          "flagged": []
+        },
+        "visual_metrics": {
+          "flagged": []
+        },
+        "visual_vision": {
+          "status": "PASS",
+          "flagged": [],
+          "info_only": 1
+        },
+        "semantic": {
+          "status": "PASS",
+          "flagged": [],
+          "dropped_ungrounded": 0,
+          "dropped_non_parity": 0
+        },
+        "rules": {
+          "flagged": []
+        },
+        "probable_layers": [],
+        "run_dir": "runs/live-acceptance-20260924T051811Z/golden/run"
+      },
+      "semantic_issues": [],
+      "visual_issues": [],
+      "readiness": "REVIEW_REQUIRED",
+      "expected": "No semantic or vision issue above info on the valid render.",
+      "verdict": "PASS",
+      "seconds": 4.6
+    },
+    "section_dropped_semantic": {
+      "summary": {
+        "overall": "FAIL",
+        "deterministic": {
+          "status": "FAIL",
+          "flagged": [
+            "golden_value_parity",
+            "static_text_parity",
+            "section_parity",
+            "golden_key_values"
+          ]
+        },
+        "visual_metrics": {
+          "flagged": []
+        },
+        "visual_vision": {
+          "status": "SKIPPED",
+          "flagged": [],
+          "info_only": 0
+        },
+        "semantic": {
+          "status": "FAIL",
+          "flagged": [
+            "missing (high) in SECTION I- DEDUCTIBLES"
+          ],
+          "dropped_ungrounded": 0,
+          "dropped_non_parity": 0
+        },
+        "rules": {
+          "flagged": [
+            "regulatory_traceability (FAIL)"
+          ]
+        },
+        "probable_layers": [
+          "data_mapping",
+          "template"
+        ],
+        "run_dir": "runs/live-acceptance-20260924T051811Z/section_dropped/run"
+      },
+      "semantic_issues": [
+        {
+          "severity": "high",
+          "source_section": "SECTION I- DEDUCTIBLES",
+          "candidate_section": "missing",
+          "issue_type": "missing",
+          "explanation": "The entire Section I- Deductibles is missing from the candidate. This section details the deductibles for All Other Perils, Hurricane, and Sinkhole, which are critical to the policyholder's understanding of their coverage.",
+          "source_evidence": "SECTION I- DEDUCTIBLES: In case of a property loss, we only cover that part of loss over the deductible(s) stated: All Other Perils (other than Hurricane): $1,000 HURRICANE: 2% OF Coverage A $3,200 Sinkhole: Not Included",
+          "candidate_evidence": null,
+          "grounded": true
+        }
+      ],
+      "visual_issues": [],
+      "readiness": "BLOCKED",
+      "expected": "Semantic 'missing' in the Section I deductibles, and nothing unrelated.",
+      "unrelated_issues": [],
+      "verdict": "PASS",
+      "seconds": 1.9
+    },
+    "row_association_swapped_semantic": {
+      "summary": {
+        "overall": "FAIL",
+        "deterministic": {
+          "status": "FAIL",
+          "flagged": [
+            "row_association"
+          ]
+        },
+        "visual_metrics": {
+          "flagged": []
+        },
+        "visual_vision": {
+          "status": "SKIPPED",
+          "flagged": [],
+          "info_only": 0
+        },
+        "semantic": {
+          "status": "FAIL",
+          "flagged": [
+            "value_mismatch (high) in SECTION I \u2013 PROPERTY COVERAGES"
+          ],
+          "dropped_ungrounded": 0,
+          "dropped_non_parity": 0
+        },
+        "rules": {
+          "flagged": []
+        },
+        "probable_layers": [
+          "data_mapping"
+        ],
+        "run_dir": "runs/live-acceptance-20260924T051811Z/row_association_swapped/run"
+      },
+      "semantic_issues": [
+        {
+          "severity": "high",
+          "source_section": "SECTION I \u2013 PROPERTY COVERAGES",
+          "candidate_section": "SECTION I PROPERTY COVERAGES",
+          "issue_type": "value_mismatch",
+          "explanation": "The premium for Coverage A - Dwelling and Coverage B - Other Structures are swapped between the reference and candidate. In the reference, Coverage A has a premium of $859.00 and Coverage B is 'Included'. In the candidate, Coverage A is 'Included' and Coverage B is $859.00.",
+          "source_evidence": "Coverage A - Dwelling $160,000 $859.00 Coverage B - Other Structures $3,200 Included",
+          "candidate_evidence": "Coverage A - Dwelling $160,000 Included Coverage B - Other Structures $3,200 $859.00",
+          "grounded": true
+        }
+      ],
+      "visual_issues": [],
+      "readiness": "BLOCKED",
+      "expected": "Semantic 'wrong_association' for the Coverage A/B premiums (all values are still on the page).",
+      "verdict": "DETECTED_MISLABELED",
+      "seconds": 1.2,
+      "rescored": "Re-scored from the saved semantic output (no new model call): the swap is described exactly but typed value_mismatch."
+    },
+    "css_squeeze_visual": {
+      "summary": {
+        "overall": "REVIEW",
+        "deterministic": {
+          "status": "PASS",
+          "flagged": []
+        },
+        "visual_metrics": {
+          "flagged": []
+        },
+        "visual_vision": {
+          "status": "PASS",
+          "flagged": [],
+          "info_only": 2
+        },
+        "semantic": {
+          "status": "SKIPPED",
+          "flagged": [],
+          "dropped_ungrounded": 0,
+          "dropped_non_parity": 0
+        },
+        "rules": {
+          "flagged": []
+        },
+        "probable_layers": [],
+        "run_dir": "runs/live-acceptance-20260924T051811Z/css_squeeze/run"
+      },
+      "semantic_issues": [],
+      "visual_issues": [],
+      "readiness": "REVIEW_REQUIRED",
+      "expected": "Deterministic and geometry checks pass; the vision review flags the bad wrapping.",
+      "deterministic_flagged": [],
+      "metric_flagged": [],
+      "verdict": "MISSED",
+      "seconds": 3.3
+    },
+    "ai_mapping_x3": {
+      "expected": "No invented catalog paths survive; most fields agree with the approved mapping; wrong proposals are flagged for review; blind approval of a proposal is caught by deterministic checks.",
+      "runs": [
+        {
+          "run": 1,
+          "summary": {
+            "requirements": 31,
+            "same_output_as_hand_mapping": 28,
+            "different_but_flagged_for_review": 2,
+            "different_and_not_flagged": [
+              "total_discounts_and_surcharges"
+            ],
+            "flagged_for_review": 4
+          },
+          "invented_paths_removed_by_guardrail": [],
+          "unresolved": [
+            "carrier_address",
+            "carrier_name"
+          ],
+          "flagged_for_review": [
+            "carrier_address",
+            "carrier_name",
+            "liability_coverages",
+            "property_coverages"
+          ],
+          "rubber_stamped": {
+            "status": "FAIL",
+            "readiness": "BLOCKED",
+            "deterministic_flagged": [
+              "contract_coverage",
+              "golden_value_parity",
+              "golden_value_format",
+              "golden_key_values"
+            ],
+            "layers": [
+              "data_mapping",
+              "snapshot_transformation"
+            ]
+          },
+          "rows": {
+            "carrier_name": {
+              "ai_status": "unresolved",
+              "ai_paths": [],
+              "same_output": false,
+              "needs_review": true,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "carrier_address": {
+              "ai_status": "unresolved",
+              "ai_paths": [],
+              "same_output": false,
+              "needs_review": true,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "agent_name": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.agent.name"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "agent_license_number": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.agent.licenseNumber"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "agent_address": {
+              "ai_status": "derived",
+              "ai_paths": [
+                "policy.data.agent.street",
+                "policy.data.agent.city",
+                "policy.data.agent.state",
+                "policy.data.agent.postalCode"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "agent_phone": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.agent.phone"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "insureds": {
+              "ai_status": "collection",
+              "ai_paths": [
+                "policy.data.namedInsureds"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "insured_mailing_address": {
+              "ai_status": "derived",
+              "ai_paths": [
+                "policy.data.insuredStreet",
+                "policy.data.insuredCity",
+                "policy.data.insuredState",
+                "policy.data.insuredPostalCode"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "mortgagees": {
+              "ai_status": "collection",
+              "ai_paths": [
+                "policy.data.mortgagees"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "policy_number": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.policyNumber"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "policy_form": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.policyForm"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "effective_date": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.effectiveDate"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "expiration_date": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.expirationDate"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "total_annual_policy_premium": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.totalAnnualPremium"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "hurricane_portion_of_premium": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.hurricanePremium"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "non_hurricane_portion_of_premium": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.nonHurricanePremium"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "property_coverages": {
+              "ai_status": "collection",
+              "ai_paths": [
+                "policy.elements"
+              ],
+              "same_output": true,
+              "needs_review": true,
+              "confidence": 0.95,
+              "guardrail_notes": []
+            },
+            "all_other_perils_deductible": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.aopDeductible"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "hurricane_deductible_percentage": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.hurricaneDeductiblePercent"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "hurricane_deductible_basis": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.hurricaneDeductibleBasis"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "hurricane_deductible_amount": {
+              "ai_status": "derived",
+              "ai_paths": [
+                "policy.data.coverageALimit",
+                "policy.data.hurricaneDeductiblePercent"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "sinkhole_deductible": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.sinkholeDeductible"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "liability_coverages": {
+              "ai_status": "collection",
+              "ai_paths": [
+                "policy.elements"
+              ],
+              "same_output": true,
+              "needs_review": true,
+              "confidence": 0.95,
+              "guardrail_notes": []
+            },
+            "optional_coverages": {
+              "ai_status": "collection",
+              "ai_paths": [
+                "policy.elements"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "discounts_and_surcharges": {
+              "ai_status": "collection",
+              "ai_paths": [
+                "policy.data.discounts"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "total_discounts_and_surcharges": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.discountTotal"
+              ],
+              "same_output": false,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "policy_fees": {
+              "ai_status": "collection",
+              "ai_paths": [
+                "policy.data.fees"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "forms_and_endorsements": {
+              "ai_status": "collection",
+              "ai_paths": [
+                "policy.data.forms"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "construction_type": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.constructionType"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "year_built": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.yearBuilt"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "dwelling_type": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.dwellingType"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            }
+          }
+        },
+        {
+          "run": 2,
+          "summary": {
+            "requirements": 31,
+            "same_output_as_hand_mapping": 28,
+            "different_but_flagged_for_review": 2,
+            "different_and_not_flagged": [
+              "total_discounts_and_surcharges"
+            ],
+            "flagged_for_review": 5
+          },
+          "invented_paths_removed_by_guardrail": [],
+          "unresolved": [],
+          "flagged_for_review": [
+            "carrier_address",
+            "carrier_name",
+            "liability_coverages",
+            "optional_coverages",
+            "property_coverages"
+          ],
+          "rubber_stamped": {
+            "status": "FAIL",
+            "readiness": "BLOCKED",
+            "deterministic_flagged": [
+              "golden_value_format",
+              "row_association",
+              "golden_key_values"
+            ],
+            "layers": [
+              "data_mapping",
+              "snapshot_transformation"
+            ]
+          },
+          "rows": {
+            "carrier_name": {
+              "ai_status": "constant",
+              "ai_paths": [],
+              "same_output": true,
+              "needs_review": true,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "carrier_address": {
+              "ai_status": "constant",
+              "ai_paths": [],
+              "same_output": false,
+              "needs_review": true,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "agent_name": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.agent.name"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "agent_license_number": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.agent.licenseNumber"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "agent_address": {
+              "ai_status": "derived",
+              "ai_paths": [
+                "policy.data.agent.street",
+                "policy.data.agent.city",
+                "policy.data.agent.state",
+                "policy.data.agent.postalCode"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "agent_phone": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.agent.phone"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "insureds": {
+              "ai_status": "collection",
+              "ai_paths": [
+                "policy.data.namedInsureds"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "insured_mailing_address": {
+              "ai_status": "derived",
+              "ai_paths": [
+                "policy.data.insuredStreet",
+                "policy.data.insuredCity",
+                "policy.data.insuredState",
+                "policy.data.insuredPostalCode"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "mortgagees": {
+              "ai_status": "collection",
+              "ai_paths": [
+                "policy.data.mortgagees"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "policy_number": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.policyNumber"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "policy_form": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.policyForm"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "effective_date": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.effectiveDate"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "expiration_date": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.expirationDate"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "total_annual_policy_premium": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.totalAnnualPremium"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "hurricane_portion_of_premium": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.hurricanePremium"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "non_hurricane_portion_of_premium": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.nonHurricanePremium"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "property_coverages": {
+              "ai_status": "collection",
+              "ai_paths": [
+                "policy.elements"
+              ],
+              "same_output": false,
+              "needs_review": true,
+              "confidence": 0.95,
+              "guardrail_notes": []
+            },
+            "all_other_perils_deductible": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.aopDeductible"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "hurricane_deductible_percentage": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.hurricaneDeductiblePercent"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "hurricane_deductible_basis": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.hurricaneDeductibleBasis"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "hurricane_deductible_amount": {
+              "ai_status": "derived",
+              "ai_paths": [
+                "policy.data.coverageALimit",
+                "policy.data.hurricaneDeductiblePercent"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "sinkhole_deductible": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.sinkholeDeductible"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "liability_coverages": {
+              "ai_status": "collection",
+              "ai_paths": [
+                "policy.elements"
+              ],
+              "same_output": true,
+              "needs_review": true,
+              "confidence": 0.95,
+              "guardrail_notes": []
+            },
+            "optional_coverages": {
+              "ai_status": "collection",
+              "ai_paths": [
+                "policy.elements"
+              ],
+              "same_output": true,
+              "needs_review": true,
+              "confidence": 0.95,
+              "guardrail_notes": []
+            },
+            "discounts_and_surcharges": {
+              "ai_status": "collection",
+              "ai_paths": [
+                "policy.data.discounts"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "total_discounts_and_surcharges": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.discountTotal"
+              ],
+              "same_output": false,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "policy_fees": {
+              "ai_status": "collection",
+              "ai_paths": [
+                "policy.data.fees"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "forms_and_endorsements": {
+              "ai_status": "collection",
+              "ai_paths": [
+                "policy.data.forms"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "construction_type": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.constructionType"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "year_built": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.yearBuilt"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "dwelling_type": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.dwellingType"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            }
+          }
+        },
+        {
+          "run": 3,
+          "summary": {
+            "requirements": 31,
+            "same_output_as_hand_mapping": 28,
+            "different_but_flagged_for_review": 2,
+            "different_and_not_flagged": [
+              "total_discounts_and_surcharges"
+            ],
+            "flagged_for_review": 5
+          },
+          "invented_paths_removed_by_guardrail": [],
+          "unresolved": [
+            "carrier_address"
+          ],
+          "flagged_for_review": [
+            "carrier_address",
+            "carrier_name",
+            "liability_coverages",
+            "optional_coverages",
+            "property_coverages"
+          ],
+          "rubber_stamped": {
+            "status": "FAIL",
+            "readiness": "BLOCKED",
+            "deterministic_flagged": [
+              "contract_coverage",
+              "golden_value_format",
+              "row_association",
+              "golden_key_values"
+            ],
+            "layers": [
+              "data_mapping",
+              "snapshot_transformation"
+            ]
+          },
+          "rows": {
+            "carrier_name": {
+              "ai_status": "constant",
+              "ai_paths": [],
+              "same_output": true,
+              "needs_review": true,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "carrier_address": {
+              "ai_status": "unresolved",
+              "ai_paths": [],
+              "same_output": false,
+              "needs_review": true,
+              "confidence": 0.0,
+              "guardrail_notes": []
+            },
+            "agent_name": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.agent.name"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "agent_license_number": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.agent.licenseNumber"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "agent_address": {
+              "ai_status": "derived",
+              "ai_paths": [
+                "policy.data.agent.street",
+                "policy.data.agent.city",
+                "policy.data.agent.state",
+                "policy.data.agent.postalCode"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "agent_phone": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.agent.phone"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "insureds": {
+              "ai_status": "collection",
+              "ai_paths": [
+                "policy.data.namedInsureds"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "insured_mailing_address": {
+              "ai_status": "derived",
+              "ai_paths": [
+                "policy.data.insuredStreet",
+                "policy.data.insuredCity",
+                "policy.data.insuredState",
+                "policy.data.insuredPostalCode"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "mortgagees": {
+              "ai_status": "collection",
+              "ai_paths": [
+                "policy.data.mortgagees"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "policy_number": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.policyNumber"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "policy_form": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.policyForm"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "effective_date": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.effectiveDate"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "expiration_date": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.expirationDate"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "total_annual_policy_premium": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.totalAnnualPremium"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "hurricane_portion_of_premium": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.hurricanePremium"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "non_hurricane_portion_of_premium": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.nonHurricanePremium"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "property_coverages": {
+              "ai_status": "collection",
+              "ai_paths": [
+                "policy.elements"
+              ],
+              "same_output": false,
+              "needs_review": true,
+              "confidence": 0.95,
+              "guardrail_notes": []
+            },
+            "all_other_perils_deductible": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.aopDeductible"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "hurricane_deductible_percentage": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.hurricaneDeductiblePercent"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "hurricane_deductible_basis": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.hurricaneDeductibleBasis"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "hurricane_deductible_amount": {
+              "ai_status": "derived",
+              "ai_paths": [
+                "policy.data.coverageALimit",
+                "policy.data.hurricaneDeductiblePercent"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "sinkhole_deductible": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.sinkholeDeductible"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "liability_coverages": {
+              "ai_status": "collection",
+              "ai_paths": [
+                "policy.elements"
+              ],
+              "same_output": true,
+              "needs_review": true,
+              "confidence": 0.95,
+              "guardrail_notes": []
+            },
+            "optional_coverages": {
+              "ai_status": "collection",
+              "ai_paths": [
+                "policy.elements"
+              ],
+              "same_output": true,
+              "needs_review": true,
+              "confidence": 0.95,
+              "guardrail_notes": []
+            },
+            "discounts_and_surcharges": {
+              "ai_status": "collection",
+              "ai_paths": [
+                "policy.data.discounts"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "total_discounts_and_surcharges": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.discountTotal"
+              ],
+              "same_output": false,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "policy_fees": {
+              "ai_status": "collection",
+              "ai_paths": [
+                "policy.data.fees"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "forms_and_endorsements": {
+              "ai_status": "collection",
+              "ai_paths": [
+                "policy.data.forms"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "construction_type": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.constructionType"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "year_built": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.yearBuilt"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            },
+            "dwelling_type": {
+              "ai_status": "direct",
+              "ai_paths": [
+                "policy.data.dwellingType"
+              ],
+              "same_output": true,
+              "needs_review": false,
+              "confidence": 1.0,
+              "guardrail_notes": []
+            }
+          }
+        }
+      ],
+      "stability": {
+        "requirements": 31,
+        "stable": 27,
+        "unstable": {
+          "carrier_address": [
+            {
+              "status": "unresolved",
+              "paths": [],
+              "same_output": false,
+              "needs_review": true
+            },
+            {
+              "status": "constant",
+              "paths": [],
+              "same_output": false,
+              "needs_review": true
+            },
+            {
+              "status": "unresolved",
+              "paths": [],
+              "same_output": false,
+              "needs_review": true
+            }
+          ],
+          "carrier_name": [
+            {
+              "status": "unresolved",
+              "paths": [],
+              "same_output": false,
+              "needs_review": true
+            },
+            {
+              "status": "constant",
+              "paths": [],
+              "same_output": true,
+              "needs_review": true
+            },
+            {
+              "status": "constant",
+              "paths": [],
+              "same_output": true,
+              "needs_review": true
+            }
+          ],
+          "optional_coverages": [
+            {
+              "status": "collection",
+              "paths": [
+                "policy.elements"
+              ],
+              "same_output": true,
+              "needs_review": false
+            },
+            {
+              "status": "collection",
+              "paths": [
+                "policy.elements"
+              ],
+              "same_output": true,
+              "needs_review": true
+            },
+            {
+              "status": "collection",
+              "paths": [
+                "policy.elements"
+              ],
+              "same_output": true,
+              "needs_review": true
+            }
+          ],
+          "property_coverages": [
+            {
+              "status": "collection",
+              "paths": [
+                "policy.elements"
+              ],
+              "same_output": true,
+              "needs_review": true
+            },
+            {
+              "status": "collection",
+              "paths": [
+                "policy.elements"
+              ],
+              "same_output": false,
+              "needs_review": true
+            },
+            {
+              "status": "collection",
+              "paths": [
+                "policy.elements"
+              ],
+              "same_output": false,
+              "needs_review": true
+            }
+          ]
+        },
+        "silently_wrong_in_every_run": [
+          "total_discounts_and_surcharges"
+        ],
+        "silently_wrong_in_any_run": [
+          "total_discounts_and_surcharges"
+        ]
+      },
+      "verdict": "REVIEW",
+      "seconds": 39.4
+    },
+    "carrier_rule_conflict_extraction": {
+      "expected": "The LLM extracts the contradictory 'do not generate for FL' rule; selection_expectations fails with a generate/remove conflict; extracted rules are unapproved.",
+      "extracted_rules": [
+        {
+          "id": "sr1",
+          "action": "generate",
+          "document_static_name": "homeownersDeclarations",
+          "conditions": [
+            {
+              "field": "policy.productName",
+              "operator": "eq",
+              "value": "Homeowners"
+            },
+            {
+              "field": "trigger",
+              "operator": "eq",
+              "value": "issued"
+            }
+          ],
+          "source_quote": "Homeowners Declarations must be generated when a Homeowners policy is issued.",
+          "approved": false,
+          "requires_human_review": true
+        },
+        {
+          "id": "sr2",
+          "action": "generate",
+          "document_static_name": "homeownersDeclarations",
+          "conditions": [
+            {
+              "field": "policy.jurisdiction",
+              "operator": "eq",
+              "value": "FL"
+            }
+          ],
+          "source_quote": "Use the Florida declarations resource for policies with jurisdiction FL.",
+          "approved": false,
+          "requires_human_review": true
+        },
+        {
+          "id": "sr3",
+          "action": "remove",
+          "document_static_name": "homeownersDeclarations",
+          "conditions": [
+            {
+              "field": "policy.jurisdiction",
+              "operator": "eq",
+              "value": "FL"
+            }
+          ],
+          "source_quote": "Do not generate Homeowners Declarations for policies with jurisdiction FL.",
+          "approved": false,
+          "requires_human_review": true
+        }
+      ],
+      "rule_checks": {
+        "selection_expectations": {
+          "status": "FAIL",
+          "detail": "Selection rules disagree with the golden cases.",
+          "failures": [
+            "Florida HO-3 issued, water backup selected (sample policy): homeownersDeclarations expected generate, rules give conflict (matched ['sr1', 'sr2', 'sr3'])",
+            "Florida HO-3 issued, water backup not selected: homeownersDeclarations expected generate, rules give conflict (matched ['sr1', 'sr2', 'sr3'])"
+          ]
+        },
+        "content_rule_expectations": {
+          "status": "PASS",
+          "detail": "Content rules agree with the golden cases.",
+          "failures": []
+        },
+        "content_rules_vs_render": {
+          "status": "PASS",
+          "detail": "The render agrees with the content rules for this policy.",
+          "failures": []
+        },
+        "rules_approved": {
+          "status": "REVIEW",
+          "detail": "Draft rules have not been approved by a reviewer.",
+          "failures": [
+            "sr1",
+            "sr2",
+            "sr3",
+            "cr1"
+          ]
+        },
+        "regulatory_traceability": {
+          "status": "PASS",
+          "detail": "2 applicable rule(s) carried by the candidate; evidence only, not a compliance finding.",
+          "failures": []
+        },
+        "regulatory_gaps_for_review": {
+          "status": "REVIEW",
+          "detail": "8 rule(s) need a human decision (not shown on either page, or applicability unknown).",
+          "failures": [
+            "FL_DECLARATIONS_AGENT_SIGNATURE (Florida Statute 624.425): No mechanical check available.",
+            "FL_DECLARATIONS_FLOOD_EXCLUSION_STATEMENT (Florida Statute 627.7011(4)(b)): Neither the reference page nor the candidate shows this; carrier/legal decision.",
+            "FL_DECLARATIONS_PHONE_NUMBER_NOTICE (Florida Statute 627.4131): No mechanical check available.",
+            "FL_DECLARATIONS_HURRICANE_DEDUCTIBLE_STATEMENT (Florida Statute 627.701(4)(a)): Neither the reference page nor the candidate shows this; carrier/legal decision.",
+            "FL_DECLARATIONS_HURRICANE_DEDUCTIBLE_INFLATION_GUARD_NOTICE (Florida Statute 627.701(4)(c)): Policy data can't decide applicability.",
+            "FL_DECLARATIONS_ROOF_DEDUCTIBLE_DISPLAY (Florida Statute 627.701(4)(e)2.): Policy data can't decide applicability."
+          ]
+        },
+        "regulatory_provenance": {
+          "status": "REVIEW",
+          "detail": "1 rule(s) cite a subsection their attached evidence does not show. 2 rule(s) cite sources that were not fetched and stay unverified.",
+          "failures": [
+            "FL_DECLARATIONS_ROOF_DEDUCTIBLE_DISPLAY: rule cites 627.701(4)(e)2., but the attached excerpt resolves only to 627.701(4)(e) and starts with '(e)1. A pers'"
+          ]
+        }
+      },
+      "readiness_layers": [
+        "document_selection_resource_configuration"
+      ],
+      "verdict": "PASS",
+      "seconds": 3.3
+    },
+    "form_analysis_florida": {
+      "expected": "A schema-valid draft that passes structure review and compiles; differences from the approved model are the human-review delta, not an error.",
+      "structure_review": {
+        "status": "PASS",
+        "failed": []
+      },
+      "draft": {
+        "title": "HOMEOWNERS POLICY DECLARATIONS",
+        "document_type": "homeowners_declarations",
+        "pages": 1,
+        "dynamic_fields": 29,
+        "unresolved_questions": 4
+      },
+      "approved": {
+        "dynamic_fields": 29
+      },
+      "comparison_vs_approved": {
+        "approved_keys": 32,
+        "draft_keys": 35,
+        "shared": 31,
+        "missing_from_candidate": [
+          "insureds"
+        ],
+        "extra_in_candidate": [
+          "carrier_phone",
+          "coverage_provided_text",
+          "named_insureds",
+          "section_i_deductibles_text"
+        ],
+        "kind_mismatches": [],
+        "expected_keys_missing": [
+          "deductibles",
+          "effective_period",
+          "forms",
+          "total_annual_premium"
+        ]
+      },
+      "concept_review": {
+        "status": "REVIEW",
+        "detail": "45 data-bearing node(s) or item field(s) lack a recognized concept or exemption."
+      },
+      "compile": {
+        "status": "PASS",
+        "rendering_keys": 32,
+        "collections": 8
+      },
+      "verdict": "PASS",
+      "seconds": 85.1,
+      "unapproved_draft_with_approved_mapping": {
+        "status": "FAIL",
+        "readiness": "BLOCKED",
+        "deterministic_flagged": {
+          "contract_coverage": [
+            "carrierPhone",
+            "namedInsureds"
+          ],
+          "golden_value_parity": [
+            "Estelle Clarion",
+            "James Delaney",
+            "SAIC HO3 11 16",
+            "SAIC WBU 11 14",
+            "SAIC WBU 05 17"
+          ],
+          "rendered_row_counts": [
+            "insureds: rendering data has 2, render shows 0"
+          ],
+          "row_association": [
+            "formsAndEndorsements rows show no form number"
+          ]
+        },
+        "layers": [
+          "data_mapping",
+          "template"
+        ],
+        "note": "Rendered offline after the live run (draft-render-run/)."
+      }
+    }
+  }
+}

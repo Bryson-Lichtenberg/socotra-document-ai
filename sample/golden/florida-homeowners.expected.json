@@ -1,0 +1,189 @@
+{
+  "reference": "sample/source/florida-homeowners.pdf",
+  "authored_by": "human, read from the reference PDF",
+  "notes": [
+    "The reference prints the effective date as 3/28/20 and the expiration as 3/28/2021. The golden expectation uses four-digit years for both.",
+    "Values compare case-insensitively after whitespace normalization.",
+    "key_values ties specific fields to the value the reference shows for them, so a value that also appears elsewhere on the page (e.g. $3,200 is both the Coverage B limit and the hurricane deductible) can't pass by coincidence."
+  ],
+  "accepted_differences": [
+    "The candidate prints the effective date as 3/28/2020. The reference prints 3/28/20. Same date.",
+    "The candidate shows effective and expiration dates as two labeled fields instead of one 'to' range.",
+    "The candidate labels fields explicitly, such as 'Agent Name:' and 'Policy Number:', where the reference relies on position.",
+    "The candidate formats addresses on one line with commas.",
+    "The candidate shows the hurricane deductible as '2% Coverage A $3,200' instead of 'HURRICANE: 2% OF Coverage A $3,200'.",
+    "The candidate places the rating information fields in a grid instead of one line.",
+    "The candidate omits the 'SAMPLE' banner and watermark. They are not part of the form.",
+    "Section headings may differ in dash or colon punctuation."
+  ],
+  "required_values": [
+    "SAFE ALL INSURANCE COMPANY",
+    "Tony Prize",
+    "194722",
+    "2047 Octavia Way",
+    "Estelle Clarion",
+    "James Delaney",
+    "596 Crossover Way",
+    "Apollo Savings Mortgage Co",
+    "P.O. Box 120140",
+    "FHO295000",
+    "HO-3",
+    "3/28/2020",
+    "3/28/2021",
+    "$854.00",
+    "$297.00",
+    "$505.00",
+    "Coverage A - Dwelling",
+    "$160,000",
+    "$859.00",
+    "Coverage B - Other Structures",
+    "$3,200",
+    "Coverage C - Personal Property",
+    "$104,250",
+    "Coverage D - Loss of Use",
+    "$20,850",
+    "Ordinance or Law: 25% of Coverage A",
+    "$40,000",
+    "-57.00",
+    "$1,000",
+    "2%",
+    "Coverage A",
+    "Not Included",
+    "Coverage E - Personal Liability",
+    "$100,000",
+    "Coverage F - Medical Payments",
+    "Water Backup and Sump Overflow",
+    "$5,000",
+    "$25.00",
+    "Proof of Updates - Roof Only",
+    "Windstorm Loss Mitigation",
+    "-2,083.00",
+    "Managing General Agency (MGA) Fee",
+    "Emergency Management Preparedness and Assistance Surcharge",
+    "$2.00",
+    "Homeowners 3 Special Form (HO-3)",
+    "SAIC HO3 11 16",
+    "Limited Water Damage Coverage",
+    "SAIC WBU 11 14",
+    "Water Backup and Sump Overflow Coverage",
+    "SAIC WBU 05 17",
+    "Masonry",
+    "1971",
+    "Single Family"
+  ],
+  "required_static_text": [
+    "Coverage is provided where a premium or limit of liability is shown for the coverage.",
+    "In case of a property loss, we only cover that part of loss over the deductible(s) stated"
+  ],
+  "required_headings": [
+    "HOMEOWNERS POLICY DECLARATIONS",
+    "SECTION I – PROPERTY COVERAGES",
+    "SECTION I- DEDUCTIBLES",
+    "SECTION II- LIABILITY COVERAGES",
+    "OPTIONAL COVERAGES",
+    "DISCOUNTS AND SURCHARGES",
+    "POLICY FEES",
+    "FORMS AND ENDORSEMENTS"
+  ],
+  "row_counts": {
+    "insureds": 2,
+    "mortgagees": 1,
+    "propertyCoverages": 5,
+    "liabilityCoverages": 2,
+    "optionalCoverages": 1,
+    "discountsAndSurcharges": 2,
+    "policyFees": 2,
+    "formsAndEndorsements": 3
+  },
+  "row_values": {
+    "propertyCoverages": [
+      [
+        "Coverage A - Dwelling",
+        "$160,000",
+        "$859.00"
+      ],
+      [
+        "Coverage B - Other Structures",
+        "$3,200",
+        "Included"
+      ],
+      [
+        "Coverage C - Personal Property",
+        "$104,250",
+        "Included"
+      ],
+      [
+        "Coverage D - Loss of Use",
+        "$20,850",
+        "Included"
+      ],
+      [
+        "Ordinance or Law: 25% of Coverage A",
+        "$40,000",
+        "-57.00"
+      ]
+    ],
+    "liabilityCoverages": [
+      [
+        "Coverage E - Personal Liability",
+        "$100,000",
+        "Included"
+      ],
+      [
+        "Coverage F - Medical Payments",
+        "$1,000",
+        "Included"
+      ]
+    ],
+    "optionalCoverages": [
+      [
+        "Water Backup and Sump Overflow",
+        "$5,000",
+        "$25.00"
+      ]
+    ],
+    "policyFees": [
+      [
+        "Managing General Agency (MGA) Fee",
+        "$25.00"
+      ],
+      [
+        "Emergency Management Preparedness and Assistance Surcharge",
+        "$2.00"
+      ]
+    ],
+    "formsAndEndorsements": [
+      [
+        "Homeowners 3 Special Form (HO-3)",
+        "SAIC HO3 11 16"
+      ],
+      [
+        "Limited Water Damage Coverage",
+        "SAIC WBU 11 14"
+      ],
+      [
+        "Water Backup and Sump Overflow Coverage",
+        "SAIC WBU 05 17"
+      ]
+    ]
+  },
+  "max_pages": 1,
+  "key_values": {
+    "carrier_name": "SAFE ALL INSURANCE COMPANY",
+    "agent_name": "Tony Prize",
+    "agent_license_number": "194722",
+    "policy_number": "FHO295000",
+    "policy_form": "HO-3",
+    "effective_date": "3/28/2020",
+    "expiration_date": "3/28/2021",
+    "total_annual_policy_premium": "$854.00",
+    "hurricane_portion_of_premium": "$297.00",
+    "non_hurricane_portion_of_premium": "$505.00",
+    "all_other_perils_deductible": "$1,000",
+    "hurricane_deductible_percentage": "2%",
+    "hurricane_deductible_basis": "Coverage A",
+    "hurricane_deductible_amount": "$3,200",
+    "sinkhole_deductible": "Not Included",
+    "total_discounts_and_surcharges": "-2,083.00"
+  }
+}

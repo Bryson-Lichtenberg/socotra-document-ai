@@ -1,0 +1,783 @@
+[
+  {
+    "semantic_key": "carrier_name",
+    "rendering_key": "carrierName",
+    "status": "constant",
+    "source_paths": [],
+    "transform": {
+      "op": "constant"
+    },
+    "constant_value": "SAFE ALL INSURANCE COMPANY",
+    "confidence": 1.0,
+    "rationale": "Carrier name is a configured value and not present in the catalog. Literal from reference context.",
+    "requires_human_review": true,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": "SAFE ALL INSURANCE COMPANY"
+  },
+  {
+    "semantic_key": "carrier_address",
+    "rendering_key": "carrierAddress",
+    "status": "unresolved",
+    "source_paths": [],
+    "transform": null,
+    "constant_value": null,
+    "confidence": 0.0,
+    "rationale": "No carrier address fields exist in the catalog. Agent address is not the carrier address.",
+    "requires_human_review": true,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": null
+  },
+  {
+    "semantic_key": "agent_name",
+    "rendering_key": "agentName",
+    "status": "direct",
+    "source_paths": [
+      "policy.data.agent.name"
+    ],
+    "transform": {
+      "op": "identity"
+    },
+    "constant_value": null,
+    "confidence": 1.0,
+    "rationale": "policy.data.agent.name is a direct match for agent name.",
+    "requires_human_review": false,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": "Tony Prize"
+  },
+  {
+    "semantic_key": "agent_license_number",
+    "rendering_key": "agentLicenseNumber",
+    "status": "direct",
+    "source_paths": [
+      "policy.data.agent.licenseNumber"
+    ],
+    "transform": {
+      "op": "identity"
+    },
+    "constant_value": null,
+    "confidence": 1.0,
+    "rationale": "policy.data.agent.licenseNumber is a direct match for agent license number.",
+    "requires_human_review": false,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": "194722"
+  },
+  {
+    "semantic_key": "agent_address",
+    "rendering_key": "agentAddress",
+    "status": "derived",
+    "source_paths": [
+      "policy.data.agent.street",
+      "policy.data.agent.city",
+      "policy.data.agent.state",
+      "policy.data.agent.postalCode"
+    ],
+    "transform": {
+      "op": "address"
+    },
+    "constant_value": null,
+    "confidence": 1.0,
+    "rationale": "All address components for agent are present and can be combined deterministically.",
+    "requires_human_review": false,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": "2047 Octavia Way, Tiptree, FL 10112-1312"
+  },
+  {
+    "semantic_key": "agent_phone",
+    "rendering_key": "agentPhone",
+    "status": "direct",
+    "source_paths": [
+      "policy.data.agent.phone"
+    ],
+    "transform": {
+      "op": "identity"
+    },
+    "constant_value": null,
+    "confidence": 1.0,
+    "rationale": "policy.data.agent.phone is a direct match for agent phone.",
+    "requires_human_review": false,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": "(123) 456-7891"
+  },
+  {
+    "semantic_key": "insureds",
+    "rendering_key": "insureds",
+    "status": "collection",
+    "source_paths": [
+      "policy.data.namedInsureds"
+    ],
+    "transform": {
+      "op": "map_collection",
+      "fields": {
+        "name": {
+          "op": "concat",
+          "paths": [
+            "firstName",
+            "lastName"
+          ],
+          "separator": " "
+        }
+      }
+    },
+    "constant_value": null,
+    "confidence": 1.0,
+    "rationale": "policy.data.namedInsureds is a collection of Person with firstName and lastName; concatenation yields full name.",
+    "requires_human_review": false,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": [
+      {
+        "name": "Estelle Clarion"
+      },
+      {
+        "name": "James Delaney"
+      }
+    ]
+  },
+  {
+    "semantic_key": "insured_mailing_address",
+    "rendering_key": "insuredMailingAddress",
+    "status": "derived",
+    "source_paths": [
+      "policy.data.insuredStreet",
+      "policy.data.insuredCity",
+      "policy.data.insuredState",
+      "policy.data.insuredPostalCode"
+    ],
+    "transform": {
+      "op": "address"
+    },
+    "constant_value": null,
+    "confidence": 1.0,
+    "rationale": "All address components for insured are present and can be combined deterministically.",
+    "requires_human_review": false,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": "596 Crossover Way, Clay, FL 17189-2021"
+  },
+  {
+    "semantic_key": "mortgagees",
+    "rendering_key": "mortgagees",
+    "status": "collection",
+    "source_paths": [
+      "policy.data.mortgagees"
+    ],
+    "transform": {
+      "op": "map_collection",
+      "fields": {
+        "name": {
+          "path": "name"
+        },
+        "address": {
+          "op": "address",
+          "paths": [
+            "street",
+            "city",
+            "state",
+            "postalCode"
+          ]
+        }
+      }
+    },
+    "constant_value": null,
+    "confidence": 1.0,
+    "rationale": "policy.data.mortgagees is a collection with all address components and name.",
+    "requires_human_review": false,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": [
+      {
+        "name": "Apollo Savings Mortgage Co",
+        "address": "P.O. Box 120140, Dept. 12, Leto, TX 22231"
+      }
+    ]
+  },
+  {
+    "semantic_key": "policy_number",
+    "rendering_key": "policyNumber",
+    "status": "direct",
+    "source_paths": [
+      "policy.data.policyNumber"
+    ],
+    "transform": {
+      "op": "identity"
+    },
+    "constant_value": null,
+    "confidence": 1.0,
+    "rationale": "policy.data.policyNumber is a direct match.",
+    "requires_human_review": false,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": "FHO295000"
+  },
+  {
+    "semantic_key": "policy_form",
+    "rendering_key": "policyForm",
+    "status": "direct",
+    "source_paths": [
+      "policy.data.policyForm"
+    ],
+    "transform": {
+      "op": "identity"
+    },
+    "constant_value": null,
+    "confidence": 1.0,
+    "rationale": "policy.data.policyForm is a direct match.",
+    "requires_human_review": false,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": "HO-3"
+  },
+  {
+    "semantic_key": "effective_date",
+    "rendering_key": "effectiveDateDisplay",
+    "status": "direct",
+    "source_paths": [
+      "policy.data.effectiveDate"
+    ],
+    "transform": {
+      "op": "date",
+      "format": "%-m/%-d/%Y"
+    },
+    "constant_value": null,
+    "confidence": 1.0,
+    "rationale": "policy.data.effectiveDate is a direct match; formatted as in reference.",
+    "requires_human_review": false,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": "3/28/2020"
+  },
+  {
+    "semantic_key": "expiration_date",
+    "rendering_key": "expirationDateDisplay",
+    "status": "direct",
+    "source_paths": [
+      "policy.data.expirationDate"
+    ],
+    "transform": {
+      "op": "date",
+      "format": "%-m/%-d/%Y"
+    },
+    "constant_value": null,
+    "confidence": 1.0,
+    "rationale": "policy.data.expirationDate is a direct match; formatted as in reference.",
+    "requires_human_review": false,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": "3/28/2021"
+  },
+  {
+    "semantic_key": "total_annual_policy_premium",
+    "rendering_key": "totalAnnualPolicyPremiumDisplay",
+    "status": "direct",
+    "source_paths": [
+      "policy.data.totalAnnualPremium"
+    ],
+    "transform": {
+      "op": "currency",
+      "decimals": 2,
+      "negative_symbol": false
+    },
+    "constant_value": null,
+    "confidence": 1.0,
+    "rationale": "policy.data.totalAnnualPremium is a direct match; reference shows cents.",
+    "requires_human_review": false,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": "$854.00"
+  },
+  {
+    "semantic_key": "hurricane_portion_of_premium",
+    "rendering_key": "hurricanePortionOfPremiumDisplay",
+    "status": "direct",
+    "source_paths": [
+      "policy.data.hurricanePremium"
+    ],
+    "transform": {
+      "op": "currency",
+      "decimals": 2,
+      "negative_symbol": false
+    },
+    "constant_value": null,
+    "confidence": 1.0,
+    "rationale": "policy.data.hurricanePremium is a direct match; reference shows cents.",
+    "requires_human_review": false,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": "$297.00"
+  },
+  {
+    "semantic_key": "non_hurricane_portion_of_premium",
+    "rendering_key": "nonHurricanePortionOfPremiumDisplay",
+    "status": "direct",
+    "source_paths": [
+      "policy.data.nonHurricanePremium"
+    ],
+    "transform": {
+      "op": "currency",
+      "decimals": 2,
+      "negative_symbol": false
+    },
+    "constant_value": null,
+    "confidence": 1.0,
+    "rationale": "policy.data.nonHurricanePremium is a direct match; reference shows cents.",
+    "requires_human_review": false,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": "$505.00"
+  },
+  {
+    "semantic_key": "property_coverages",
+    "rendering_key": "propertyCoverages",
+    "status": "collection",
+    "source_paths": [
+      "policy.elements"
+    ],
+    "transform": {
+      "op": "map_collection",
+      "filter": {
+        "category": "property"
+      },
+      "fields": {
+        "displayName": {
+          "path": "data.displayName"
+        },
+        "limitDisplay": {
+          "op": "currency",
+          "path": "data.limit",
+          "decimals": 0,
+          "negative_symbol": false
+        },
+        "premiumDisplay": {
+          "path": "data.premium"
+        }
+      }
+    },
+    "constant_value": null,
+    "confidence": 0.95,
+    "rationale": "policy.elements with category=property; limit as whole dollars per reference; premium may be 'Included' or money.",
+    "requires_human_review": true,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": [
+      {
+        "displayName": "Coverage A - Dwelling",
+        "limitDisplay": "$160,000",
+        "premiumDisplay": "859.00"
+      },
+      {
+        "displayName": "Coverage B - Other Structures",
+        "limitDisplay": "$3,200",
+        "premiumDisplay": "Included"
+      },
+      {
+        "displayName": "Coverage C - Personal Property",
+        "limitDisplay": "$104,250",
+        "premiumDisplay": "Included"
+      }
+    ]
+  },
+  {
+    "semantic_key": "all_other_perils_deductible",
+    "rendering_key": "allOtherPerilsDeductibleDisplay",
+    "status": "direct",
+    "source_paths": [
+      "policy.data.aopDeductible"
+    ],
+    "transform": {
+      "op": "currency",
+      "decimals": 0,
+      "negative_symbol": false
+    },
+    "constant_value": null,
+    "confidence": 1.0,
+    "rationale": "policy.data.aopDeductible is a direct match; reference shows whole dollars.",
+    "requires_human_review": false,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": "$1,000"
+  },
+  {
+    "semantic_key": "hurricane_deductible_percentage",
+    "rendering_key": "hurricaneDeductiblePercentageDisplay",
+    "status": "direct",
+    "source_paths": [
+      "policy.data.hurricaneDeductiblePercent"
+    ],
+    "transform": {
+      "op": "percent"
+    },
+    "constant_value": null,
+    "confidence": 1.0,
+    "rationale": "policy.data.hurricaneDeductiblePercent is a direct match; percent formatting.",
+    "requires_human_review": false,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": "2%"
+  },
+  {
+    "semantic_key": "hurricane_deductible_basis",
+    "rendering_key": "hurricaneDeductibleBasis",
+    "status": "direct",
+    "source_paths": [
+      "policy.data.hurricaneDeductibleBasis"
+    ],
+    "transform": {
+      "op": "identity"
+    },
+    "constant_value": null,
+    "confidence": 1.0,
+    "rationale": "policy.data.hurricaneDeductibleBasis is a direct match.",
+    "requires_human_review": false,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": "Coverage A"
+  },
+  {
+    "semantic_key": "hurricane_deductible_amount",
+    "rendering_key": "hurricaneDeductibleAmountDisplay",
+    "status": "derived",
+    "source_paths": [
+      "policy.data.coverageALimit",
+      "policy.data.hurricaneDeductiblePercent"
+    ],
+    "transform": {
+      "op": "percentage_of",
+      "basePath": "policy.data.coverageALimit",
+      "percentPath": "policy.data.hurricaneDeductiblePercent",
+      "decimals": 0
+    },
+    "constant_value": null,
+    "confidence": 0.95,
+    "rationale": "Reference context is '2% of Coverage A'; catalog has both fields. Whole dollars per reference.",
+    "requires_human_review": false,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": "$3,200"
+  },
+  {
+    "semantic_key": "sinkhole_deductible",
+    "rendering_key": "sinkholeDeductibleDisplay",
+    "status": "direct",
+    "source_paths": [
+      "policy.data.sinkholeDeductible"
+    ],
+    "transform": {
+      "op": "identity"
+    },
+    "constant_value": null,
+    "confidence": 1.0,
+    "rationale": "policy.data.sinkholeDeductible is a direct match; may be 'Not Included' or a dollar value.",
+    "requires_human_review": false,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": "Not Included"
+  },
+  {
+    "semantic_key": "liability_coverages",
+    "rendering_key": "liabilityCoverages",
+    "status": "collection",
+    "source_paths": [
+      "policy.elements"
+    ],
+    "transform": {
+      "op": "map_collection",
+      "filter": {
+        "category": "liability"
+      },
+      "fields": {
+        "displayName": {
+          "path": "data.displayName"
+        },
+        "limitDisplay": {
+          "op": "currency",
+          "path": "data.limit",
+          "decimals": 0,
+          "negative_symbol": false
+        },
+        "premiumDisplay": {
+          "path": "data.premium"
+        }
+      }
+    },
+    "constant_value": null,
+    "confidence": 0.95,
+    "rationale": "policy.elements with category=liability; limit as whole dollars per reference; premium may be 'Included' or money.",
+    "requires_human_review": true,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": [
+      {
+        "displayName": "Coverage E - Personal Liability",
+        "limitDisplay": "$100,000",
+        "premiumDisplay": "Included"
+      },
+      {
+        "displayName": "Coverage F - Medical Payments",
+        "limitDisplay": "$1,000",
+        "premiumDisplay": "Included"
+      }
+    ]
+  },
+  {
+    "semantic_key": "optional_coverages",
+    "rendering_key": "optionalCoverages",
+    "status": "collection",
+    "source_paths": [
+      "policy.elements"
+    ],
+    "transform": {
+      "op": "map_collection",
+      "filter": {
+        "category": "optional"
+      },
+      "fields": {
+        "displayName": {
+          "path": "data.displayName"
+        },
+        "limitDisplay": {
+          "op": "currency",
+          "path": "data.limit",
+          "decimals": 0,
+          "negative_symbol": false
+        },
+        "premiumDisplay": {
+          "op": "currency",
+          "path": "data.premium",
+          "decimals": 2,
+          "negative_symbol": false
+        }
+      }
+    },
+    "constant_value": null,
+    "confidence": 0.95,
+    "rationale": "policy.elements with category=optional; limit as whole dollars, premium as money with cents per reference.",
+    "requires_human_review": true,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": [
+      {
+        "displayName": "Water Backup and Sump Overflow",
+        "limitDisplay": "$5,000",
+        "premiumDisplay": "$25.00"
+      }
+    ]
+  },
+  {
+    "semantic_key": "discounts_and_surcharges",
+    "rendering_key": "discountsAndSurcharges",
+    "status": "collection",
+    "source_paths": [
+      "policy.data.discounts"
+    ],
+    "transform": {
+      "op": "map_collection",
+      "fields": {
+        "displayName": {
+          "path": "name"
+        }
+      }
+    },
+    "constant_value": null,
+    "confidence": 1.0,
+    "rationale": "policy.data.discounts is a collection of discount/surcharge names.",
+    "requires_human_review": false,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": [
+      {
+        "displayName": "Proof of Updates - Roof Only"
+      },
+      {
+        "displayName": "Windstorm Loss Mitigation"
+      }
+    ]
+  },
+  {
+    "semantic_key": "total_discounts_and_surcharges",
+    "rendering_key": "totalDiscountsAndSurchargesDisplay",
+    "status": "direct",
+    "source_paths": [
+      "policy.data.discountTotal"
+    ],
+    "transform": {
+      "op": "currency",
+      "decimals": 2,
+      "negative_symbol": true
+    },
+    "constant_value": null,
+    "confidence": 1.0,
+    "rationale": "policy.data.discountTotal is a direct match; reference shows negative symbol and cents.",
+    "requires_human_review": false,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": "-$2,083.00"
+  },
+  {
+    "semantic_key": "policy_fees",
+    "rendering_key": "policyFees",
+    "status": "collection",
+    "source_paths": [
+      "policy.data.fees"
+    ],
+    "transform": {
+      "op": "map_collection",
+      "fields": {
+        "displayName": {
+          "path": "name"
+        },
+        "amountDisplay": {
+          "op": "currency",
+          "path": "amount",
+          "decimals": 2,
+          "negative_symbol": false
+        }
+      }
+    },
+    "constant_value": null,
+    "confidence": 1.0,
+    "rationale": "policy.data.fees is a collection with name and amount; amount formatted as money with cents.",
+    "requires_human_review": false,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": [
+      {
+        "displayName": "Managing General Agency (MGA) Fee",
+        "amountDisplay": "$25.00"
+      },
+      {
+        "displayName": "Emergency Management Preparedness and Assistance Surcharge",
+        "amountDisplay": "$2.00"
+      }
+    ]
+  },
+  {
+    "semantic_key": "forms_and_endorsements",
+    "rendering_key": "formsAndEndorsements",
+    "status": "collection",
+    "source_paths": [
+      "policy.data.forms"
+    ],
+    "transform": {
+      "op": "map_collection",
+      "fields": {
+        "displayName": {
+          "path": "name"
+        },
+        "formNumber": {
+          "path": "formNumber"
+        }
+      }
+    },
+    "constant_value": null,
+    "confidence": 1.0,
+    "rationale": "policy.data.forms is a collection with name and formNumber.",
+    "requires_human_review": false,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": [
+      {
+        "displayName": "Homeowners 3 Special Form (HO-3)",
+        "formNumber": "SAIC HO3 11 16"
+      },
+      {
+        "displayName": "Limited Water Damage Coverage",
+        "formNumber": "SAIC WBU 11 14"
+      },
+      {
+        "displayName": "Water Backup and Sump Overflow Coverage",
+        "formNumber": "SAIC WBU 05 17"
+      }
+    ]
+  },
+  {
+    "semantic_key": "construction_type",
+    "rendering_key": "constructionType",
+    "status": "direct",
+    "source_paths": [
+      "policy.data.constructionType"
+    ],
+    "transform": {
+      "op": "identity"
+    },
+    "constant_value": null,
+    "confidence": 1.0,
+    "rationale": "policy.data.constructionType is a direct match.",
+    "requires_human_review": false,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": "Masonry"
+  },
+  {
+    "semantic_key": "year_built",
+    "rendering_key": "yearBuilt",
+    "status": "direct",
+    "source_paths": [
+      "policy.data.yearBuilt"
+    ],
+    "transform": {
+      "op": "identity"
+    },
+    "constant_value": null,
+    "confidence": 1.0,
+    "rationale": "policy.data.yearBuilt is a direct match.",
+    "requires_human_review": false,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": "1971"
+  },
+  {
+    "semantic_key": "dwelling_type",
+    "rendering_key": "dwellingType",
+    "status": "direct",
+    "source_paths": [
+      "policy.data.dwellingType"
+    ],
+    "transform": {
+      "op": "identity"
+    },
+    "constant_value": null,
+    "confidence": 1.0,
+    "rationale": "policy.data.dwellingType is a direct match.",
+    "requires_human_review": false,
+    "approved": false,
+    "proposed_by": "ai",
+    "guardrail_notes": [],
+    "preview": "Single Family"
+  }
+]

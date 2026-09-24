@@ -1,0 +1,22 @@
+# Secrets and local config
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+
+# Pipeline output (every run writes a timestamped folder here)
+runs/
+
+# Local research corpus and reference checkouts (not redistributed)
+references/downloads/
+references/socotra-skills/
+
+# Archives and OS files
+*.zip
+.DS_Store

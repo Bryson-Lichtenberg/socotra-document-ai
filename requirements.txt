@@ -1,0 +1,10 @@
+# Versions the test suite was last run with (Python 3.12).
+pydantic==2.13.5
+pymupdf==1.28.2
+python-liquid==2.3.2
+streamlit==1.64.0
+pillow==12.3.0
+rapidfuzz==3.14.6
+openai==3.19.2
+pytest==9.1.1
+# Optional second renderer: pip install playwright==1.63.0 && playwright install chromium

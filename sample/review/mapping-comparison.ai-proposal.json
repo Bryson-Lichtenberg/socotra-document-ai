@@ -1,0 +1,707 @@
+{
+  "summary": {
+    "requirements": 31,
+    "same_output_as_hand_mapping": 28,
+    "different_but_flagged_for_review": 2,
+    "different_and_not_flagged": [
+      "total_discounts_and_surcharges"
+    ],
+    "flagged_for_review": 5
+  },
+  "rows": [
+    {
+      "semantic_key": "carrier_name",
+      "ai_status": "constant",
+      "reference_status": "constant",
+      "ai_paths": [],
+      "reference_paths": [],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": "SAFE ALL INSURANCE COMPANY",
+      "reference_output": "SAFE ALL INSURANCE COMPANY",
+      "confidence": 1.0,
+      "needs_review": true,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "carrier_address",
+      "ai_status": "unresolved",
+      "reference_status": "constant",
+      "ai_paths": [],
+      "reference_paths": [],
+      "same_paths": true,
+      "same_output": false,
+      "ai_output": null,
+      "reference_output": "SAFE ALL INS CO, P.O. Box 1075, Thiston, FL 12345-6789, (123) 456-7891",
+      "confidence": 0.0,
+      "needs_review": true,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "agent_name",
+      "ai_status": "direct",
+      "reference_status": "direct",
+      "ai_paths": [
+        "policy.data.agent.name"
+      ],
+      "reference_paths": [
+        "policy.data.agent.name"
+      ],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": "Tony Prize",
+      "reference_output": "Tony Prize",
+      "confidence": 1.0,
+      "needs_review": false,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "agent_license_number",
+      "ai_status": "direct",
+      "reference_status": "direct",
+      "ai_paths": [
+        "policy.data.agent.licenseNumber"
+      ],
+      "reference_paths": [
+        "policy.data.agent.licenseNumber"
+      ],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": "194722",
+      "reference_output": "194722",
+      "confidence": 1.0,
+      "needs_review": false,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "agent_address",
+      "ai_status": "derived",
+      "reference_status": "derived",
+      "ai_paths": [
+        "policy.data.agent.street",
+        "policy.data.agent.city",
+        "policy.data.agent.state",
+        "policy.data.agent.postalCode"
+      ],
+      "reference_paths": [
+        "policy.data.agent.street",
+        "policy.data.agent.city",
+        "policy.data.agent.state",
+        "policy.data.agent.postalCode"
+      ],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": "2047 Octavia Way, Tiptree, FL 10112-1312",
+      "reference_output": "2047 Octavia Way, Tiptree, FL 10112-1312",
+      "confidence": 1.0,
+      "needs_review": false,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "agent_phone",
+      "ai_status": "direct",
+      "reference_status": "direct",
+      "ai_paths": [
+        "policy.data.agent.phone"
+      ],
+      "reference_paths": [
+        "policy.data.agent.phone"
+      ],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": "(123) 456-7891",
+      "reference_output": "(123) 456-7891",
+      "confidence": 1.0,
+      "needs_review": false,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "insureds",
+      "ai_status": "collection",
+      "reference_status": "collection",
+      "ai_paths": [
+        "policy.data.namedInsureds"
+      ],
+      "reference_paths": [
+        "policy.data.namedInsureds"
+      ],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": [
+        {
+          "name": "Estelle Clarion"
+        },
+        {
+          "name": "James Delaney"
+        }
+      ],
+      "reference_output": [
+        {
+          "name": "Estelle Clarion"
+        },
+        {
+          "name": "James Delaney"
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "insured_mailing_address",
+      "ai_status": "derived",
+      "reference_status": "derived",
+      "ai_paths": [
+        "policy.data.insuredStreet",
+        "policy.data.insuredCity",
+        "policy.data.insuredState",
+        "policy.data.insuredPostalCode"
+      ],
+      "reference_paths": [
+        "policy.data.insuredStreet",
+        "policy.data.insuredCity",
+        "policy.data.insuredState",
+        "policy.data.insuredPostalCode"
+      ],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": "596 Crossover Way, Clay, FL 17189-2021",
+      "reference_output": "596 Crossover Way, Clay, FL 17189-2021",
+      "confidence": 1.0,
+      "needs_review": false,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "mortgagees",
+      "ai_status": "collection",
+      "reference_status": "collection",
+      "ai_paths": [
+        "policy.data.mortgagees"
+      ],
+      "reference_paths": [
+        "policy.data.mortgagees"
+      ],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": [
+        {
+          "name": "Apollo Savings Mortgage Co",
+          "address": "P.O. Box 120140, Dept. 12, Leto, TX 22231"
+        }
+      ],
+      "reference_output": [
+        {
+          "name": "Apollo Savings Mortgage Co",
+          "address": "P.O. Box 120140, Dept. 12, Leto, TX 22231"
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "policy_number",
+      "ai_status": "direct",
+      "reference_status": "direct",
+      "ai_paths": [
+        "policy.data.policyNumber"
+      ],
+      "reference_paths": [
+        "policy.data.policyNumber"
+      ],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": "FHO295000",
+      "reference_output": "FHO295000",
+      "confidence": 1.0,
+      "needs_review": false,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "policy_form",
+      "ai_status": "direct",
+      "reference_status": "direct",
+      "ai_paths": [
+        "policy.data.policyForm"
+      ],
+      "reference_paths": [
+        "policy.data.policyForm"
+      ],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": "HO-3",
+      "reference_output": "HO-3",
+      "confidence": 1.0,
+      "needs_review": false,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "effective_date",
+      "ai_status": "direct",
+      "reference_status": "derived",
+      "ai_paths": [
+        "policy.data.effectiveDate"
+      ],
+      "reference_paths": [
+        "policy.data.effectiveDate"
+      ],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": "3/28/2020",
+      "reference_output": "3/28/2020",
+      "confidence": 1.0,
+      "needs_review": false,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "expiration_date",
+      "ai_status": "direct",
+      "reference_status": "derived",
+      "ai_paths": [
+        "policy.data.expirationDate"
+      ],
+      "reference_paths": [
+        "policy.data.expirationDate"
+      ],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": "3/28/2021",
+      "reference_output": "3/28/2021",
+      "confidence": 1.0,
+      "needs_review": false,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "total_annual_policy_premium",
+      "ai_status": "direct",
+      "reference_status": "derived",
+      "ai_paths": [
+        "policy.data.totalAnnualPremium"
+      ],
+      "reference_paths": [
+        "policy.data.totalAnnualPremium"
+      ],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": "$854.00",
+      "reference_output": "$854.00",
+      "confidence": 1.0,
+      "needs_review": false,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "hurricane_portion_of_premium",
+      "ai_status": "direct",
+      "reference_status": "derived",
+      "ai_paths": [
+        "policy.data.hurricanePremium"
+      ],
+      "reference_paths": [
+        "policy.data.hurricanePremium"
+      ],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": "$297.00",
+      "reference_output": "$297.00",
+      "confidence": 1.0,
+      "needs_review": false,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "non_hurricane_portion_of_premium",
+      "ai_status": "direct",
+      "reference_status": "derived",
+      "ai_paths": [
+        "policy.data.nonHurricanePremium"
+      ],
+      "reference_paths": [
+        "policy.data.nonHurricanePremium"
+      ],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": "$505.00",
+      "reference_output": "$505.00",
+      "confidence": 1.0,
+      "needs_review": false,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "property_coverages",
+      "ai_status": "collection",
+      "reference_status": "collection",
+      "ai_paths": [
+        "policy.elements"
+      ],
+      "reference_paths": [
+        "policy.elements"
+      ],
+      "same_paths": true,
+      "same_output": false,
+      "ai_output": [
+        {
+          "displayName": "Coverage A - Dwelling",
+          "limitDisplay": "$160,000",
+          "premiumDisplay": "859.00"
+        },
+        {
+          "displayName": "Coverage B - Other Structures",
+          "limitDisplay": "$3,200",
+          "premiumDisplay": "Included"
+        }
+      ],
+      "reference_output": [
+        {
+          "displayName": "Coverage A - Dwelling",
+          "limitDisplay": "$160,000",
+          "premiumDisplay": "$859.00"
+        },
+        {
+          "displayName": "Coverage B - Other Structures",
+          "limitDisplay": "$3,200",
+          "premiumDisplay": "Included"
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": true,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "all_other_perils_deductible",
+      "ai_status": "direct",
+      "reference_status": "derived",
+      "ai_paths": [
+        "policy.data.aopDeductible"
+      ],
+      "reference_paths": [
+        "policy.data.aopDeductible"
+      ],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": "$1,000",
+      "reference_output": "$1,000",
+      "confidence": 1.0,
+      "needs_review": false,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "hurricane_deductible_percentage",
+      "ai_status": "direct",
+      "reference_status": "derived",
+      "ai_paths": [
+        "policy.data.hurricaneDeductiblePercent"
+      ],
+      "reference_paths": [
+        "policy.data.hurricaneDeductiblePercent"
+      ],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": "2%",
+      "reference_output": "2%",
+      "confidence": 1.0,
+      "needs_review": false,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "hurricane_deductible_basis",
+      "ai_status": "direct",
+      "reference_status": "direct",
+      "ai_paths": [
+        "policy.data.hurricaneDeductibleBasis"
+      ],
+      "reference_paths": [
+        "policy.data.hurricaneDeductibleBasis"
+      ],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": "Coverage A",
+      "reference_output": "Coverage A",
+      "confidence": 1.0,
+      "needs_review": false,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "hurricane_deductible_amount",
+      "ai_status": "derived",
+      "reference_status": "derived",
+      "ai_paths": [
+        "policy.data.coverageALimit",
+        "policy.data.hurricaneDeductiblePercent"
+      ],
+      "reference_paths": [
+        "policy.data.coverageALimit",
+        "policy.data.hurricaneDeductiblePercent"
+      ],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": "$3,200",
+      "reference_output": "$3,200",
+      "confidence": 0.95,
+      "needs_review": false,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "sinkhole_deductible",
+      "ai_status": "direct",
+      "reference_status": "direct",
+      "ai_paths": [
+        "policy.data.sinkholeDeductible"
+      ],
+      "reference_paths": [
+        "policy.data.sinkholeDeductible"
+      ],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": "Not Included",
+      "reference_output": "Not Included",
+      "confidence": 1.0,
+      "needs_review": false,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "liability_coverages",
+      "ai_status": "collection",
+      "reference_status": "collection",
+      "ai_paths": [
+        "policy.elements"
+      ],
+      "reference_paths": [
+        "policy.elements"
+      ],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": [
+        {
+          "displayName": "Coverage E - Personal Liability",
+          "limitDisplay": "$100,000",
+          "premiumDisplay": "Included"
+        },
+        {
+          "displayName": "Coverage F - Medical Payments",
+          "limitDisplay": "$1,000",
+          "premiumDisplay": "Included"
+        }
+      ],
+      "reference_output": [
+        {
+          "displayName": "Coverage E - Personal Liability",
+          "limitDisplay": "$100,000",
+          "premiumDisplay": "Included"
+        },
+        {
+          "displayName": "Coverage F - Medical Payments",
+          "limitDisplay": "$1,000",
+          "premiumDisplay": "Included"
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": true,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "optional_coverages",
+      "ai_status": "collection",
+      "reference_status": "collection",
+      "ai_paths": [
+        "policy.elements"
+      ],
+      "reference_paths": [
+        "policy.elements"
+      ],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": [
+        {
+          "displayName": "Water Backup and Sump Overflow",
+          "limitDisplay": "$5,000",
+          "premiumDisplay": "$25.00"
+        }
+      ],
+      "reference_output": [
+        {
+          "displayName": "Water Backup and Sump Overflow",
+          "limitDisplay": "$5,000",
+          "premiumDisplay": "$25.00"
+        }
+      ],
+      "confidence": 0.95,
+      "needs_review": true,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "discounts_and_surcharges",
+      "ai_status": "collection",
+      "reference_status": "collection",
+      "ai_paths": [
+        "policy.data.discounts"
+      ],
+      "reference_paths": [
+        "policy.data.discounts"
+      ],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": [
+        {
+          "displayName": "Proof of Updates - Roof Only"
+        },
+        {
+          "displayName": "Windstorm Loss Mitigation"
+        }
+      ],
+      "reference_output": [
+        {
+          "displayName": "Proof of Updates - Roof Only"
+        },
+        {
+          "displayName": "Windstorm Loss Mitigation"
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "total_discounts_and_surcharges",
+      "ai_status": "direct",
+      "reference_status": "derived",
+      "ai_paths": [
+        "policy.data.discountTotal"
+      ],
+      "reference_paths": [
+        "policy.data.discountTotal"
+      ],
+      "same_paths": true,
+      "same_output": false,
+      "ai_output": "-$2,083.00",
+      "reference_output": "-2,083.00",
+      "confidence": 1.0,
+      "needs_review": false,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "policy_fees",
+      "ai_status": "collection",
+      "reference_status": "collection",
+      "ai_paths": [
+        "policy.data.fees"
+      ],
+      "reference_paths": [
+        "policy.data.fees"
+      ],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": [
+        {
+          "displayName": "Managing General Agency (MGA) Fee",
+          "amountDisplay": "$25.00"
+        },
+        {
+          "displayName": "Emergency Management Preparedness and Assistance Surcharge",
+          "amountDisplay": "$2.00"
+        }
+      ],
+      "reference_output": [
+        {
+          "displayName": "Managing General Agency (MGA) Fee",
+          "amountDisplay": "$25.00"
+        },
+        {
+          "displayName": "Emergency Management Preparedness and Assistance Surcharge",
+          "amountDisplay": "$2.00"
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "forms_and_endorsements",
+      "ai_status": "collection",
+      "reference_status": "collection",
+      "ai_paths": [
+        "policy.data.forms"
+      ],
+      "reference_paths": [
+        "policy.data.forms"
+      ],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": [
+        {
+          "displayName": "Homeowners 3 Special Form (HO-3)",
+          "formNumber": "SAIC HO3 11 16"
+        },
+        {
+          "displayName": "Limited Water Damage Coverage",
+          "formNumber": "SAIC WBU 11 14"
+        }
+      ],
+      "reference_output": [
+        {
+          "displayName": "Homeowners 3 Special Form (HO-3)",
+          "formNumber": "SAIC HO3 11 16"
+        },
+        {
+          "displayName": "Limited Water Damage Coverage",
+          "formNumber": "SAIC WBU 11 14"
+        }
+      ],
+      "confidence": 1.0,
+      "needs_review": false,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "construction_type",
+      "ai_status": "direct",
+      "reference_status": "direct",
+      "ai_paths": [
+        "policy.data.constructionType"
+      ],
+      "reference_paths": [
+        "policy.data.constructionType"
+      ],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": "Masonry",
+      "reference_output": "Masonry",
+      "confidence": 1.0,
+      "needs_review": false,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "year_built",
+      "ai_status": "direct",
+      "reference_status": "direct",
+      "ai_paths": [
+        "policy.data.yearBuilt"
+      ],
+      "reference_paths": [
+        "policy.data.yearBuilt"
+      ],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": "1971",
+      "reference_output": "1971",
+      "confidence": 1.0,
+      "needs_review": false,
+      "guardrail_notes": []
+    },
+    {
+      "semantic_key": "dwelling_type",
+      "ai_status": "direct",
+      "reference_status": "direct",
+      "ai_paths": [
+        "policy.data.dwellingType"
+      ],
+      "reference_paths": [
+        "policy.data.dwellingType"
+      ],
+      "same_paths": true,
+      "same_output": true,
+      "ai_output": "Single Family",
+      "reference_output": "Single Family",
+      "confidence": 1.0,
+      "needs_review": false,
+      "guardrail_notes": []
+    }
+  ]
+}

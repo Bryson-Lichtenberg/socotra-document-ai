@@ -1,0 +1,83 @@
+{
+  "jurisdiction": "US",
+  "disclaimer": "Hand-modelled representation test for a non-Florida program manual. Not NFIP support, not legal advice and not a compliance certification.",
+  "caveat": "Two rules modelled by hand from the NFIP Flood Insurance Manual, October 2025. The manual is not otherwise ingested.",
+  "sources": [
+    {
+      "id": "fema-nfip-flood-insurance-manual-2025-10",
+      "source_type": "program_manual",
+      "rank": 1,
+      "title": "NFIP Flood Insurance Manual",
+      "jurisdiction": "US",
+      "path": "../references/corpus-triage/downloads/discovered/fema/fema_rsl_national-flood-insurance-manual_06032025.pdf",
+      "role": "Program rules for NFIP flood policies, including declarations page requirements (Appendix I).",
+      "notes": "The local filename carries 06032025; the cover reads October 2025.",
+      "edition": "October 2025"
+    }
+  ],
+  "rows_parsed": 0,
+  "rules": [
+    {
+      "id": "NFIP_LOAN_EXCEPTION_EFFECTIVE_TIME",
+      "source": "NFIP Flood Insurance Manual (October 2025), Section 2.C and Table 10",
+      "source_type": "program_manual",
+      "source_id": "fema-nfip-flood-insurance-manual-2025-10",
+      "source_row": "Section 2.C Loan Exception (No Waiting Period); Table 10",
+      "source_quote": "If a policy or endorsement is eligible for this exception, then the coverage becomes effective as of the time of the loan closing.",
+      "source_location": "fema_rsl_national-flood-insurance-manual_06032025.pdf pp.27-29 (printed 2 • 16 to 2 • 18)",
+      "authority": "legal_regulatory",
+      "rule_type": "underwriting_eligibility",
+      "applies_when": {},
+      "requirement": {
+        "document": "other",
+        "kind": "field_value",
+        "description": "Coverage starts at the time of loan closing when the purchase qualifies for the loan exception under Table 10 (application on or before closing, application and full amount due received within the stated window); otherwise the standard waiting period and 12:01 a.m. apply.",
+        "concept_refs": [{"concept_id": "policy_period", "qualifiers": {"facet": "effective_time"}}]
+      },
+      "statute_evidence": [
+        {"citation": "42 USC 4013(c)(2)(C); 44 CFR § 61.11(b)", "note": "Legal basis cited by the manual (Section 2.C, footnote 13). Not fetched."}
+      ],
+      "confidence": 0.9,
+      "requires_human_review": true,
+      "grounding_notes": [
+        "rule_type is the nearest legacy label (eligibility for the exception); rule_class records that this is a calculation of the effective date and time.",
+        "Obtaining the actual closing time when a loss occurs on the closing date is claims workflow and is not modelled."
+      ],
+      "approved": false,
+      "rule_class": "calculation_requirement",
+      "routes": [
+        {"sink": "data_snapshot", "target": "policy effective date and time, and how it was determined",
+         "validation_obligations": ["calculation_correctness", "provenance_traceability"],
+         "reviewer_note": "Determined by the policy system; documents only read the result."}
+      ]
+    },
+    {
+      "id": "NFIP_DECLARATIONS_LOAN_CLOSING_EFFECTIVE_TIME",
+      "source": "NFIP Flood Insurance Manual (October 2025), Appendix I Table 2 and Section 2.C",
+      "source_type": "program_manual",
+      "source_id": "fema-nfip-flood-insurance-manual-2025-10",
+      "source_row": "Appendix I, E. Requirements, Table 2: Declarations Page Requirements, row ID 2 (Policy Term)",
+      "source_quote": "For loan exception policies, indicate the Policy Effective Time as “at the time of loan closing.” For non-loan exception policies, indicate the Policy Effective Time as “12:01am.” For all policies indicate the Policy Expiration Time as “12:01am.”",
+      "source_location": "fema_rsl_national-flood-insurance-manual_06032025.pdf p.333 (printed I • 12); corroborated p.28 (printed 2 • 17): the declarations page should state the effective date and specify that the coverage is effective “at the time of loan closing” (versus 12:01 a.m.)",
+      "authority": "legal_regulatory",
+      "rule_type": "document_content",
+      "applies_when": {"effective_time_basis": "loan_closing"},
+      "requirement": {
+        "document": "declarations",
+        "kind": "field_value",
+        "description": "Policy Effective Time reads “at the time of loan closing” instead of “12:01am”. Policy Expiration Time stays “12:01am”.",
+        "concept_refs": [{"concept_id": "policy_period", "qualifiers": {"facet": "effective_time"}}]
+      },
+      "confidence": 0.9,
+      "requires_human_review": true,
+      "unresolved_terms": ["no document field for the policy effective time", "no policy field records whether the loan exception applies"],
+      "grounding_notes": ["The narrative says 'should'; the table says 'indicate' and marks the row 'Always shown'. Requirement strength is not modelled."],
+      "approved": false,
+      "rule_class": "content_requirement",
+      "routes": [
+        {"sink": "template", "target": "declarations", "validation_obligations": ["content_presence", "value_correctness", "provenance_traceability"]},
+        {"sink": "data_snapshot", "target": "effective-time basis produced by NFIP_LOAN_EXCEPTION_EFFECTIVE_TIME", "validation_obligations": ["value_correctness"]}
+      ]
+    }
+  ]
+}

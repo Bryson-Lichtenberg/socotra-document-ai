@@ -1,0 +1,104 @@
+{
+  "document_type": "homeowners_declarations",
+  "title": "Homeowners Policy Declarations",
+  "pages": 1,
+  "assumptions": [
+    "Manually curated from the Florida DFS sample declarations page for the Stage 1 contract.",
+    "Sample values on the form are dynamic fields, not static legal text."
+  ],
+  "unresolved_questions": [
+    "The form lists Proof of Updates and Windstorm Loss Mitigation but only prints a combined discount total.",
+    "Local Liquid root variable `data` still needs tenant verification."
+  ],
+  "nodes": [
+    {
+      "id": "title",
+      "kind": "static_text",
+      "label": "Title",
+      "text": "HOMEOWNERS POLICY DECLARATIONS",
+      "source": {"page": 1, "text_excerpt": "HOMEOWNERS POLICY DECLARATIONS"},
+      "confidence": 0.99
+    },
+    {
+      "id": "policy_number",
+      "kind": "dynamic_field",
+      "label": "Policy Number",
+      "semantic_key": "policy_number",
+      "text": "FHO295000",
+      "source": {"page": 1, "text_excerpt": "POLICY NO. FHO295000"},
+      "confidence": 0.99
+    },
+    {
+      "id": "policy_form",
+      "kind": "dynamic_field",
+      "label": "Policy Form",
+      "semantic_key": "policy_form",
+      "text": "HO-3",
+      "source": {"page": 1, "text_excerpt": "POLICY FORM: HO-3"},
+      "confidence": 0.99
+    },
+    {
+      "id": "effective_period",
+      "kind": "dynamic_field",
+      "label": "Policy Effective Date",
+      "semantic_key": "effective_period",
+      "text": "3/28/20 to 3/28/2021",
+      "source": {"page": 1, "text_excerpt": "POLICY EFFECTIVE DATE: 3/28/20 to 3/28/2021"},
+      "confidence": 0.95
+    },
+    {
+      "id": "named_insureds",
+      "kind": "dynamic_field",
+      "label": "Insured Name and Address",
+      "semantic_key": "named_insureds",
+      "text": "Estelle Clarion & James Delaney",
+      "source": {"page": 1, "text_excerpt": "Estelle Clarion & James Delaney"},
+      "confidence": 0.95
+    },
+    {
+      "id": "property_coverages",
+      "kind": "table",
+      "label": "Section I Property Coverages",
+      "semantic_key": "property_coverages",
+      "text": "SECTION I – PROPERTY COVERAGES",
+      "source": {"page": 1, "text_excerpt": "SECTION I – PROPERTY COVERAGES"},
+      "confidence": 0.93,
+      "children": []
+    },
+    {
+      "id": "premiums",
+      "kind": "section",
+      "label": "Premium summary",
+      "text": "TOTAL ANNUAL POLICY PREMIUM",
+      "source": {"page": 1, "text_excerpt": "TOTAL ANNUAL POLICY PREMIUM: $854.00"},
+      "confidence": 0.99,
+      "children": [
+        {"id": "total_annual_premium", "kind": "dynamic_field", "label": "Total Annual Policy Premium", "semantic_key": "total_annual_premium", "text": "$854.00", "source": {"page": 1, "text_excerpt": "$854.00"}, "confidence": 0.99},
+        {"id": "hurricane_premium", "kind": "dynamic_field", "label": "Hurricane Premium", "semantic_key": "hurricane_premium", "text": "$297.00", "source": {"page": 1, "text_excerpt": "$297.00"}, "confidence": 0.99},
+        {"id": "non_hurricane_premium", "kind": "dynamic_field", "label": "Non-Hurricane Premium", "semantic_key": "non_hurricane_premium", "text": "$505.00", "source": {"page": 1, "text_excerpt": "$505.00"}, "confidence": 0.99}
+      ]
+    },
+    {
+      "id": "deductibles",
+      "kind": "section",
+      "label": "Deductibles",
+      "text": "SECTION I- DEDUCTIBLES",
+      "source": {"page": 1, "text_excerpt": "SECTION I- DEDUCTIBLES"},
+      "confidence": 0.97,
+      "children": [
+        {"id": "aop_deductible", "kind": "dynamic_field", "label": "All Other Perils Deductible", "semantic_key": "aop_deductible", "text": "$1,000", "source": {"page": 1, "text_excerpt": "$1,000"}, "confidence": 0.95},
+        {"id": "hurricane_deductible", "kind": "dynamic_field", "label": "Hurricane Deductible", "semantic_key": "hurricane_deductible", "text": "$3,200", "source": {"page": 1, "text_excerpt": "HURRICANE: 2% OF Coverage A $3,200"}, "confidence": 0.86},
+        {"id": "sinkhole_deductible", "kind": "dynamic_field", "label": "Sinkhole", "semantic_key": "sinkhole_deductible", "text": "Not Included", "source": {"page": 1, "text_excerpt": "Sinkhole: Not Included"}, "confidence": 0.9}
+      ]
+    },
+    {
+      "id": "forms",
+      "kind": "repeating_group",
+      "label": "Forms and Endorsements",
+      "semantic_key": "forms",
+      "text": "FORMS AND ENDORSEMENTS",
+      "source": {"page": 1, "text_excerpt": "FORMS AND ENDORSEMENTS"},
+      "confidence": 0.94
+    }
+  ]
+}

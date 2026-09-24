@@ -1,0 +1,1030 @@
+[
+  {
+    "id": "myfloridacfo-com--docs-sf-consumer-services-libraries-consumerservices-documents-understanding-co",
+    "original_url": "https://www.myfloridacfo.com/docs-sf/consumer-services-libraries/consumerservices-documents/understanding-coverage/sample-declarations-page.pdf?sfvrsn=7d9437e7_2",
+    "final_url": "https://www.myfloridacfo.com/docs-sf/consumer-services-libraries/consumerservices-documents/understanding-coverage/sample-declarations-page.pdf?sfvrsn=7d9437e7_2",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "title": null,
+    "source_domain": "www.myfloridacfo.com",
+    "retrieved": "2026-09-24T03:46:57Z",
+    "file_size_bytes": 161555,
+    "classification": "downloadable_document",
+    "artifact_type": "sample_declarations",
+    "workstreams": [
+      "template_generation",
+      "validation"
+    ],
+    "usefulness": 5,
+    "authority": "illustrative",
+    "rationale": "Official one-page Florida sample declarations with populated coverages, deductibles, and premiums.",
+    "local_files": [
+      "downloads/declarations/sample-declarations-page.pdf"
+    ],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "dfs-ny-gov--system-files-documents-2026-04-Sample-Homeowners-Declarations-Page-pdf",
+    "original_url": "https://www.dfs.ny.gov/system/files/documents/2026/04/Sample-Homeowners-Declarations-Page.pdf",
+    "final_url": "https://www.dfs.ny.gov/system/files/documents/2026/04/Sample-Homeowners-Declarations-Page.pdf",
+    "http_status": 403,
+    "content_type": "text/html; charset=UTF-8",
+    "title": "Just a moment...",
+    "source_domain": "www.dfs.ny.gov",
+    "retrieved": "2026-09-24T03:46:57Z",
+    "file_size_bytes": 6020,
+    "classification": "blocked",
+    "artifact_type": null,
+    "workstreams": [],
+    "usefulness": null,
+    "authority": null,
+    "rationale": "Cloudflare challenge page (HTTP 403, title 'Just a moment...'), not the PDF.",
+    "local_files": [],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "disb-dc-gov--sites-default-files-dc-sites-disb-publication-attachments-Declaration-20Page-20",
+    "original_url": "https://disb.dc.gov/sites/default/files/dc/sites/disb/publication/attachments/Declaration%20Page%20Sample%20Homeowners%2012.pdf",
+    "final_url": "https://disb.dc.gov/sites/default/files/dc/sites/disb/publication/attachments/Declaration%20Page%20Sample%20Homeowners%2012.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "title": null,
+    "source_domain": "disb.dc.gov",
+    "retrieved": "2026-09-24T03:46:57Z",
+    "file_size_bytes": 83734,
+    "classification": "downloadable_document",
+    "artifact_type": "sample_declarations",
+    "workstreams": [
+      "template_generation",
+      "validation"
+    ],
+    "usefulness": 4,
+    "authority": "illustrative",
+    "rationale": "DC regulator one-page sample declarations with section I/II limits and a populated layout.",
+    "local_files": [
+      "downloads/declarations/Declaration-Page-Sample-Homeowners-12.pdf"
+    ],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "mutualofwausau-com--agent-resources",
+    "original_url": "https://mutualofwausau.com/agent-resources/",
+    "final_url": "https://mutualofwausau.com/agent-resources/",
+    "http_status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "title": "Agents - Mutual of Wausau",
+    "source_domain": "mutualofwausau.com",
+    "retrieved": "2026-09-24T03:46:57Z",
+    "file_size_bytes": 696088,
+    "classification": "login_required",
+    "artifact_type": null,
+    "workstreams": [],
+    "usefulness": null,
+    "authority": null,
+    "rationale": "Page is an agent-center login form (username and password). Not bypassed.",
+    "local_files": [],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "interactive-web-insurance-ca-gov--apex-f",
+    "original_url": "https://interactive.web.insurance.ca.gov/apex/f?p=143:16",
+    "final_url": "https://interactive.web.insurance.ca.gov/apex/f?p=143:16",
+    "http_status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "title": "Search",
+    "source_domain": "interactive.web.insurance.ca.gov",
+    "retrieved": "2026-09-24T03:46:57Z",
+    "file_size_bytes": 25833,
+    "classification": "interactive_tool",
+    "artifact_type": null,
+    "workstreams": [],
+    "usefulness": null,
+    "authority": null,
+    "rationale": "Oracle APEX homeowners comparison tool. The HTML has no policy-form or attachment downloads.",
+    "local_files": [],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "fema-gov--sites-default-files-documents-fema-nfip-flood-insurance-full-manual-102022-pdf",
+    "original_url": "https://www.fema.gov/sites/default/files/documents/fema_nfip-flood-insurance-full-manual_102022.pdf",
+    "final_url": "https://www.fema.gov/sites/default/files/documents/fema_nfip-flood-insurance-full-manual_102022.pdf",
+    "http_status": 404,
+    "content_type": "text/html",
+    "title": "FEMA.gov | Federal Emergency Management Agency - FEMA.gov is experiencing technical difficulties",
+    "source_domain": "www.fema.gov",
+    "retrieved": "2026-09-24T03:46:57Z",
+    "file_size_bytes": 660233,
+    "classification": "dead_link",
+    "artifact_type": null,
+    "workstreams": [],
+    "usefulness": null,
+    "authority": null,
+    "rationale": "FEMA 404 page: 'Page Not Found'. Current manuals were recorded separately, not substituted.",
+    "local_files": [],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "content-govdelivery-com--attachments-FLOIR-2022-08-23-file-attachments-2251444-Personal-20Residential-pd",
+    "original_url": "https://content.govdelivery.com/attachments/FLOIR/2022/08/23/file_attachments/2251444/Personal%20Residential.pdf",
+    "final_url": "https://content.govdelivery.com/attachments/FLOIR/2022/08/23/file_attachments/2251444/Personal%20Residential.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "title": null,
+    "source_domain": "content.govdelivery.com",
+    "retrieved": "2026-09-24T03:46:58Z",
+    "file_size_bytes": 377234,
+    "classification": "downloadable_document",
+    "artifact_type": "regulator_checklist",
+    "workstreams": [
+      "rule_abstraction",
+      "validation"
+    ],
+    "usefulness": 5,
+    "authority": "authoritative",
+    "rationale": "Florida OIR personal-residential form-filing checklist, revised July 2022, citing statutes per row.",
+    "local_files": [
+      "downloads/checklists/Personal-Residential.pdf"
+    ],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "leg-state-fl-us--Statutes-index-cfm",
+    "original_url": "https://leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0600-0699%2F0627%2FSections%2F0627.701.html",
+    "final_url": "https://leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0600-0699%2F0627%2FSections%2F0627.701.html",
+    "http_status": 200,
+    "content_type": "text/html;charset=UTF-8",
+    "title": "Statutes & Constitution :View Statutes : Online SunshineThe Florida StatutesF.S. 627.701",
+    "source_domain": "leg.state.fl.us",
+    "retrieved": "2026-09-24T03:46:58Z",
+    "file_size_bytes": 46800,
+    "classification": "static_web_document",
+    "artifact_type": "statute",
+    "workstreams": [
+      "rule_abstraction",
+      "validation"
+    ],
+    "usefulness": 5,
+    "authority": "authoritative",
+    "rationale": "Florida Statutes \u00a7627.701, including deductible display and hurricane-premium separation.",
+    "local_files": [
+      "downloads/statutes/leg-state-fl-us--Statutes-index-cfm.html",
+      "downloads/statutes/leg-state-fl-us--Statutes-index-cfm.md"
+    ],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "maine-gov--pfr-insurance-sites-maine-gov-pfr-insurance-files-inline-files-homeowners-pdf",
+    "original_url": "https://www.maine.gov/pfr/insurance/sites/maine.gov.pfr.insurance/files/inline-files/homeowners.pdf",
+    "final_url": "https://www.maine.gov/pfr/insurance/sites/maine.gov.pfr.insurance/files/inline-files/homeowners.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "title": null,
+    "source_domain": "www.maine.gov",
+    "retrieved": "2026-09-24T03:46:58Z",
+    "file_size_bytes": 172459,
+    "classification": "downloadable_document",
+    "artifact_type": "regulator_checklist",
+    "workstreams": [
+      "rule_abstraction",
+      "validation"
+    ],
+    "usefulness": 4,
+    "authority": "authoritative",
+    "rationale": "Maine Bureau of Insurance homeowners line checklist, updated 5/7/2025, with review standards.",
+    "local_files": [
+      "downloads/checklists/homeowners.pdf"
+    ],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "cfpnet-com--wp-content-uploads-2020-12-Dwelling-New-Business-Application-REV-01-2021-pdf",
+    "original_url": "https://www.cfpnet.com/wp-content/uploads/2020/12/Dwelling-New-Business-Application-REV-01-2021.pdf",
+    "final_url": "https://www.cfpnet.com/wp-content/uploads/2020/12/Dwelling-New-Business-Application-REV-01-2021.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "title": null,
+    "source_domain": "www.cfpnet.com",
+    "retrieved": "2026-09-24T03:46:58Z",
+    "file_size_bytes": 177666,
+    "classification": "downloadable_document",
+    "artifact_type": "application_checklist",
+    "workstreams": [
+      "rule_abstraction",
+      "data_mapping"
+    ],
+    "usefulness": 4,
+    "authority": "carrier-specific",
+    "rationale": "California FAIR Plan dwelling new-business application with eligibility and coverage instructions.",
+    "local_files": [
+      "downloads/applications/Dwelling-New-Business-Application-REV-01-2021.pdf"
+    ],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "fema-gov--flood-insurance-work-with-nfip-manuals-current",
+    "original_url": "https://www.fema.gov/flood-insurance/work-with-nfip/manuals/current",
+    "final_url": "https://www.fema.gov/flood-insurance/work-with-nfip/manuals/current",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "title": "Current Flood Insurance Manuals | FEMA.govLock",
+    "source_domain": "www.fema.gov",
+    "retrieved": "2026-09-24T03:46:58Z",
+    "file_size_bytes": 139348,
+    "classification": "document_index",
+    "artifact_type": "manual_index",
+    "workstreams": [
+      "rule_abstraction",
+      "validation"
+    ],
+    "usefulness": 4,
+    "authority": "authoritative",
+    "rationale": "FEMA page listing current NFIP Flood Insurance Manuals, with direct full-manual PDF links.",
+    "local_files": [
+      "downloads/indexes/fema-gov--flood-insurance-work-with-nfip-manuals-current.html"
+    ],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "dfs-ny-gov--apps-and-licensing-property-insurers-rate-form-filings",
+    "original_url": "https://www.dfs.ny.gov/apps_and_licensing/property_insurers/rate_form_filings",
+    "final_url": "https://www.dfs.ny.gov/apps_and_licensing/property_insurers/rate_form_filings",
+    "http_status": 403,
+    "content_type": "text/html; charset=UTF-8",
+    "title": "Just a moment...",
+    "source_domain": "www.dfs.ny.gov",
+    "retrieved": "2026-09-24T03:46:58Z",
+    "file_size_bytes": 5930,
+    "classification": "blocked",
+    "artifact_type": null,
+    "workstreams": [],
+    "usefulness": null,
+    "authority": null,
+    "rationale": "Cloudflare challenge page (HTTP 403), not the filing-instructions page.",
+    "local_files": [],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "filingsdirect-com--docs-NYIA-2018-Spinnaker-20HO-20Initial-20Renters-20rate-20rule-20form-2012-201",
+    "original_url": "https://filingsdirect.com/docs/NYIA/2018/Spinnaker%20HO%20Initial%20Renters%20rate%20rule%20form%2012%2017%20WOOD-131141666.pdf",
+    "final_url": "https://filingsdirect.com/docs/NYIA/2018/Spinnaker%20HO%20Initial%20Renters%20rate%20rule%20form%2012%2017%20WOOD-131141666.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "title": null,
+    "source_domain": "filingsdirect.com",
+    "retrieved": "2026-09-24T03:46:58Z",
+    "file_size_bytes": 4690374,
+    "classification": "downloadable_document",
+    "artifact_type": "serff_filing",
+    "workstreams": [
+      "rule_abstraction",
+      "template_generation",
+      "validation"
+    ],
+    "usefulness": 4,
+    "authority": "carrier-specific",
+    "rationale": "Approved New York SERFF package for Spinnaker's renters program, including forms and rules.",
+    "local_files": [
+      "downloads/filings/Spinnaker-HO-Initial-Renters-rate-rule-form-12-17-WOOD-131141666.pdf"
+    ],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "courts-ca-gov--system-files-solicitation-request-document-builders-risk-policy-pdf",
+    "original_url": "https://courts.ca.gov/system/files/solicitation-request-document/builders-risk-policy.pdf",
+    "final_url": "https://courts.ca.gov/system/files/solicitation-request-document/builders-risk-policy.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "title": null,
+    "source_domain": "courts.ca.gov",
+    "retrieved": "2026-09-24T03:46:58Z",
+    "file_size_bytes": 1792866,
+    "classification": "downloadable_document",
+    "artifact_type": "issued_policy_package",
+    "workstreams": [
+      "template_generation"
+    ],
+    "usefulness": 3,
+    "authority": "carrier-specific",
+    "rationale": "Issued Illinois Union builders-risk policy posted by the California courts, a different product line.",
+    "local_files": [
+      "downloads/forms/builders-risk-policy.pdf"
+    ],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "cfpnet-com--wp-content-uploads-2020-02-Dwelling-20Application-20REV-2001-2020-pdf",
+    "original_url": "https://www.cfpnet.com/wp-content/uploads/2020/02/Dwelling%20Application%20REV%2001%2020.pdf",
+    "final_url": "https://www.cfpnet.com/wp-content/uploads/2020/02/Dwelling%20Application%20REV%2001%2020.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "title": null,
+    "source_domain": "www.cfpnet.com",
+    "retrieved": "2026-09-24T03:46:58Z",
+    "file_size_bytes": 75049,
+    "classification": "downloadable_document",
+    "artifact_type": "application",
+    "workstreams": [
+      "data_mapping"
+    ],
+    "usefulness": 5,
+    "authority": "carrier-specific",
+    "rationale": "California FAIR Plan dwelling application with applicant, property, construction, coverage, and deductible fields.",
+    "local_files": [
+      "downloads/applications/Dwelling-Application-REV-01-20.pdf"
+    ],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "fema-gov--sites-default-files-documents-fema-ff-206-fy-21-117-flood-insurance-application",
+    "original_url": "https://www.fema.gov/sites/default/files/documents/fema_ff-206-fy-21-117_flood-insurance-application_may-2021_exp-28-feb-2027.pdf",
+    "final_url": "https://www.fema.gov/sites/default/files/documents/fema_ff-206-fy-21-117_flood-insurance-application_may-2021_exp-28-feb-2027.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "title": null,
+    "source_domain": "www.fema.gov",
+    "retrieved": "2026-09-24T03:46:58Z",
+    "file_size_bytes": 209455,
+    "classification": "downloadable_document",
+    "artifact_type": "application",
+    "workstreams": [
+      "data_mapping"
+    ],
+    "usefulness": 4,
+    "authority": "authoritative",
+    "rationale": "Official NFIP flood insurance application (FF-206) with structured intake fields.",
+    "local_files": [
+      "downloads/applications/fema_ff-206-fy-21-117_flood-insurance-application_may-2021_exp-28-feb-2027.pdf"
+    ],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "github-com--socotra-public-tree-master-product-examples-homeowners-config",
+    "original_url": "https://github.com/socotra/public/tree/master/product_examples/homeowners/config",
+    "final_url": "https://github.com/socotra/public/tree/master/product_examples/homeowners/config",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "title": "public/product_examples/homeowners/config at master \u00b7 socotra/public \u00b7 GitHub",
+    "source_domain": "github.com",
+    "retrieved": "2026-09-24T03:46:58Z",
+    "file_size_bytes": 234100,
+    "classification": "document_index",
+    "artifact_type": "product_config_index",
+    "workstreams": [
+      "data_mapping",
+      "template_generation",
+      "rule_abstraction"
+    ],
+    "usefulness": 5,
+    "authority": "illustrative",
+    "rationale": "Public Socotra homeowners config tree. Policy JSON, schedule template, and underwriting liquid were saved from it.",
+    "local_files": [
+      "downloads/indexes/github-com--socotra-public-tree-master-product-examples-homeowners-config.html"
+    ],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "docs-socotra-com--configuration-data-extensions-overview",
+    "original_url": "https://docs.socotra.com/configuration/data-extensions/overview",
+    "final_url": "https://docs.socotra.com/configuration/data-extensions/overview",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "title": "Data Extensions",
+    "source_domain": "docs.socotra.com",
+    "retrieved": "2026-09-24T03:46:58Z",
+    "file_size_bytes": 278228,
+    "classification": "static_web_document",
+    "artifact_type": "product_documentation",
+    "workstreams": [
+      "data_mapping"
+    ],
+    "usefulness": 4,
+    "authority": "authoritative",
+    "rationale": "Socotra docs page for data-extension names, types, scope, and cardinality.",
+    "local_files": [
+      "downloads/docs/docs-socotra-com--configuration-data-extensions-overview.html",
+      "downloads/docs/docs-socotra-com--configuration-data-extensions-overview.md"
+    ],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "github-com--socotra-public-blob-master-gen-data-dictionary-py",
+    "original_url": "https://github.com/socotra/public/blob/master/gen_data_dictionary.py",
+    "final_url": "https://github.com/socotra/public/blob/master/gen_data_dictionary.py",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "title": "gen_data_dictionary.py",
+    "source_domain": "github.com",
+    "retrieved": "2026-09-24T03:46:59Z",
+    "file_size_bytes": 275201,
+    "classification": "downloadable_document",
+    "artifact_type": "data_dictionary_script",
+    "workstreams": [
+      "data_mapping"
+    ],
+    "usefulness": 3,
+    "authority": "illustrative",
+    "rationale": "Public script that builds a data dictionary from Socotra configuration. Saved from the raw file URL.",
+    "local_files": [
+      "downloads/discovered/socotra/gen_data_dictionary.py"
+    ],
+    "discovered_from": null,
+    "notes": "The GitHub URL returned the HTML file viewer. The .py file was saved from raw.githubusercontent.com."
+  },
+  {
+    "id": "fema-gov--about-reports-and-data-openfema",
+    "original_url": "https://www.fema.gov/about/reports-and-data/openfema",
+    "final_url": "https://www.fema.gov/about/reports-and-data/openfema",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "title": "OpenFEMA | FEMA.govLock",
+    "source_domain": "www.fema.gov",
+    "retrieved": "2026-09-24T03:46:59Z",
+    "file_size_bytes": 148008,
+    "classification": "document_index",
+    "artifact_type": "dataset_catalog",
+    "workstreams": [
+      "data_mapping"
+    ],
+    "usefulness": 2,
+    "authority": "authoritative",
+    "rationale": "OpenFEMA landing page. Links go to an API catalog and dataset index, not a homeowners download.",
+    "local_files": [
+      "downloads/indexes/fema-gov--about-reports-and-data-openfema.html"
+    ],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "github-com--socotra-public",
+    "original_url": "https://github.com/socotra/public",
+    "final_url": "https://github.com/socotra/public",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "title": "GitHub - socotra/public \u00b7 GitHub",
+    "source_domain": "github.com",
+    "retrieved": "2026-09-24T03:46:59Z",
+    "file_size_bytes": 285837,
+    "classification": "document_index",
+    "artifact_type": "code_repository",
+    "workstreams": [
+      "data_mapping",
+      "validation"
+    ],
+    "usefulness": 3,
+    "authority": "illustrative",
+    "rationale": "Socotra public repo root. Useful children are the homeowners config, data-dictionary script, and premium_test, saved from those URLs.",
+    "local_files": [
+      "downloads/indexes/github-com--socotra-public.html"
+    ],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "content-naic-org--prod-serv-idp-de-guides-htm",
+    "original_url": "https://content.naic.org/prod_serv_idp_de_guides.htm",
+    "final_url": "https://content.naic.org/prod_serv_idp_de_guides.htm",
+    "http_status": 403,
+    "content_type": "text/html; charset=UTF-8",
+    "title": "Just a moment...",
+    "source_domain": "content.naic.org",
+    "retrieved": "2026-09-24T03:46:59Z",
+    "file_size_bytes": 5872,
+    "classification": "blocked",
+    "artifact_type": null,
+    "workstreams": [],
+    "usefulness": null,
+    "authority": null,
+    "rationale": "Cloudflare challenge page (HTTP 403, title 'Just a moment...').",
+    "local_files": [],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "ldi-la-gov--industry-form-and-rate-filing-p-c-rating-filing-exhibits",
+    "original_url": "https://ldi.la.gov/industry/form-and-rate-filing/p-c-rating-filing-exhibits",
+    "final_url": "https://ldi.la.gov/industry/form-and-rate-filing/p-c-rating-filing-exhibits",
+    "http_status": 403,
+    "content_type": "text/html; charset=UTF-8",
+    "title": "Just a moment...",
+    "source_domain": "ldi.la.gov",
+    "retrieved": "2026-09-24T03:46:59Z",
+    "file_size_bytes": 5932,
+    "classification": "blocked",
+    "artifact_type": null,
+    "workstreams": [],
+    "usefulness": null,
+    "authority": null,
+    "rationale": "Cloudflare challenge page (HTTP 403), not the rating-exhibits index.",
+    "local_files": [],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "fema-gov--sites-default-files-2020-09-fema-flood-insurance-manual-full-edition-april-oct2",
+    "original_url": "https://www.fema.gov/sites/default/files/2020-09/fema_flood-insurance-manual-full-edition_april-oct2020.pdf",
+    "final_url": "https://www.fema.gov/sites/default/files/2020-09/fema_flood-insurance-manual-full-edition_april-oct2020.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "title": null,
+    "source_domain": "www.fema.gov",
+    "retrieved": "2026-09-24T03:46:59Z",
+    "file_size_bytes": 20206164,
+    "classification": "downloadable_document",
+    "artifact_type": "rating_manual",
+    "workstreams": [
+      "rule_abstraction",
+      "validation"
+    ],
+    "usefulness": 4,
+    "authority": "authoritative",
+    "rationale": "April 2020 NFIP Flood Insurance Manual (516 pages), an older edition with rating and underwriting rules.",
+    "local_files": [
+      "downloads/manuals/fema_flood-insurance-manual-full-edition_april-oct2020.pdf"
+    ],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "github-com--socotra-public-tree-master-premium-test",
+    "original_url": "https://github.com/socotra/public/tree/master/premium_test",
+    "final_url": "https://github.com/socotra/public/tree/master/premium_test",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "title": "public/premium_test at master \u00b7 socotra/public \u00b7 GitHub",
+    "source_domain": "github.com",
+    "retrieved": "2026-09-24T03:46:59Z",
+    "file_size_bytes": 230412,
+    "classification": "document_index",
+    "artifact_type": "test_fixture_index",
+    "workstreams": [
+      "validation"
+    ],
+    "usefulness": 3,
+    "authority": "illustrative",
+    "rationale": "premium_test folder. Saved test_peril.json, price_perils.py, and basic.calculation.liquid.",
+    "local_files": [
+      "downloads/indexes/github-com--socotra-public-tree-master-premium-test.html"
+    ],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "docs-socotra-com--configuration-general-topics-configuration-sdk",
+    "original_url": "https://docs.socotra.com/configuration/general-topics/configuration-sdk",
+    "final_url": "https://docs.socotra.com/configuration/general-topics/configuration-sdk",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "title": "Configuration SDK",
+    "source_domain": "docs.socotra.com",
+    "retrieved": "2026-09-24T03:47:00Z",
+    "file_size_bytes": 275004,
+    "classification": "static_web_document",
+    "artifact_type": "product_documentation",
+    "workstreams": [
+      "validation"
+    ],
+    "usefulness": 3,
+    "authority": "authoritative",
+    "rationale": "Socotra Configuration SDK docs, including how tenant tests are structured.",
+    "local_files": [
+      "downloads/docs/docs-socotra-com--configuration-general-topics-configuration-sdk.html",
+      "downloads/docs/docs-socotra-com--configuration-general-topics-configuration-sdk.md"
+    ],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "github-com--socotra-socotra-skills",
+    "original_url": "https://github.com/socotra/socotra-skills",
+    "final_url": "https://github.com/socotra/socotra-skills",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "title": "GitHub - socotra/socotra-skills: Socotra public AI Skills repository \u00b7 GitHub",
+    "source_domain": "github.com",
+    "retrieved": "2026-09-24T03:47:00Z",
+    "file_size_bytes": 279219,
+    "classification": "document_index",
+    "artifact_type": "implementation_reference",
+    "workstreams": [
+      "validation",
+      "template_generation"
+    ],
+    "usefulness": 3,
+    "authority": "illustrative",
+    "rationale": "Socotra public skills repo. README saved. It is an implementation reference, not policy content.",
+    "local_files": [
+      "downloads/indexes/github-com--socotra-socotra-skills.html"
+    ],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "www3-ambest-com--completefilings-MO-05-2013-601300-735979-pdf",
+    "original_url": "https://www3.ambest.com/completefilings/MO_05_2013_601300_735979.pdf",
+    "final_url": "https://www3.ambest.com/completefilings/MO_05_2013_601300_735979.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "title": null,
+    "source_domain": "www3.ambest.com",
+    "retrieved": "2026-09-24T03:47:00Z",
+    "file_size_bytes": 751746,
+    "classification": "downloadable_document",
+    "artifact_type": "serff_filing",
+    "workstreams": [
+      "rule_abstraction",
+      "validation"
+    ],
+    "usefulness": 4,
+    "authority": "carrier-specific",
+    "rationale": "2013 Missouri SERFF filing for Foremost's homeowners program (55 pages), closed filing with form and rate material.",
+    "local_files": [
+      "downloads/filings/MO_05_2013_601300_735979.pdf"
+    ],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "www3-ambest-com--comprehensivefilings-NJ-10-2023-601300-1616769-pdf",
+    "original_url": "https://www3.ambest.com/comprehensivefilings/NJ_10_2023_601300_1616769.pdf",
+    "final_url": "https://www3.ambest.com/comprehensivefilings/NJ_10_2023_601300_1616769.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "title": null,
+    "source_domain": "www3.ambest.com",
+    "retrieved": "2026-09-24T03:47:00Z",
+    "file_size_bytes": 28786099,
+    "classification": "downloadable_document",
+    "artifact_type": "serff_filing",
+    "workstreams": [
+      "rule_abstraction",
+      "validation"
+    ],
+    "usefulness": 4,
+    "authority": "carrier-specific",
+    "rationale": "Approved New Jersey rate/rule filing for American Strategic homeowners (1,495 pages).",
+    "local_files": [
+      "downloads/filings/NJ_10_2023_601300_1616769.pdf"
+    ],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "insurance-ca-gov--01-consumers-150-other-prog-01-intervenor-upload-PA-2023-00017-RFC-Re-CW-Standa",
+    "original_url": "https://www.insurance.ca.gov/01-consumers/150-other-prog/01-intervenor/upload/PA-2023-00017-RFC-Re-CW_Standard-Fire.pdf",
+    "final_url": "https://www.insurance.ca.gov/01-consumers/150-other-prog/01-intervenor/upload/PA-2023-00017-RFC-Re-CW_Standard-Fire.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "title": null,
+    "source_domain": "www.insurance.ca.gov",
+    "retrieved": "2026-09-24T03:47:00Z",
+    "file_size_bytes": 23494476,
+    "classification": "downloadable_document",
+    "artifact_type": "intervenor_compensation_request",
+    "workstreams": [
+      "validation"
+    ],
+    "usefulness": 2,
+    "authority": "illustrative",
+    "rationale": "Consumer Watchdog compensation petition about a Standard Fire rate matter, not the objection correspondence itself.",
+    "local_files": [
+      "downloads/filings/PA-2023-00017-RFC-Re-CW_Standard-Fire.pdf"
+    ],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "alta-org--policies-and-standards-policy-forms-downloadSub",
+    "original_url": "https://www.alta.org/policies-and-standards/policy-forms/downloadSub?formSubID=2201&type=pdf",
+    "final_url": "https://www.alta.org/policies-and-standards/policy-forms/downloadSub?formSubID=2201&type=pdf",
+    "http_status": 200,
+    "content_type": "application/pdf;charset=UTF-8",
+    "title": null,
+    "source_domain": "www.alta.org",
+    "retrieved": "2026-09-24T03:47:00Z",
+    "file_size_bytes": 190698,
+    "classification": "downloadable_document",
+    "artifact_type": "form_redline",
+    "workstreams": [
+      "template_generation",
+      "validation"
+    ],
+    "usefulness": 3,
+    "authority": "illustrative",
+    "rationale": "ALTA 2021 Homeowner's title policy redlined against the 2013 form. Title insurance, not P&C homeowners.",
+    "local_files": [
+      "downloads/redlines/downloadSub"
+    ],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "tdi-texas-gov--rules-2025-documents-2026resredline-pdf",
+    "original_url": "https://www.tdi.texas.gov/rules/2025/documents/2026resredline.pdf",
+    "final_url": "https://www.tdi.texas.gov/rules/2025/documents/2026resredline.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "title": null,
+    "source_domain": "www.tdi.texas.gov",
+    "retrieved": "2026-09-24T03:47:01Z",
+    "file_size_bytes": 318982,
+    "classification": "downloadable_document",
+    "artifact_type": "statistical_plan",
+    "workstreams": [
+      "data_mapping",
+      "rule_abstraction"
+    ],
+    "usefulness": 3,
+    "authority": "authoritative",
+    "rationale": "Texas Statistical Plan for Residential Risks, effective April 1, 2026. A data-reporting spec, not a policy-form redline.",
+    "local_files": [
+      "downloads/redlines/2026resredline.pdf"
+    ],
+    "discovered_from": null,
+    "notes": null
+  },
+  {
+    "id": "fema-nfip-manual-2024",
+    "original_url": "https://www.fema.gov/sites/default/files/documents/fema_nfip_flood-insurance-manual_042024.pdf",
+    "final_url": "https://www.fema.gov/sites/default/files/documents/fema_nfip_flood-insurance-manual_042024.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "title": "NFIP Flood Insurance Manual, April 2024",
+    "source_domain": "www.fema.gov",
+    "retrieved": "2026-09-24T03:49:50Z",
+    "file_size_bytes": 18979531,
+    "classification": "downloadable_document",
+    "artifact_type": "rating_manual",
+    "workstreams": [
+      "rule_abstraction",
+      "validation"
+    ],
+    "usefulness": 5,
+    "authority": "authoritative",
+    "rationale": "Current full NFIP manual linked from the FEMA manuals page. Replacement candidate for the dead October 2022 PDF, kept as its own source.",
+    "local_files": [
+      "downloads/discovered/fema/fema_nfip_flood-insurance-manual_042024.pdf"
+    ],
+    "discovered_from": "https://www.fema.gov/flood-insurance/work-with-nfip/manuals/current",
+    "notes": "Discovered while inspecting a document index or a dead-link replacement search. Not in the original list."
+  },
+  {
+    "id": "fema-nfip-manual-2025",
+    "original_url": "https://www.fema.gov/sites/default/files/documents/fema_rsl_national-flood-insurance-manual_06032025.pdf",
+    "final_url": "https://www.fema.gov/sites/default/files/documents/fema_rsl_national-flood-insurance-manual_06032025.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "title": "NFIP Flood Insurance Manual, October 2025",
+    "source_domain": "www.fema.gov",
+    "retrieved": "2026-09-24T03:49:50Z",
+    "file_size_bytes": 29141784,
+    "classification": "downloadable_document",
+    "artifact_type": "rating_manual",
+    "workstreams": [
+      "rule_abstraction",
+      "validation"
+    ],
+    "usefulness": 5,
+    "authority": "authoritative",
+    "rationale": "Latest full NFIP manual linked from the same FEMA page, effective October 2025.",
+    "local_files": [
+      "downloads/discovered/fema/fema_rsl_national-flood-insurance-manual_06032025.pdf"
+    ],
+    "discovered_from": "https://www.fema.gov/flood-insurance/work-with-nfip/manuals/current",
+    "notes": "Discovered while inspecting a document index or a dead-link replacement search. Not in the original list."
+  },
+  {
+    "id": "socotra-ho-policy-json",
+    "original_url": "https://raw.githubusercontent.com/socotra/public/master/product_examples/homeowners/config/products/homeowners/policy/policy.json",
+    "final_url": "https://raw.githubusercontent.com/socotra/public/master/product_examples/homeowners/config/products/homeowners/policy/policy.json",
+    "http_status": 200,
+    "content_type": "application/json",
+    "title": "Socotra homeowners policy.json",
+    "source_domain": "raw.githubusercontent.com",
+    "retrieved": "2026-09-24T03:49:50Z",
+    "file_size_bytes": 1488,
+    "classification": "downloadable_document",
+    "artifact_type": "product_config",
+    "workstreams": [
+      "data_mapping"
+    ],
+    "usefulness": 5,
+    "authority": "illustrative",
+    "rationale": "Public homeowners policy configuration: exposures, coverages, and field names.",
+    "local_files": [
+      "downloads/discovered/socotra/policy.json"
+    ],
+    "discovered_from": "https://github.com/socotra/public/tree/master/product_examples/homeowners/config",
+    "notes": "Discovered while inspecting a document index or a dead-link replacement search. Not in the original list."
+  },
+  {
+    "id": "socotra-ho-endorsements",
+    "original_url": "https://raw.githubusercontent.com/socotra/public/master/product_examples/homeowners/config/products/homeowners/policy/endorsements.json",
+    "final_url": "https://raw.githubusercontent.com/socotra/public/master/product_examples/homeowners/config/products/homeowners/policy/endorsements.json",
+    "http_status": 200,
+    "content_type": "application/json",
+    "title": "Socotra homeowners endorsements.json",
+    "source_domain": "raw.githubusercontent.com",
+    "retrieved": "2026-09-24T03:49:50Z",
+    "file_size_bytes": 310,
+    "classification": "downloadable_document",
+    "artifact_type": "form_schedule",
+    "workstreams": [
+      "template_generation",
+      "rule_abstraction"
+    ],
+    "usefulness": 4,
+    "authority": "illustrative",
+    "rationale": "Endorsement list from the public homeowners config.",
+    "local_files": [
+      "downloads/discovered/socotra/endorsements.json"
+    ],
+    "discovered_from": "https://github.com/socotra/public/tree/master/product_examples/homeowners/config",
+    "notes": "Discovered while inspecting a document index or a dead-link replacement search. Not in the original list."
+  },
+  {
+    "id": "socotra-ho-schedule",
+    "original_url": "https://raw.githubusercontent.com/socotra/public/master/product_examples/homeowners/config/products/homeowners/policy/schedule.template.liquid",
+    "final_url": "https://raw.githubusercontent.com/socotra/public/master/product_examples/homeowners/config/products/homeowners/policy/schedule.template.liquid",
+    "http_status": 200,
+    "content_type": "text/plain",
+    "title": "Socotra homeowners schedule.template.liquid",
+    "source_domain": "raw.githubusercontent.com",
+    "retrieved": "2026-09-24T03:49:50Z",
+    "file_size_bytes": 3738,
+    "classification": "downloadable_document",
+    "artifact_type": "document_template",
+    "workstreams": [
+      "template_generation"
+    ],
+    "usefulness": 5,
+    "authority": "illustrative",
+    "rationale": "Liquid schedule template from the public homeowners config, the closest thing in the repo to a declarations template.",
+    "local_files": [
+      "downloads/discovered/socotra/schedule.template.liquid"
+    ],
+    "discovered_from": "https://github.com/socotra/public/tree/master/product_examples/homeowners/config",
+    "notes": "Discovered while inspecting a document index or a dead-link replacement search. Not in the original list."
+  },
+  {
+    "id": "socotra-ho-underwriting",
+    "original_url": "https://raw.githubusercontent.com/socotra/public/master/product_examples/homeowners/config/products/homeowners/policy/underwriting.guidelines.liquid",
+    "final_url": "https://raw.githubusercontent.com/socotra/public/master/product_examples/homeowners/config/products/homeowners/policy/underwriting.guidelines.liquid",
+    "http_status": 200,
+    "content_type": "text/plain",
+    "title": "Socotra homeowners underwriting.guidelines.liquid",
+    "source_domain": "raw.githubusercontent.com",
+    "retrieved": "2026-09-24T03:49:50Z",
+    "file_size_bytes": 1560,
+    "classification": "downloadable_document",
+    "artifact_type": "underwriting_rules",
+    "workstreams": [
+      "rule_abstraction"
+    ],
+    "usefulness": 4,
+    "authority": "illustrative",
+    "rationale": "Underwriting guideline liquid from the public homeowners config.",
+    "local_files": [
+      "downloads/discovered/socotra/underwriting.guidelines.liquid"
+    ],
+    "discovered_from": "https://github.com/socotra/public/tree/master/product_examples/homeowners/config",
+    "notes": "Discovered while inspecting a document index or a dead-link replacement search. Not in the original list."
+  },
+  {
+    "id": "socotra-ho-calculations",
+    "original_url": "https://raw.githubusercontent.com/socotra/public/master/product_examples/homeowners/config/products/homeowners/policy/policy.calculations.liquid",
+    "final_url": "https://raw.githubusercontent.com/socotra/public/master/product_examples/homeowners/config/products/homeowners/policy/policy.calculations.liquid",
+    "http_status": 200,
+    "content_type": "text/plain",
+    "title": "Socotra homeowners policy.calculations.liquid",
+    "source_domain": "raw.githubusercontent.com",
+    "retrieved": "2026-09-24T03:49:50Z",
+    "file_size_bytes": 198,
+    "classification": "downloadable_document",
+    "artifact_type": "rating_logic",
+    "workstreams": [
+      "validation"
+    ],
+    "usefulness": 3,
+    "authority": "illustrative",
+    "rationale": "Small policy-calculation liquid from the same config.",
+    "local_files": [
+      "downloads/discovered/socotra/policy.calculations.liquid"
+    ],
+    "discovered_from": "https://github.com/socotra/public/tree/master/product_examples/homeowners/config",
+    "notes": "Discovered while inspecting a document index or a dead-link replacement search. Not in the original list."
+  },
+  {
+    "id": "socotra-premium-test-json",
+    "original_url": "https://raw.githubusercontent.com/socotra/public/master/premium_test/test_peril.json",
+    "final_url": "https://raw.githubusercontent.com/socotra/public/master/premium_test/test_peril.json",
+    "http_status": 200,
+    "content_type": "application/json",
+    "title": "premium_test/test_peril.json",
+    "source_domain": "raw.githubusercontent.com",
+    "retrieved": "2026-09-24T03:49:50Z",
+    "file_size_bytes": 416,
+    "classification": "downloadable_document",
+    "artifact_type": "test_fixture",
+    "workstreams": [
+      "validation"
+    ],
+    "usefulness": 3,
+    "authority": "illustrative",
+    "rationale": "Worked peril input from Socotra's public premium_test folder.",
+    "local_files": [
+      "downloads/discovered/socotra/test_peril.json"
+    ],
+    "discovered_from": "https://github.com/socotra/public/tree/master/premium_test",
+    "notes": "Discovered while inspecting a document index or a dead-link replacement search. Not in the original list."
+  },
+  {
+    "id": "socotra-price-perils",
+    "original_url": "https://raw.githubusercontent.com/socotra/public/master/premium_test/price_perils.py",
+    "final_url": "https://raw.githubusercontent.com/socotra/public/master/premium_test/price_perils.py",
+    "http_status": 200,
+    "content_type": "text/x-python",
+    "title": "premium_test/price_perils.py",
+    "source_domain": "raw.githubusercontent.com",
+    "retrieved": "2026-09-24T03:49:50Z",
+    "file_size_bytes": 1666,
+    "classification": "downloadable_document",
+    "artifact_type": "test_fixture",
+    "workstreams": [
+      "validation"
+    ],
+    "usefulness": 2,
+    "authority": "illustrative",
+    "rationale": "Pricing script paired with the premium_test fixtures.",
+    "local_files": [
+      "downloads/discovered/socotra/price_perils.py"
+    ],
+    "discovered_from": "https://github.com/socotra/public/tree/master/premium_test",
+    "notes": "Discovered while inspecting a document index or a dead-link replacement search. Not in the original list."
+  },
+  {
+    "id": "socotra-basic-calculation",
+    "original_url": "https://raw.githubusercontent.com/socotra/public/master/premium_test/basic.calculation.liquid",
+    "final_url": "https://raw.githubusercontent.com/socotra/public/master/premium_test/basic.calculation.liquid",
+    "http_status": 200,
+    "content_type": "text/plain",
+    "title": "premium_test/basic.calculation.liquid",
+    "source_domain": "raw.githubusercontent.com",
+    "retrieved": "2026-09-24T03:49:50Z",
+    "file_size_bytes": 553,
+    "classification": "downloadable_document",
+    "artifact_type": "rating_logic",
+    "workstreams": [
+      "validation"
+    ],
+    "usefulness": 3,
+    "authority": "illustrative",
+    "rationale": "Sample calculation liquid in premium_test.",
+    "local_files": [
+      "downloads/discovered/socotra/basic.calculation.liquid"
+    ],
+    "discovered_from": "https://github.com/socotra/public/tree/master/premium_test",
+    "notes": "Discovered while inspecting a document index or a dead-link replacement search. Not in the original list."
+  },
+  {
+    "id": "socotra-skills-readme",
+    "original_url": "https://raw.githubusercontent.com/socotra/socotra-skills/master/README.md",
+    "final_url": "https://raw.githubusercontent.com/socotra/socotra-skills/master/README.md",
+    "http_status": 200,
+    "content_type": "text/markdown",
+    "title": "socotra-skills README",
+    "source_domain": "raw.githubusercontent.com",
+    "retrieved": "2026-09-24T03:49:50Z",
+    "file_size_bytes": 6781,
+    "classification": "downloadable_document",
+    "artifact_type": "implementation_reference",
+    "workstreams": [
+      "validation"
+    ],
+    "usefulness": 3,
+    "authority": "illustrative",
+    "rationale": "README for Socotra's public skills repo. Implementation guidance, not an insurance artifact.",
+    "local_files": [
+      "downloads/discovered/socotra/socotra-skills-README.md"
+    ],
+    "discovered_from": "https://github.com/socotra/socotra-skills",
+    "notes": "Discovered while inspecting a document index or a dead-link replacement search. Not in the original list."
+  }
+]

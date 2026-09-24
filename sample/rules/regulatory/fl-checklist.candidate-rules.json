@@ -1,0 +1,2137 @@
+{
+  "jurisdiction": "FL",
+  "disclaimer": "Candidate rules extracted from regulator and statute sources for implementation review. Not legal advice and not a compliance certification.",
+  "caveat": "This checklist includes statutes, rules, and bulletins that apply to personal residential forms but may not contain all of the requirements for a personal residential form filing. Please refer to the cited statutes and rules for instructions and guidance.",
+  "sources": [
+    {
+      "id": "fl-oir-residential-checklist",
+      "source_type": "regulator_checklist",
+      "rank": 1,
+      "title": "Florida Office of Insurance Regulation — Form Filing Checklist: Homeowners, Mobile Home, and Dwelling Forms (revised January 2025)",
+      "jurisdiction": "FL",
+      "path": "sample/rules/sources/floir-residential-property-checklist-may-2025.pdf",
+      "url": null,
+      "retrieved": null,
+      "role": "Primary normalized requirements source",
+      "notes": "This checklist includes statutes, rules, and bulletins that apply to personal residential forms but may not contain all of the requirements for a personal residential form filing. Please refer to the cited statutes and rules for instructions and guidance."
+    },
+    {
+      "id": "fl-stat-627.7152",
+      "source_type": "statute_or_rule",
+      "rank": 2,
+      "title": "Florida Statutes §627.7152",
+      "jurisdiction": "FL",
+      "path": null,
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.7152.html",
+      "retrieved": "2026-09-23",
+      "role": "Authoritative text behind checklist citations",
+      "notes": null
+    },
+    {
+      "id": "fl-stat-627.701",
+      "source_type": "statute_or_rule",
+      "rank": 2,
+      "title": "Florida Statutes §627.701",
+      "jurisdiction": "FL",
+      "path": null,
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.701.html",
+      "retrieved": "2026-09-23",
+      "role": "Authoritative text behind checklist citations",
+      "notes": null
+    },
+    {
+      "id": "fl-stat-627.4085",
+      "source_type": "statute_or_rule",
+      "rank": 2,
+      "title": "Florida Statutes §627.4085",
+      "jurisdiction": "FL",
+      "path": null,
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.4085.html",
+      "retrieved": "2026-09-23",
+      "role": "Authoritative text behind checklist citations",
+      "notes": null
+    },
+    {
+      "id": "fl-stat-627.4205",
+      "source_type": "statute_or_rule",
+      "rank": 2,
+      "title": "Florida Statutes §627.4205",
+      "jurisdiction": "FL",
+      "path": null,
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.4205.html",
+      "retrieved": "2026-09-23",
+      "role": "Authoritative text behind checklist citations",
+      "notes": null
+    },
+    {
+      "id": "fl-stat-624.425",
+      "source_type": "statute_or_rule",
+      "rank": 2,
+      "title": "Florida Statutes §624.425",
+      "jurisdiction": "FL",
+      "path": null,
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0624/Sections/0624.425.html",
+      "retrieved": "2026-09-23",
+      "role": "Authoritative text behind checklist citations",
+      "notes": null
+    },
+    {
+      "id": "fl-stat-627.715",
+      "source_type": "statute_or_rule",
+      "rank": 2,
+      "title": "Florida Statutes §627.715",
+      "jurisdiction": "FL",
+      "path": null,
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.715.html",
+      "retrieved": "2026-09-23",
+      "role": "Authoritative text behind checklist citations",
+      "notes": null
+    },
+    {
+      "id": "fl-stat-627.7011",
+      "source_type": "statute_or_rule",
+      "rank": 2,
+      "title": "Florida Statutes §627.7011",
+      "jurisdiction": "FL",
+      "path": null,
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.7011.html",
+      "retrieved": "2026-09-23",
+      "role": "Authoritative text behind checklist citations",
+      "notes": null
+    },
+    {
+      "id": "fl-stat-627.0629",
+      "source_type": "statute_or_rule",
+      "rank": 2,
+      "title": "Florida Statutes §627.0629",
+      "jurisdiction": "FL",
+      "path": null,
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.0629.html",
+      "retrieved": "2026-09-23",
+      "role": "Authoritative text behind checklist citations",
+      "notes": null
+    },
+    {
+      "id": "fl-stat-627.4131",
+      "source_type": "statute_or_rule",
+      "rank": 2,
+      "title": "Florida Statutes §627.4131",
+      "jurisdiction": "FL",
+      "path": null,
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.4131.html",
+      "retrieved": "2026-09-23",
+      "role": "Authoritative text behind checklist citations",
+      "notes": null
+    },
+    {
+      "id": "fl-stat-627.706",
+      "source_type": "statute_or_rule",
+      "rank": 2,
+      "title": "Florida Statutes §627.706",
+      "jurisdiction": "FL",
+      "path": null,
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.706.html",
+      "retrieved": "2026-09-23",
+      "role": "Authoritative text behind checklist citations",
+      "notes": null
+    },
+    {
+      "id": "fl-stat-624.5108",
+      "source_type": "statute_or_rule",
+      "rank": 2,
+      "title": "Florida Statutes §624.5108",
+      "jurisdiction": "FL",
+      "path": null,
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0624/Sections/0624.5108.html",
+      "retrieved": "2026-09-23",
+      "role": "Authoritative text behind checklist citations",
+      "notes": null
+    },
+    {
+      "id": "carrier-rulebook",
+      "source_type": "carrier_rulebook",
+      "rank": 3,
+      "title": "Synthetic carrier rulebook (document selection and optional-coverage rows)",
+      "jurisdiction": null,
+      "path": "sample/rules/sample-rulebook.md",
+      "url": null,
+      "retrieved": null,
+      "role": "Carrier business and applicability rules",
+      "notes": "Synthetic for the prototype; a real engagement would use the carrier's form matrix and manuals."
+    },
+    {
+      "id": "legacy-export",
+      "source_type": "legacy_export",
+      "rank": 4,
+      "title": "Legacy configuration or code export",
+      "jurisdiction": null,
+      "path": null,
+      "url": null,
+      "retrieved": null,
+      "role": "Unwritten applicability logic",
+      "notes": "Not supplied; loader accepts JSON rows."
+    },
+    {
+      "id": "reference-declarations",
+      "source_type": "policy_document",
+      "rank": 5,
+      "title": "Florida DFS sample homeowners declarations page",
+      "jurisdiction": "FL",
+      "path": "sample/source/florida-homeowners.pdf",
+      "url": null,
+      "retrieved": null,
+      "role": "Evidence and regression example only; not a rule source",
+      "notes": null
+    }
+  ],
+  "rows_parsed": 150,
+  "triage": [
+    {
+      "row_id": "p1-r1",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Prohibits assignment of benefits; may require policy statement."
+    },
+    {
+      "row_id": "p1-r2",
+      "rule_type": "offer_or_notice",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Requires offering $500 deductible and notice; could be on declarations."
+    },
+    {
+      "row_id": "p1-r3",
+      "rule_type": "filing_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Relates to filing application forms, not policy content."
+    },
+    {
+      "row_id": "p1-r4",
+      "rule_type": "underwriting_eligibility",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Prohibits discrimination based on firearm ownership."
+    },
+    {
+      "row_id": "p1-r5",
+      "rule_type": "filing_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Exchange of business requirements are filing-related."
+    },
+    {
+      "row_id": "p1-r6",
+      "rule_type": "offer_or_notice",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Requires offering premium payment plan options."
+    },
+    {
+      "row_id": "p1-r7",
+      "rule_type": "presentation",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Requires prominent display of insurer and agent info; could be on declarations."
+    },
+    {
+      "row_id": "p2-r1",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Defines application statements as representations, not warranties."
+    },
+    {
+      "row_id": "p2-r2",
+      "rule_type": "offer_or_notice",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Requires notice about credit report and financial literacy programs."
+    },
+    {
+      "row_id": "p2-r3",
+      "rule_type": "presentation",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Requires space for initials on application form."
+    },
+    {
+      "row_id": "p2-r4",
+      "rule_type": "document_applicability",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Allows electronic delivery or posting of policy documents."
+    },
+    {
+      "row_id": "p2-r5",
+      "rule_type": "document_applicability",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Requires accessibility and notice for electronic/paper copies."
+    },
+    {
+      "row_id": "p2-r6",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Fraud statement must appear on all application forms."
+    },
+    {
+      "row_id": "p2-r7",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Sets requirements for mandatory arbitration endorsement content."
+    },
+    {
+      "row_id": "p3-r1",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Coverage identification number required; could be on declarations."
+    },
+    {
+      "row_id": "p3-r2",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Specifies notice period for binder cancellation."
+    },
+    {
+      "row_id": "p3-r3",
+      "rule_type": "underwriting_eligibility",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Prohibits cancellation based on firearm ownership."
+    },
+    {
+      "row_id": "p3-r4",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Specifies notice and curing for nonpayment cancellation."
+    },
+    {
+      "row_id": "p3-r5",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Specifies notice for cancellation within first 60 days."
+    },
+    {
+      "row_id": "p3-r6",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Specifies 120-day notice for cancellation after 60 days."
+    },
+    {
+      "row_id": "p3-r7",
+      "rule_type": "underwriting_eligibility",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Limits reasons for cancellation after 60 days."
+    },
+    {
+      "row_id": "p3-r8",
+      "rule_type": "underwriting_eligibility",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Prohibits cancellation based on public credit information after 60 days."
+    },
+    {
+      "row_id": "p3-r9",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Prohibits cancellation after hurricane/wind loss for specified periods."
+    },
+    {
+      "row_id": "p4-r1",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Extends cancellation effective date during hurricane duration."
+    },
+    {
+      "row_id": "p4-r2",
+      "rule_type": "underwriting_eligibility",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Prohibits cancellation for act of God claims."
+    },
+    {
+      "row_id": "p4-r3",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Requires reinstatement if cancelled due to lender nonpayment."
+    },
+    {
+      "row_id": "p4-r4",
+      "rule_type": "underwriting_eligibility",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Prohibits cancellation for single water damage claim."
+    },
+    {
+      "row_id": "p4-r5",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Prohibits fully earned premium provisions in contracts/endorsements."
+    },
+    {
+      "row_id": "p4-r6",
+      "rule_type": "underwriting_eligibility",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Prohibits cancellation due to family day care services."
+    },
+    {
+      "row_id": "p4-r7",
+      "rule_type": "underwriting_eligibility",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Prohibits cancellation based solely on roof age under certain conditions."
+    },
+    {
+      "row_id": "p4-r8",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Cancellation notice must include reason(s)."
+    },
+    {
+      "row_id": "p4-r9",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Refund timing must be stated in cancellation notice or policy."
+    },
+    {
+      "row_id": "p4-r10",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Requires CGCC coverage; could be referenced on declarations."
+    },
+    {
+      "row_id": "p4-r11",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Defines 'CGCC' for policy."
+    },
+    {
+      "row_id": "p4-r12",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Defines 'primary structural member/system' for policy."
+    },
+    {
+      "row_id": "p4-r13",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Defines 'structural damage' for policy."
+    },
+    {
+      "row_id": "p4-r14",
+      "rule_type": "filing_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Checklist of coverage not subject to OIR approval."
+    },
+    {
+      "row_id": "p5-r1",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Requires 48-hour notice before claim meeting/inspection."
+    },
+    {
+      "row_id": "p5-r2",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Prohibits claim denial based on public credit info after 90 days."
+    },
+    {
+      "row_id": "p5-r3",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Claim payment must be made within 20 days of settlement."
+    },
+    {
+      "row_id": "p5-r4",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Payment required within 60 days after judgment."
+    },
+    {
+      "row_id": "p5-r5",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Claim must be paid or denied within 60 days."
+    },
+    {
+      "row_id": "p5-r6",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Defines 'reopened' and 'supplemental' claim."
+    },
+    {
+      "row_id": "p5-r7",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Sets deadlines for claim notice after loss."
+    },
+    {
+      "row_id": "p5-r8",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Clarifies date of loss for certain claims."
+    },
+    {
+      "row_id": "p5-r9",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Sets conditions for wind claim denial based on flood coverage."
+    },
+    {
+      "row_id": "p6-r1",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Specifies exclusions for condo association policies."
+    },
+    {
+      "row_id": "p6-r2",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Requires condo unit owner policy to conform to statute."
+    },
+    {
+      "row_id": "p6-r3",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Unit owner responsible for certain reconstruction costs."
+    },
+    {
+      "row_id": "p6-r4",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Requires $2,000 loss assessment coverage; could be on declarations."
+    },
+    {
+      "row_id": "p6-r5",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Specifies required policy provision for loss assessment coverage limits."
+    },
+    {
+      "row_id": "p6-r6",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Limits insurer's payment obligation; must be stated in policy."
+    },
+    {
+      "row_id": "p6-r7",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Requires specific policy provisions on excess coverage and subrogation."
+    },
+    {
+      "row_id": "p6-r8",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Sets deadlines for filing loss assessment claims."
+    },
+    {
+      "row_id": "p7-r1",
+      "rule_type": "offer_or_notice",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Insurer must offer contents exclusion and obtain signed statement."
+    },
+    {
+      "row_id": "p7-r2",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Specifies essential policy information, often on declarations page."
+    },
+    {
+      "row_id": "p7-r3",
+      "rule_type": "filing_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Describes filing requirements, not policy content."
+    },
+    {
+      "row_id": "p7-r4",
+      "rule_type": "presentation",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "yes",
+      "reason": "Declarations must be signed by a licensed agent."
+    },
+    {
+      "row_id": "p7-r5",
+      "rule_type": "presentation",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "yes",
+      "reason": "Flood deductible and limits must be prominently noted on declarations."
+    },
+    {
+      "row_id": "p7-r6",
+      "rule_type": "presentation",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "yes",
+      "reason": "Prescribed statement required on declarations in bold, 18-point font."
+    },
+    {
+      "row_id": "p7-r7",
+      "rule_type": "presentation",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Hurricane premium must be shown separately, may be on declarations."
+    },
+    {
+      "row_id": "p7-r8",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Contact number must be available, may be on declarations or elsewhere."
+    },
+    {
+      "row_id": "p7-r9",
+      "rule_type": "presentation",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Hurricane deductible statement required in bold, 18-point font."
+    },
+    {
+      "row_id": "p7-r10",
+      "rule_type": "presentation",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Actual hurricane deductible must be prominently displayed, may be on declarations."
+    },
+    {
+      "row_id": "p7-r11",
+      "rule_type": "offer_or_notice",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Notice about inflation guard effect may be on declarations or renewal notice."
+    },
+    {
+      "row_id": "p8-r1",
+      "rule_type": "presentation",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Roof deductible value must be prominently displayed, may be on declarations."
+    },
+    {
+      "row_id": "p8-r2",
+      "rule_type": "presentation",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Other deductible amounts must be indicated, may be on declarations."
+    },
+    {
+      "row_id": "p8-r3",
+      "rule_type": "presentation",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Sinkhole exclusion statement in bold, 14-point font, may be on declarations."
+    },
+    {
+      "row_id": "p8-r4",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Law and Ordinance statement required, typically on declarations."
+    },
+    {
+      "row_id": "p8-r5",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "yes",
+      "reason": "Declarations must reflect specific discounts for certain policy periods."
+    },
+    {
+      "row_id": "p8-r6",
+      "rule_type": "presentation",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Requires policy readability; not specific to declarations."
+    },
+    {
+      "row_id": "p8-r7",
+      "rule_type": "offer_or_notice",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Allows insurer to offer flood coverage."
+    },
+    {
+      "row_id": "p8-r8",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Defines types of flood coverage; must be described in policy."
+    },
+    {
+      "row_id": "p8-r9",
+      "rule_type": "offer_or_notice",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Agent must provide notice for NFIP replacement; may be on application."
+    },
+    {
+      "row_id": "p8-r10",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Establishes regulatory supremacy for flood coverage."
+    },
+    {
+      "row_id": "p8-r11",
+      "rule_type": "filing_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Insurer may request OIR certification of flood endorsement."
+    },
+    {
+      "row_id": "p8-r12",
+      "rule_type": "presentation",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "yes",
+      "reason": "Flood deductibles and limits must be prominently noted on declarations."
+    },
+    {
+      "row_id": "p8-r13",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Form must have unique identifiers and edition dates."
+    },
+    {
+      "row_id": "p9-r1",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Incomplete; likely relates to policy content for fungi/mold."
+    },
+    {
+      "row_id": "p9-r2",
+      "rule_type": "offer_or_notice",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Requires offering fungi coverage options and policy exceptions."
+    },
+    {
+      "row_id": "p9-r3",
+      "rule_type": "filing_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "States OIR review does not apply to Claims Bill of Rights."
+    },
+    {
+      "row_id": "p9-r4",
+      "rule_type": "offer_or_notice",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Defines hurricane deductible and required deductible offerings."
+    },
+    {
+      "row_id": "p9-r5",
+      "rule_type": "offer_or_notice",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Notice of hurricane deductible options required at renewal."
+    },
+    {
+      "row_id": "p9-r6",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Hurricane deductible applies on calendar year basis; must be in policy."
+    },
+    {
+      "row_id": "p9-r7",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Policy must contain an index or table of contents."
+    },
+    {
+      "row_id": "p9-r8",
+      "rule_type": "offer_or_notice",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Must offer law and ordinance coverage on Homeowners policies."
+    },
+    {
+      "row_id": "p9-r9",
+      "rule_type": "offer_or_notice",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Notice of law and ordinance coverage must be provided every three years."
+    },
+    {
+      "row_id": "p9-r10",
+      "rule_type": "filing_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Selection/rejection of coverage must be on OIR-approved form."
+    },
+    {
+      "row_id": "p10-r1",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Law and Ordinance statement required, typically on declarations."
+    },
+    {
+      "row_id": "p10-r2",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "References loss assessment requirements; see prior rules."
+    },
+    {
+      "row_id": "p10-r3",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Describes loss settlement process for replacement cost claims."
+    },
+    {
+      "row_id": "p10-r4",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Details payment process for dwelling losses and roof deductibles."
+    },
+    {
+      "row_id": "p10-r5",
+      "rule_type": "offer_or_notice",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Insurer must offer replacement cost coverage for personal property."
+    },
+    {
+      "row_id": "p10-r6",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Requires matching repairs/replacement for non-matching items."
+    },
+    {
+      "row_id": "p10-r7",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Describes mediation process for property insurance claims."
+    },
+    {
+      "row_id": "p10-r8",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Specifies required language for mutual insurer policies."
+    },
+    {
+      "row_id": "p10-r9",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Describes neutral evaluation for sinkhole claims."
+    },
+    {
+      "row_id": "p10-r10",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Sets timeframe and precedence for neutral evaluation."
+    },
+    {
+      "row_id": "p11-r1",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Neutral evaluation is nonbinding but mandatory if requested."
+    },
+    {
+      "row_id": "p11-r2",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Requires 120 days' notice before nonrenewal for certain policies."
+    },
+    {
+      "row_id": "p11-r3",
+      "rule_type": "underwriting_eligibility",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Prohibits nonrenewal based on credit information."
+    },
+    {
+      "row_id": "p11-r4",
+      "rule_type": "underwriting_eligibility",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Limits when insurer may nonrenew after property damage."
+    },
+    {
+      "row_id": "p11-r5",
+      "rule_type": "underwriting_eligibility",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Extends nonrenewal effective date during hurricane duration."
+    },
+    {
+      "row_id": "p11-r6",
+      "rule_type": "underwriting_eligibility",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Prohibits nonrenewal for act of God property claims."
+    },
+    {
+      "row_id": "p11-r7",
+      "rule_type": "underwriting_eligibility",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Prohibits nonrenewal solely for a single water damage claim."
+    },
+    {
+      "row_id": "p11-r8",
+      "rule_type": "underwriting_eligibility",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Limits nonrenewal based on sinkhole claims."
+    },
+    {
+      "row_id": "p12-r1",
+      "rule_type": "underwriting_eligibility",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Prohibits nonrenewal based on firearm or ammunition ownership."
+    },
+    {
+      "row_id": "p12-r2",
+      "rule_type": "underwriting_eligibility",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Prohibits nonrenewal solely due to roof age under certain conditions."
+    },
+    {
+      "row_id": "p12-r3",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Nonrenewal notice must state reasons for nonrenewal."
+    },
+    {
+      "row_id": "p12-r4",
+      "rule_type": "presentation",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Specifies notice format, font size, and placement."
+    },
+    {
+      "row_id": "p12-r5",
+      "rule_type": "filing_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Outline of Coverage not subject to OIR review."
+    },
+    {
+      "row_id": "p12-r6",
+      "rule_type": "offer_or_notice",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Insurer must offer personal property replacement cost coverage."
+    },
+    {
+      "row_id": "p12-r7",
+      "rule_type": "offer_or_notice",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Insurer must offer exclusion of personal property coverage."
+    },
+    {
+      "row_id": "p12-r8",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Phone number for inquiries must be made available."
+    },
+    {
+      "row_id": "p12-r9",
+      "rule_type": "offer_or_notice",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Advance written notice of renewal premium required."
+    },
+    {
+      "row_id": "p12-r10",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Assessment recoupment amounts must be specified."
+    },
+    {
+      "row_id": "p12-r11",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Premium increases and coverage change amounts must be specified."
+    },
+    {
+      "row_id": "p12-r12",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "BCEGS rate adjustment amounts must be specified."
+    },
+    {
+      "row_id": "p13-r1",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Hurricane premium must be indicated separately."
+    },
+    {
+      "row_id": "p13-r2",
+      "rule_type": "presentation",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "yes",
+      "reason": "Roof deductible value must be prominently displayed on declarations or renewal notice."
+    },
+    {
+      "row_id": "p13-r3",
+      "rule_type": "offer_or_notice",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Must offer replacement cost on Homeowners policies."
+    },
+    {
+      "row_id": "p13-r4",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Disclosure/explanation of replacement cost coverage required."
+    },
+    {
+      "row_id": "p13-r5",
+      "rule_type": "offer_or_notice",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Must offer option to reject roof deductible."
+    },
+    {
+      "row_id": "p13-r6",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Limits and application of roof deductible must be specified."
+    },
+    {
+      "row_id": "p13-r7",
+      "rule_type": "presentation",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Prescribed statement about roof deductible on separate page after declarations."
+    },
+    {
+      "row_id": "p13-r8",
+      "rule_type": "offer_or_notice",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Must offer sinkhole coverage and specify deductible options."
+    },
+    {
+      "row_id": "p13-r9",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Defines 'primary structural member' and 'system' for policy."
+    },
+    {
+      "row_id": "p13-r10",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Defines 'structural damage' for policy."
+    },
+    {
+      "row_id": "p13-r11",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Defines 'sinkhole activity' for policy."
+    },
+    {
+      "row_id": "p13-r12",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Defines 'sinkhole loss' for policy."
+    },
+    {
+      "row_id": "p13-r13",
+      "rule_type": "presentation",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Exclusion of sinkhole coverage must be in bold, 14-point font."
+    },
+    {
+      "row_id": "p13-r14",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Sinkhole claim notice must be given within 2 years."
+    },
+    {
+      "row_id": "p14-r1",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Insured may demand sinkhole testing after claim denial."
+    },
+    {
+      "row_id": "p14-r2",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Insurer must pay for stabilization and repairs per engineer's recommendations."
+    },
+    {
+      "row_id": "p14-r3",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Payments may be limited to ACV until repair contract entered."
+    },
+    {
+      "row_id": "p14-r4",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Time limit to enter sinkhole repair contract is 90 days."
+    },
+    {
+      "row_id": "p14-r5",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Time limit to complete repairs is 12 months."
+    },
+    {
+      "row_id": "p14-r6",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Defines and prohibits 'rebate' for sinkhole claims."
+    },
+    {
+      "row_id": "p14-r7",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Insured must reimburse insurer for testing if claim not in good faith."
+    },
+    {
+      "row_id": "p14-r8",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Insured must file sinkhole report before accepting payment."
+    },
+    {
+      "row_id": "p14-r9",
+      "rule_type": "offer_or_notice",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Disclosure required if mobile home policy not written on stated value."
+    },
+    {
+      "row_id": "p14-r10",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Action against insurer must be commenced within 5 years."
+    },
+    {
+      "row_id": "p14-r11",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Applies to all suits under residential property insurance."
+    },
+    {
+      "row_id": "p14-r12",
+      "rule_type": "claims_or_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Notice of intent to litigate must be provided to DFS."
+    },
+    {
+      "row_id": "p14-r13",
+      "rule_type": "document_content",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Valued Policy Law: insurer's liability equals insured amount for total loss."
+    },
+    {
+      "row_id": "p14-r14",
+      "rule_type": "offer_or_notice",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "maybe",
+      "reason": "Must offer windstorm exclusion at insured's option."
+    },
+    {
+      "row_id": "p15-r1",
+      "rule_type": "presentation",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Prescribed statement must be handwritten/typed, signed, and dated."
+    },
+    {
+      "row_id": "p15-r2",
+      "rule_type": "presentation",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Signed statement on letterhead required for non-natural persons."
+    },
+    {
+      "row_id": "p15-r3",
+      "rule_type": "presentation",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Alternative methods to handwritten/typed statements allowed."
+    },
+    {
+      "row_id": "p15-r4",
+      "rule_type": "filing_process",
+      "authority": "legal_regulatory",
+      "declarations_relevance": "no",
+      "reason": "Insured must provide written approval from mortgageholder for windstorm exclusion."
+    }
+  ],
+  "rules": [
+    {
+      "id": "FL_AOB_ASSIGNMENT_PROHIBITION",
+      "source": "Florida Statute 627.7152(13)",
+      "source_type": "regulator_checklist",
+      "source_id": "fl-oir-residential-checklist",
+      "source_row": "p1-r1",
+      "source_quote": "Except as provided in s. 627.7152(11), a policyholder may not assign, in whole or in part, any post-loss insurance benefit under any residential or commercial property insurance policy, issued on or after January 1, 2023. Any attempt to assign post-loss property insurance benefits under such a policy is void, invalid, and unenforceable.",
+      "source_location": "floir-residential-property-checklist-may-2025.pdf p.1, row p1-r1 (Assignment of Benefits (AOB))",
+      "authority": "legal_regulatory",
+      "rule_type": "document_applicability",
+      "applies_when": {
+        "jurisdiction": "FL",
+        "product_family": "personal_residential_property",
+        "effective_date_on_or_after": "2023-01-01"
+      },
+      "requirement": {
+        "document": "policy_form",
+        "kind": "field_value",
+        "description": "Policyholder may not assign any post-loss insurance benefit under any residential or commercial property insurance policy issued on or after January 1, 2023.",
+        "fields": [],
+        "must_be_separate_from": [],
+        "presentation": {
+          "prominent": false,
+          "bold": false,
+          "min_font_pt": null,
+          "separate_page": false,
+          "first_page": false
+        },
+        "prescribed_text": null
+      },
+      "statute_evidence": [
+        {
+          "citation": "627.7152(13)",
+          "section": "627.7152",
+          "subsection": "(13)",
+          "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.7152.html",
+          "excerpt": "(13) Except as provided in subsection (11), a policyholder may not assign, in whole or in part, any post-loss insurance benefit under any residential property insurance policy or under any commercial property insurance policy as that term is defined in s. 627.0625 (1), issued on or after January 1, 2023. An attempt to assign post-loss property insurance benefits under such a policy is void, invalid, and unenforceable.",
+          "retrieved": "2026-09-23",
+          "note": null
+        }
+      ],
+      "confidence": 1.0,
+      "requires_human_review": true,
+      "unresolved_terms": [
+        "no field for assignment of benefits"
+      ],
+      "grounding_notes": [],
+      "approved": false,
+      "reviewer_note": null
+    },
+    {
+      "id": "FL_AOP_DEDUCTIBLE_OFFER_NOTICE",
+      "source": "Florida Statute 627.701(7)",
+      "source_type": "regulator_checklist",
+      "source_id": "fl-oir-residential-checklist",
+      "source_row": "p1-r2",
+      "source_quote": "“All Other Perils” (AOP) or “other than hurricane” deductible option of $500 is required to be offered Insurer must provide notice of the availability of the $500 AOP deductible at least once every 3 years in a form approved by OIR Most special deductibles are subject to this statute—e.g., any Windstorm Other-Than- Hurricane Deductible must offer a $500 option or be offered on an opt-in basis to the insured",
+      "source_location": "floir-residential-property-checklist-may-2025.pdf p.1, row p1-r2 (All Other Perils Deductible)",
+      "authority": "legal_regulatory",
+      "rule_type": "offer_or_notice",
+      "applies_when": {
+        "jurisdiction": "FL",
+        "product_family": "personal_residential_property"
+      },
+      "requirement": {
+        "document": "notice",
+        "kind": "text_mention",
+        "description": "Insurer must provide notice of the availability of the $500 all other perils deductible at least once every 3 years in a form approved by OIR.",
+        "fields": [],
+        "must_be_separate_from": [],
+        "presentation": {
+          "prominent": false,
+          "bold": false,
+          "min_font_pt": null,
+          "separate_page": false,
+          "first_page": false
+        },
+        "prescribed_text": null
+      },
+      "statute_evidence": [
+        {
+          "citation": "627.701(7)",
+          "section": "627.701",
+          "subsection": "(7)",
+          "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.701.html",
+          "excerpt": "(7) Prior to issuing a personal lines residential property insurance policy on or after April 1, 1997, or prior to the first renewal of a residential property insurance policy on or after April 1, 1997, the insurer must offer a deductible equal to $500 applicable to losses from perils other than hurricane. The insurer must provide the policyholder with notice of the availability of the deductible specified in this subsection in a form approved by the office at least once every 3 years. The failure to provide such notice constitutes a violation of this code but does not affect the coverage provided under the policy. An insurer may require a higher deductible only as part of a deductible program lawfully in effect on June 1, 1996, or as part of a similar deductible program.",
+          "retrieved": "2026-09-23",
+          "note": null
+        }
+      ],
+      "confidence": 1.0,
+      "requires_human_review": true,
+      "unresolved_terms": [],
+      "grounding_notes": [],
+      "approved": false,
+      "reviewer_note": null
+    },
+    {
+      "id": "FL_APPLICATION_DISPLAY_CARRIER_AGENT",
+      "source": "Florida Statute 627.4085(1)",
+      "source_type": "regulator_checklist",
+      "source_id": "fl-oir-residential-checklist",
+      "source_row": "p1-r7",
+      "source_quote": "Must prominently display the name of the insuring entity on the first page Must disclose the name and license number of the agent (typed, printed, stamped, or legibly handwritten)",
+      "source_location": "floir-residential-property-checklist-may-2025.pdf p.1, row p1-r7 (Applications)",
+      "authority": "legal_regulatory",
+      "rule_type": "presentation",
+      "applies_when": {
+        "jurisdiction": "FL",
+        "product_family": "personal_residential_property"
+      },
+      "requirement": {
+        "document": "application",
+        "kind": "field_value",
+        "description": "The name of the insuring entity must be prominently displayed on the first page of the application, and the name and license number of the agent must be disclosed.",
+        "fields": [
+          "carrier_name",
+          "agent_name",
+          "agent_license_number"
+        ],
+        "must_be_separate_from": [],
+        "presentation": {
+          "prominent": true,
+          "bold": false,
+          "min_font_pt": null,
+          "separate_page": false,
+          "first_page": true
+        },
+        "prescribed_text": null
+      },
+      "statute_evidence": [
+        {
+          "citation": "627.4085(1)",
+          "section": "627.4085",
+          "subsection": "(1)",
+          "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.4085.html",
+          "excerpt": "(1) All applications for an insurance policy or annuity contract shall prominently display the name of the insuring entity on the first page of the application form at the time the coverage is bound or premium is quoted. Such applications shall also disclose the name and license identification number of the agent as shown on the agent’s license issued by the department, which information may be typed, printed, stamped, or handwritten if legible.",
+          "retrieved": "2026-09-23",
+          "note": null
+        }
+      ],
+      "confidence": 1.0,
+      "requires_human_review": true,
+      "unresolved_terms": [],
+      "grounding_notes": [],
+      "approved": false,
+      "reviewer_note": null
+    },
+    {
+      "id": "FL_BINDER_COVERAGE_ID_NUMBER",
+      "source": "Florida Statute 627.4205",
+      "source_type": "regulator_checklist",
+      "source_id": "fl-oir-residential-checklist",
+      "source_row": "p3-r1",
+      "source_quote": "Coverage identification number required",
+      "source_location": "floir-residential-property-checklist-may-2025.pdf p.3, row p3-r1 (Binders)",
+      "authority": "legal_regulatory",
+      "rule_type": "document_content",
+      "applies_when": {
+        "jurisdiction": "FL",
+        "product_family": "personal_residential_property"
+      },
+      "requirement": {
+        "document": "policy_form",
+        "kind": "field_value",
+        "description": "A coverage identification number must be provided to the named insured no later than when coverage becomes effective.",
+        "fields": [
+          "policy_number"
+        ],
+        "must_be_separate_from": [],
+        "presentation": {
+          "prominent": false,
+          "bold": false,
+          "min_font_pt": null,
+          "separate_page": false,
+          "first_page": false
+        },
+        "prescribed_text": null
+      },
+      "statute_evidence": [
+        {
+          "citation": "627.4205",
+          "section": "627.4205",
+          "subsection": null,
+          "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.4205.html",
+          "excerpt": "627.4205 Coverage identification number required. — An insurer shall provide to the named insured a coverage identification number no later than the time insurance coverage under a policy, binder, or other contract providing any insurance or surety coverage becomes effective. The coverage identification number shall be construed for regulatory purposes under this code as a policy number.",
+          "retrieved": "2026-09-23",
+          "note": null
+        }
+      ],
+      "confidence": 1.0,
+      "requires_human_review": true,
+      "unresolved_terms": [],
+      "grounding_notes": [],
+      "approved": false,
+      "reviewer_note": null
+    },
+    {
+      "id": "FL_DECLARATIONS_AGENT_SIGNATURE",
+      "source": "Florida Statute 624.425",
+      "source_type": "regulator_checklist",
+      "source_id": "fl-oir-residential-checklist",
+      "source_row": "p7-r4",
+      "source_quote": "Must be signed by a Florida licensed agent",
+      "source_location": "floir-residential-property-checklist-may-2025.pdf p.7, row p7-r4 (Declarations)",
+      "authority": "legal_regulatory",
+      "rule_type": "presentation",
+      "applies_when": {
+        "jurisdiction": "FL",
+        "product_family": "personal_residential_property"
+      },
+      "requirement": {
+        "document": "declarations",
+        "kind": "field_value",
+        "description": "Declarations must be signed by a Florida licensed agent.",
+        "fields": [
+          "agent_name",
+          "agent_license_number"
+        ],
+        "must_be_separate_from": [],
+        "presentation": {
+          "prominent": false,
+          "bold": false,
+          "min_font_pt": null,
+          "separate_page": false,
+          "first_page": false
+        },
+        "prescribed_text": null
+      },
+      "statute_evidence": [
+        {
+          "citation": "624.425",
+          "section": "624.425",
+          "subsection": null,
+          "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0624/Sections/0624.425.html",
+          "excerpt": "624.425 Agent countersignature required, property, casualty, surety insurance. — (1) Except as stated in s. 624.426 , no authorized property, casualty, or surety insurer shall assume direct liability as to a subject of insurance resident, located, or to be performed in this state unless the policy or contract of insurance is issued by or through, and is countersigned by, an agent who is regularly commissioned and licensed currently as an agent and appointed as an agent for the insurer under this code. If two or more authorized insurers issue a single policy of insurance against legal liability for loss or damage to person or property caused by the nuclear energy hazard, or a single policy insuring against loss or damage to property by radioactive contamination, whether or not also insuring against one or more other perils proper to insure against in this state, such policy if otherwise lawful may be countersigned on behalf of all of the insurers by a licensed and appointed agent of any insurer appearing thereon. The producing agent shall receive on each policy or contract the full and usual commission allowed and paid by the insurer to its agents on business written or transacted by them for the insurer. (2) If any subject of insurance referred to in subsection (1) is insured under a policy, or contract, or certificate of renewal or continuation thereof, issued in another state and covering also property and risks outside this state, a certificate evidencing such insurance as to subjects located, resident, or to be performed in this state, shall be issued by or through and shall be countersigned by the insurer’s commissioned and appointed producing agent. (3) An agent shall not sign or countersign in blank any policy to be issued outside her or his office, or countersign in blank any countersignature endorsement therefor, or certificate issued thereunder. An agent may give a written power of attorney to the issuing insurance company to countersign such documents by imprinting her or his name, or the name of the agency or other entity with which the agent may be sharing commission pursuant to s. 626.753 (1)(a) and (2), thereon in lieu of manually countersigning such documents; but an agent shall not give a power of attorney to any other person to countersign any such document in her or his name unless the person so authorized is directly employed by the agent and by no other person, and is so employed in the office of the agent. (4) This section shall not b",
+          "retrieved": "2026-09-23",
+          "note": null
+        }
+      ],
+      "confidence": 1.0,
+      "requires_human_review": true,
+      "unresolved_terms": [],
+      "grounding_notes": [],
+      "approved": false,
+      "reviewer_note": null
+    },
+    {
+      "id": "FL_DECLARATIONS_FLOOD_DEDUCTIBLE_LIMITS_PROMINENT",
+      "source": "Florida Statute 627.715(2)",
+      "source_type": "regulator_checklist",
+      "source_id": "fl-oir-residential-checklist",
+      "source_row": "p7-r5",
+      "source_quote": "If flood coverage is provided, flood deductible and coverage limits must be prominently noted on the declarations page",
+      "source_location": "floir-residential-property-checklist-may-2025.pdf p.7, row p7-r5 (Declarations)",
+      "authority": "legal_regulatory",
+      "rule_type": "presentation",
+      "applies_when": {
+        "jurisdiction": "FL",
+        "product_family": "personal_residential_property",
+        "flood_coverage_provided": true
+      },
+      "requirement": {
+        "document": "declarations",
+        "kind": "field_value",
+        "description": "Flood deductible and coverage limits must be prominently noted on the declarations page.",
+        "fields": [],
+        "must_be_separate_from": [],
+        "presentation": {
+          "prominent": true,
+          "bold": false,
+          "min_font_pt": null,
+          "separate_page": false,
+          "first_page": false
+        },
+        "prescribed_text": null
+      },
+      "statute_evidence": [
+        {
+          "citation": "627.715(2)",
+          "section": "627.715",
+          "subsection": "(2)",
+          "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.715.html",
+          "excerpt": "(2) Flood coverage deductibles and policy limits pursuant to this section must be prominently noted on the policy declarations page or face page.",
+          "retrieved": "2026-09-23",
+          "note": null
+        }
+      ],
+      "confidence": 1.0,
+      "requires_human_review": true,
+      "unresolved_terms": [
+        "no field for flood coverage limits",
+        "no field for flood deductible"
+      ],
+      "grounding_notes": [],
+      "approved": false,
+      "reviewer_note": null
+    },
+    {
+      "id": "FL_DECLARATIONS_FLOOD_EXCLUSION_STATEMENT",
+      "source": "Florida Statute 627.7011(4)(b)",
+      "source_type": "regulator_checklist",
+      "source_id": "fl-oir-residential-checklist",
+      "source_row": "p7-r6",
+      "source_quote": "If flood coverage is excluded, a prescribed statement is required on the declarations page in bold type, no smaller than 18-point font (requirement only applies to Homeowners policies)",
+      "source_location": "floir-residential-property-checklist-may-2025.pdf p.7, row p7-r6 (Declarations)",
+      "authority": "legal_regulatory",
+      "rule_type": "presentation",
+      "applies_when": {
+        "jurisdiction": "FL",
+        "product_family": "personal_residential_property",
+        "policy_type": "homeowners",
+        "flood_coverage_provided": false
+      },
+      "requirement": {
+        "document": "declarations",
+        "kind": "prescribed_statement",
+        "description": "If flood coverage is excluded, a prescribed statement must appear on the declarations page in bold type, no smaller than 18-point font.",
+        "fields": [],
+        "must_be_separate_from": [],
+        "presentation": {
+          "prominent": false,
+          "bold": true,
+          "min_font_pt": 18.0,
+          "separate_page": false,
+          "first_page": false
+        },
+        "prescribed_text": "FLOOD INSURANCE: YOU SHOULD CONSIDER THE PURCHASE OF FLOOD INSURANCE. YOUR HOMEOWNER’S INSURANCE POLICY DOES NOT INCLUDE COVERAGE FOR DAMAGE RESULTING FROM FLOOD EVEN IF HURRICANE WINDS AND RAIN CAUSED THE FLOOD TO OCCUR. WITHOUT SEPARATE FLOOD INSURANCE COVERAGE, YOUR UNCOVERED LOSSES CAUSED BY FLOOD ARE NOT COVERED. PLEASE DISCUSS THE NEED TO PURCHASE SEPARATE FLOOD INSURANCE COVERAGE WITH YOUR INSURANCE AGENT."
+      },
+      "statute_evidence": [
+        {
+          "citation": "627.7011(4)(b)",
+          "section": "627.7011",
+          "subsection": "(4)(b)",
+          "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.7011.html",
+          "excerpt": "(b) An insurer that issues a homeowner’s insurance policy that does not provide flood insurance coverage must include on the policy declarations page at initial issuance and every renewal, in bold type no smaller than 18 points, the following statement: “FLOOD INSURANCE: YOU SHOULD CONSIDER THE PURCHASE OF FLOOD INSURANCE. YOUR HOMEOWNER’S INSURANCE POLICY DOES NOT INCLUDE COVERAGE FOR DAMAGE RESULTING FROM FLOOD EVEN IF HURRICANE WINDS AND RAIN CAUSED THE FLOOD TO OCCUR. WITHOUT SEPARATE FLOOD INSURANCE COVERAGE, YOUR UNCOVERED LOSSES CAUSED BY FLOOD ARE NOT COVERED. PLEASE DISCUSS THE NEED TO PURCHASE SEPARATE FLOOD INSURANCE COVERAGE WITH YOUR INSURANCE AGENT.”",
+          "retrieved": "2026-09-23",
+          "note": null
+        }
+      ],
+      "confidence": 1.0,
+      "requires_human_review": true,
+      "unresolved_terms": [],
+      "grounding_notes": [
+        "rule_type 'prescribed_statement' is not in the taxonomy; used the row's triage label 'presentation'."
+      ],
+      "approved": false,
+      "reviewer_note": null
+    },
+    {
+      "id": "FL_DECLARATIONS_HURRICANE_PREMIUM_SEPARATE",
+      "source": "Florida Statute 627.0629(4)",
+      "source_type": "regulator_checklist",
+      "source_id": "fl-oir-residential-checklist",
+      "source_row": "p7-r7",
+      "source_quote": "Premium for hurricane coverage must be indicated separately from premium for all other coverages (may be on declarations page or premium notice)",
+      "source_location": "floir-residential-property-checklist-may-2025.pdf p.7, row p7-r7 (Declarations)",
+      "authority": "legal_regulatory",
+      "rule_type": "presentation",
+      "applies_when": {
+        "jurisdiction": "FL",
+        "product_family": "personal_residential_property"
+      },
+      "requirement": {
+        "document": "declarations_or_premium_notice",
+        "kind": "field_value",
+        "description": "Premium for hurricane coverage must be indicated separately from premium for all other coverages.",
+        "fields": [
+          "hurricane_portion_of_premium",
+          "non_hurricane_portion_of_premium"
+        ],
+        "must_be_separate_from": [],
+        "presentation": {
+          "prominent": false,
+          "bold": false,
+          "min_font_pt": null,
+          "separate_page": false,
+          "first_page": false
+        },
+        "prescribed_text": null
+      },
+      "statute_evidence": [
+        {
+          "citation": "627.0629(4)",
+          "section": "627.0629",
+          "subsection": "(4)",
+          "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.0629.html",
+          "excerpt": "(4) The Legislature finds that separate consideration and notice of hurricane insurance premiums will assist consumers by providing greater assurance that hurricane premiums are lawful and by providing more complete information regarding the components of property insurance premiums. A rate filing for residential property insurance shall be separated into two components, rates for hurricane coverage and rates for all other coverages. A premium notice reflecting a rate implemented on the basis of such a filing shall separately indicate the premium for hurricane coverage and the premium for all other coverages.",
+          "retrieved": "2026-09-23",
+          "note": null
+        }
+      ],
+      "confidence": 1.0,
+      "requires_human_review": true,
+      "unresolved_terms": [],
+      "grounding_notes": [
+        "Removed self-references from must_be_separate_from: hurricane_portion_of_premium, non_hurricane_portion_of_premium."
+      ],
+      "approved": false,
+      "reviewer_note": null
+    },
+    {
+      "id": "FL_DECLARATIONS_PHONE_NUMBER_NOTICE",
+      "source": "Florida Statute 627.4131",
+      "source_type": "regulator_checklist",
+      "source_id": "fl-oir-residential-checklist",
+      "source_row": "p7-r8",
+      "source_quote": "Phone number and its purpose must be made available to present inquiries or obtain information about coverage and to provide assistance in resolving complaints (may be located elsewhere—e.g., on policy jacket)",
+      "source_location": "floir-residential-property-checklist-may-2025.pdf p.7, row p7-r8 (Declarations)",
+      "authority": "legal_regulatory",
+      "rule_type": "document_content",
+      "applies_when": {
+        "jurisdiction": "FL",
+        "product_family": "personal_residential_property"
+      },
+      "requirement": {
+        "document": "declarations",
+        "kind": "field_value",
+        "description": "Phone number and its purpose must be made available to present inquiries or obtain information about coverage and to provide assistance in resolving complaints.",
+        "fields": [
+          "agent_phone"
+        ],
+        "must_be_separate_from": [],
+        "presentation": {
+          "prominent": false,
+          "bold": false,
+          "min_font_pt": null,
+          "separate_page": false,
+          "first_page": false
+        },
+        "prescribed_text": null
+      },
+      "statute_evidence": [
+        {
+          "citation": "627.4131",
+          "section": "627.4131",
+          "subsection": null,
+          "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.4131.html",
+          "excerpt": "627.4131 Telephone number required. — Each insurer issuing a policy subject to this part, or issuing a policy of title insurance, credit life insurance, or credit disability insurance in this state, must make a telephone number available for policyholders and certificateholders to present inquiries or obtain information about coverage and to provide assistance in resolving complaints. The policy or certificate must provide notice of the telephone number and its purposes.",
+          "retrieved": "2026-09-23",
+          "note": null
+        }
+      ],
+      "confidence": 1.0,
+      "requires_human_review": true,
+      "unresolved_terms": [],
+      "grounding_notes": [],
+      "approved": false,
+      "reviewer_note": null
+    },
+    {
+      "id": "FL_DECLARATIONS_HURRICANE_DEDUCTIBLE_STATEMENT",
+      "source": "Florida Statute 627.701(4)(a)",
+      "source_type": "regulator_checklist",
+      "source_id": "fl-oir-residential-checklist",
+      "source_row": "p7-r9",
+      "source_quote": "Hurricane deductible statement is required in boldfaced type, no smaller than 18-point font (see statute for prescribed language)",
+      "source_location": "floir-residential-property-checklist-may-2025.pdf p.7, row p7-r9 (Declarations)",
+      "authority": "legal_regulatory",
+      "rule_type": "presentation",
+      "applies_when": {
+        "jurisdiction": "FL",
+        "product_family": "personal_residential_property",
+        "has_separate_hurricane_deductible": true
+      },
+      "requirement": {
+        "document": "declarations",
+        "kind": "prescribed_statement",
+        "description": "A hurricane deductible statement is required in boldfaced type, no smaller than 18-point font.",
+        "fields": [],
+        "must_be_separate_from": [],
+        "presentation": {
+          "prominent": false,
+          "bold": true,
+          "min_font_pt": 18.0,
+          "separate_page": false,
+          "first_page": false
+        },
+        "prescribed_text": "THIS POLICY CONTAINS A SEPARATE DEDUCTIBLE FOR HURRICANE LOSSES, WHICH MAY RESULT IN HIGH OUT-OF-POCKET EXPENSES TO YOU."
+      },
+      "statute_evidence": [
+        {
+          "citation": "627.701(4)(a)",
+          "section": "627.701",
+          "subsection": "(4)(a)",
+          "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.701.html",
+          "excerpt": "(a) Any policy that contains a separate hurricane deductible must on its face include in boldfaced type no smaller than 18 points the following statement: “THIS POLICY CONTAINS A SEPARATE DEDUCTIBLE FOR HURRICANE LOSSES, WHICH MAY RESULT IN HIGH OUT-OF-POCKET EXPENSES TO YOU.” A policy containing a coinsurance provision applicable to hurricane losses must on its face include in boldfaced type no smaller than 18 points the following statement: “THIS POLICY CONTAINS A CO-PAY PROVISION THAT MAY RESULT IN HIGH OUT-OF-POCKET EXPENSES TO YOU.”",
+          "retrieved": "2026-09-23",
+          "note": null
+        }
+      ],
+      "confidence": 1.0,
+      "requires_human_review": true,
+      "unresolved_terms": [],
+      "grounding_notes": [
+        "rule_type 'prescribed_statement' is not in the taxonomy; used the row's triage label 'presentation'."
+      ],
+      "approved": false,
+      "reviewer_note": null
+    },
+    {
+      "id": "FL_DECLARATIONS_HURRICANE_DEDUCTIBLE_DISPLAY",
+      "source": "Florida Statute 627.701(4)(b)",
+      "source_type": "regulator_checklist",
+      "source_id": "fl-oir-residential-checklist",
+      "source_row": "p7-r10",
+      "source_quote": "Actual dollar value of Hurricane deductible must be computed and “prominently displayed” (for renewals, may be on declarations page or renewal premium notice)",
+      "source_location": "floir-residential-property-checklist-may-2025.pdf p.7, row p7-r10 (Declarations)",
+      "authority": "legal_regulatory",
+      "rule_type": "presentation",
+      "applies_when": {
+        "jurisdiction": "FL",
+        "product_family": "personal_residential_property",
+        "has_separate_hurricane_deductible": true
+      },
+      "requirement": {
+        "document": "declarations_or_renewal_notice",
+        "kind": "field_value",
+        "description": "The actual dollar value of the hurricane deductible must be computed and prominently displayed.",
+        "fields": [
+          "hurricane_deductible_amount"
+        ],
+        "must_be_separate_from": [],
+        "presentation": {
+          "prominent": true,
+          "bold": false,
+          "min_font_pt": null,
+          "separate_page": false,
+          "first_page": false
+        },
+        "prescribed_text": null
+      },
+      "statute_evidence": [
+        {
+          "citation": "627.701(4)(b) & (c)",
+          "section": "627.701",
+          "subsection": "(4)(b)",
+          "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.701.html",
+          "excerpt": "(b) For any personal lines residential property insurance policy containing a separate hurricane deductible, the insurer shall compute and prominently display the actual dollar value of the hurricane deductible on the declarations page of the policy at issuance and, for renewal, on the renewal declarations page of the policy or on the premium renewal notice.",
+          "retrieved": "2026-09-23",
+          "note": null
+        },
+        {
+          "citation": "627.701(4)(b) & (c)",
+          "section": "627.701",
+          "subsection": "(4)(c)",
+          "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.701.html",
+          "excerpt": "(c) For any personal lines residential property insurance policy containing an inflation guard rider, the insurer shall compute and prominently display the actual dollar value of the hurricane deductible on the declarations page of the policy at issuance and, for renewal, on the renewal declarations page of the policy or on the premium renewal notice. In addition, for any personal lines residential property insurance policy containing an inflation guard rider, the insurer shall notify the policyholder of the possibility that the hurricane deductible may be higher than indicated when loss occurs due to application of the inflation guard rider. Such notification shall be made on the declarations page of the policy at issuance and, for renewal, on the renewal declarations page of the policy or on the premium renewal notice.",
+          "retrieved": "2026-09-23",
+          "note": null
+        },
+        {
+          "citation": "69O-167.013(2)",
+          "section": null,
+          "subsection": null,
+          "url": null,
+          "excerpt": null,
+          "retrieved": null,
+          "note": "Administrative rule or case reference; not fetched (not on Online Sunshine)."
+        }
+      ],
+      "confidence": 1.0,
+      "requires_human_review": true,
+      "unresolved_terms": [],
+      "grounding_notes": [],
+      "approved": false,
+      "reviewer_note": null
+    },
+    {
+      "id": "FL_DECLARATIONS_HURRICANE_DEDUCTIBLE_INFLATION_GUARD_NOTICE",
+      "source": "Florida Statute 627.701(4)(c)",
+      "source_type": "regulator_checklist",
+      "source_id": "fl-oir-residential-checklist",
+      "source_row": "p7-r11",
+      "source_quote": "Policy with inflation guard must notify policyholder of possibility that hurricane deductible may be higher than indicated when loss occurs due to application of the inflation guard (may be on declarations page or renewal premium notice)",
+      "source_location": "floir-residential-property-checklist-may-2025.pdf p.7, row p7-r11 (Declarations)",
+      "authority": "legal_regulatory",
+      "rule_type": "offer_or_notice",
+      "applies_when": {
+        "jurisdiction": "FL",
+        "product_family": "personal_residential_property",
+        "has_separate_hurricane_deductible": true,
+        "has_inflation_guard": true
+      },
+      "requirement": {
+        "document": "declarations_or_renewal_notice",
+        "kind": "text_mention",
+        "description": "Policy with inflation guard must notify policyholder of possibility that hurricane deductible may be higher than indicated due to application of the inflation guard.",
+        "fields": [],
+        "must_be_separate_from": [],
+        "presentation": {
+          "prominent": false,
+          "bold": false,
+          "min_font_pt": null,
+          "separate_page": false,
+          "first_page": false
+        },
+        "prescribed_text": null
+      },
+      "statute_evidence": [
+        {
+          "citation": "627.701(4)(c)",
+          "section": "627.701",
+          "subsection": "(4)(c)",
+          "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.701.html",
+          "excerpt": "(c) For any personal lines residential property insurance policy containing an inflation guard rider, the insurer shall compute and prominently display the actual dollar value of the hurricane deductible on the declarations page of the policy at issuance and, for renewal, on the renewal declarations page of the policy or on the premium renewal notice. In addition, for any personal lines residential property insurance policy containing an inflation guard rider, the insurer shall notify the policyholder of the possibility that the hurricane deductible may be higher than indicated when loss occurs due to application of the inflation guard rider. Such notification shall be made on the declarations page of the policy at issuance and, for renewal, on the renewal declarations page of the policy or on the premium renewal notice.",
+          "retrieved": "2026-09-23",
+          "note": null
+        }
+      ],
+      "confidence": 1.0,
+      "requires_human_review": true,
+      "unresolved_terms": [],
+      "grounding_notes": [],
+      "approved": false,
+      "reviewer_note": null
+    },
+    {
+      "id": "FL_DECLARATIONS_ROOF_DEDUCTIBLE_DISPLAY",
+      "source": "Florida Statute 627.701(4)(e)2.",
+      "source_type": "regulator_checklist",
+      "source_id": "fl-oir-residential-checklist",
+      "source_row": "p8-r1",
+      "source_quote": "Any personal residential policy including a separate roof deductible must prominently display the actual dollar value of the roof deductible on the declarations page or on the renewal premium notice",
+      "source_location": "floir-residential-property-checklist-may-2025.pdf p.8, row p8-r1 (Declarations)",
+      "authority": "legal_regulatory",
+      "rule_type": "presentation",
+      "applies_when": {
+        "jurisdiction": "FL",
+        "product_family": "personal_residential_property",
+        "has_roof_deductible": true
+      },
+      "requirement": {
+        "document": "declarations_or_renewal_notice",
+        "kind": "field_value",
+        "description": "Any personal residential policy including a separate roof deductible must prominently display the actual dollar value of the roof deductible.",
+        "fields": [],
+        "must_be_separate_from": [],
+        "presentation": {
+          "prominent": true,
+          "bold": false,
+          "min_font_pt": null,
+          "separate_page": false,
+          "first_page": false
+        },
+        "prescribed_text": null
+      },
+      "statute_evidence": [
+        {
+          "citation": "627.701(4)(e)2.",
+          "section": "627.701",
+          "subsection": "(4)(e)",
+          "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.701.html",
+          "excerpt": "(e)1. A personal lines residential property insurance policy that contains a separate roof deductible must include, on the page immediately behind the declarations page, with no other policy language on the page, in boldfaced type no smaller than 18 point, the following statement: “YOU ARE ELECTING TO PURCHASE COVERAGE ON YOUR HOME WHICH CONTAINS A SEPARATE DEDUCTIBLE FOR ROOF LOSSES. BE ADVISED THAT THIS MAY RESULT IN HIGH OUT-OF-POCKET EXPENSES TO YOU. PLEASE DISCUSS WITH YOUR INSURANCE AGENT.” 2. For any personal lines residential property insurance policy containing a separate roof deductible, the insurer shall compute and prominently display on the declarations page of the policy or on the premium renewal notice the actual dollar value of the roof deductible of the policy at issuance and renewal.",
+          "retrieved": "2026-09-23",
+          "note": null
+        }
+      ],
+      "confidence": 1.0,
+      "requires_human_review": true,
+      "unresolved_terms": [
+        "no field for roof deductible"
+      ],
+      "grounding_notes": [],
+      "approved": false,
+      "reviewer_note": null
+    },
+    {
+      "id": "FL_DECLARATIONS_OTHER_DEDUCTIBLES_INDICATED",
+      "source": "Florida Statute 627.701(7), 627.715(2), 627.706(1)(b)",
+      "source_type": "regulator_checklist",
+      "source_id": "fl-oir-residential-checklist",
+      "source_row": "p8-r2",
+      "source_quote": "Other applicable deductible amounts must be indicated, including “other than hurricane” or “all other perils” deductible, sinkhole, flood, or other deductibles",
+      "source_location": "floir-residential-property-checklist-may-2025.pdf p.8, row p8-r2 (Declarations)",
+      "authority": "legal_regulatory",
+      "rule_type": "document_content",
+      "applies_when": {
+        "jurisdiction": "FL",
+        "product_family": "personal_residential_property"
+      },
+      "requirement": {
+        "document": "declarations",
+        "kind": "field_value",
+        "description": "Other applicable deductible amounts must be indicated, including all other perils, sinkhole, flood, or other deductibles.",
+        "fields": [
+          "all_other_perils_deductible",
+          "sinkhole_deductible"
+        ],
+        "must_be_separate_from": [],
+        "presentation": {
+          "prominent": false,
+          "bold": false,
+          "min_font_pt": null,
+          "separate_page": false,
+          "first_page": false
+        },
+        "prescribed_text": null
+      },
+      "statute_evidence": [
+        {
+          "citation": "627.701(7)",
+          "section": "627.701",
+          "subsection": "(7)",
+          "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.701.html",
+          "excerpt": "(7) Prior to issuing a personal lines residential property insurance policy on or after April 1, 1997, or prior to the first renewal of a residential property insurance policy on or after April 1, 1997, the insurer must offer a deductible equal to $500 applicable to losses from perils other than hurricane. The insurer must provide the policyholder with notice of the availability of the deductible specified in this subsection in a form approved by the office at least once every 3 years. The failure to provide such notice constitutes a violation of this code but does not affect the coverage provided under the policy. An insurer may require a higher deductible only as part of a deductible program lawfully in effect on June 1, 1996, or as part of a similar deductible program.",
+          "retrieved": "2026-09-23",
+          "note": null
+        },
+        {
+          "citation": "627.715(2)",
+          "section": "627.715",
+          "subsection": "(2)",
+          "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.715.html",
+          "excerpt": "(2) Flood coverage deductibles and policy limits pursuant to this section must be prominently noted on the policy declarations page or face page.",
+          "retrieved": "2026-09-23",
+          "note": null
+        },
+        {
+          "citation": "627.706(1)(b)",
+          "section": "627.706",
+          "subsection": "(1)(b)",
+          "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.706.html",
+          "excerpt": "(b) The insurer shall make available, for an appropriate additional premium, coverage for sinkhole losses on any structure, including the contents of personal property contained therein, to the extent provided in the form to which the coverage attaches. The insurer may require an inspection of the property before issuance of sinkhole loss coverage. A policy for residential property insurance may include a deductible amount applicable to sinkhole losses equal to 1 percent, 2 percent, 5 percent, or 10 percent of the policy dwelling limits, with appropriate premium discounts offered with each deductible amount.",
+          "retrieved": "2026-09-23",
+          "note": null
+        }
+      ],
+      "confidence": 1.0,
+      "requires_human_review": true,
+      "unresolved_terms": [
+        "no field for flood deductible",
+        "no field for other deductibles"
+      ],
+      "grounding_notes": [],
+      "approved": false,
+      "reviewer_note": null
+    },
+    {
+      "id": "FL_DECLARATIONS_SINKHOLE_EXCLUSION_STATEMENT",
+      "source": "Florida Statute 627.706(3)",
+      "source_type": "regulator_checklist",
+      "source_id": "fl-oir-residential-checklist",
+      "source_row": "p8-r3",
+      "source_quote": "If sinkhole coverage is excluded, bold type statement in at least 14-point font is required (see statute)",
+      "source_location": "floir-residential-property-checklist-may-2025.pdf p.8, row p8-r3 (Declarations)",
+      "authority": "legal_regulatory",
+      "rule_type": "presentation",
+      "applies_when": {
+        "jurisdiction": "FL",
+        "product_family": "personal_residential_property",
+        "sinkhole_coverage_excluded": true
+      },
+      "requirement": {
+        "document": "declarations",
+        "kind": "prescribed_statement",
+        "description": "If sinkhole coverage is excluded, a bold type statement in at least 14-point font is required.",
+        "fields": [],
+        "must_be_separate_from": [],
+        "presentation": {
+          "prominent": false,
+          "bold": true,
+          "min_font_pt": 14.0,
+          "separate_page": false,
+          "first_page": false
+        },
+        "prescribed_text": "YOUR POLICY PROVIDES COVERAGE FOR A CATASTROPHIC GROUND COVER COLLAPSE THAT RESULTS IN THE PROPERTY BEING CONDEMNED AND UNINHABITABLE. OTHERWISE, YOUR POLICY DOES NOT PROVIDE COVERAGE FOR SINKHOLE LOSSES. YOU MAY PURCHASE ADDITIONAL COVERAGE FOR SINKHOLE LOSSES FOR AN ADDITIONAL PREMIUM."
+      },
+      "statute_evidence": [
+        {
+          "citation": "627.706(3)",
+          "section": "627.706",
+          "subsection": "(3)",
+          "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.706.html",
+          "excerpt": "(3) Insurers offering policies that exclude coverage for sinkhole losses must inform policyholders in bold type of not less than 14 points as follows: “YOUR POLICY PROVIDES COVERAGE FOR A CATASTROPHIC GROUND COVER COLLAPSE THAT RESULTS IN THE PROPERTY BEING CONDEMNED AND UNINHABITABLE. OTHERWISE, YOUR POLICY DOES NOT PROVIDE COVERAGE FOR SINKHOLE LOSSES. YOU MAY PURCHASE ADDITIONAL COVERAGE FOR SINKHOLE LOSSES FOR AN ADDITIONAL PREMIUM.”",
+          "retrieved": "2026-09-23",
+          "note": null
+        }
+      ],
+      "confidence": 1.0,
+      "requires_human_review": true,
+      "unresolved_terms": [],
+      "grounding_notes": [
+        "rule_type 'prescribed_statement' is not in the taxonomy; used the row's triage label 'presentation'."
+      ],
+      "approved": false,
+      "reviewer_note": null
+    },
+    {
+      "id": "FL_DECLARATIONS_LAW_AND_ORDINANCE_STATEMENT",
+      "source": "Florida Statute 627.7011(4)(a)",
+      "source_type": "regulator_checklist",
+      "source_id": "fl-oir-residential-checklist",
+      "source_row": "p8-r4",
+      "source_quote": "Law and Ordinance statement required (only required for Homeowners policies)",
+      "source_location": "floir-residential-property-checklist-may-2025.pdf p.8, row p8-r4 (Declarations)",
+      "authority": "legal_regulatory",
+      "rule_type": "document_content",
+      "applies_when": {
+        "jurisdiction": "FL",
+        "product_family": "personal_residential_property",
+        "policy_type": "homeowners"
+      },
+      "requirement": {
+        "document": "policy_form",
+        "kind": "prescribed_statement",
+        "description": "Law and Ordinance statement required for Homeowners policies in bold type no smaller than 18 points.",
+        "fields": [],
+        "must_be_separate_from": [],
+        "presentation": {
+          "prominent": false,
+          "bold": true,
+          "min_font_pt": 18.0,
+          "separate_page": false,
+          "first_page": false
+        },
+        "prescribed_text": "LAW AND ORDINANCE: LAW AND ORDINANCE COVERAGE IS AN IMPORTANT COVERAGE THAT YOU MAY WISH TO PURCHASE. PLEASE DISCUSS WITH YOUR INSURANCE AGENT."
+      },
+      "statute_evidence": [
+        {
+          "citation": "627.7011(4)(a)",
+          "section": "627.7011",
+          "subsection": "(4)(a)",
+          "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.7011.html",
+          "excerpt": "(a) An insurer that issues a homeowner’s insurance policy must include with the policy documents at initial issuance and every renewal, in bold type no smaller than 18 points, the following statement: “LAW AND ORDINANCE: LAW AND ORDINANCE COVERAGE IS AN IMPORTANT COVERAGE THAT YOU MAY WISH TO PURCHASE. PLEASE DISCUSS WITH YOUR INSURANCE AGENT.”",
+          "retrieved": "2026-09-23",
+          "note": null
+        }
+      ],
+      "confidence": 1.0,
+      "requires_human_review": true,
+      "unresolved_terms": [],
+      "grounding_notes": [
+        "rule_type 'prescribed_statement' is not in the taxonomy; used the row's triage label 'document_content'."
+      ],
+      "approved": false,
+      "reviewer_note": null
+    },
+    {
+      "id": "FL_DECLARATIONS_LEGISLATIVE_DISCOUNTS",
+      "source": "Florida Statute 624.5108(1) & 69O-ER24",
+      "source_type": "regulator_checklist",
+      "source_id": "fl-oir-residential-checklist",
+      "source_row": "p8-r5",
+      "source_quote": "For property insurance policies with an effective date between 10/1/24 and 9/30/25, the declarations must reflect the following discounts (if applicable): (a) Legislative Premium Tax Discount (b) Legislative Fire Marshal Assessment Discount (c) Legislative Flood Premium Tax Discount",
+      "source_location": "floir-residential-property-checklist-may-2025.pdf p.8, row p8-r5 (Declarations)",
+      "authority": "legal_regulatory",
+      "rule_type": "document_content",
+      "applies_when": {
+        "jurisdiction": "FL",
+        "product_family": "personal_residential_property",
+        "effective_date_on_or_after": "2024-10-01",
+        "effective_date_on_or_before": "2025-09-30"
+      },
+      "requirement": {
+        "document": "declarations",
+        "kind": "field_value",
+        "description": "Declarations must reflect the Legislative Premium Tax Discount, Legislative Fire Marshal Assessment Discount, and Legislative Flood Premium Tax Discount if applicable.",
+        "fields": [
+          "discounts_and_surcharges"
+        ],
+        "must_be_separate_from": [],
+        "presentation": {
+          "prominent": false,
+          "bold": false,
+          "min_font_pt": null,
+          "separate_page": false,
+          "first_page": false
+        },
+        "prescribed_text": null
+      },
+      "statute_evidence": [
+        {
+          "citation": "624.5108(1) & 69O-ER24",
+          "section": "624.5108",
+          "subsection": "(1)",
+          "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0624/Sections/0624.5108.html",
+          "excerpt": "(1) An insurer must deduct the following amounts from the total charged for the following policies: (a) For a policy providing residential coverage on a dwelling, an amount equal to 1.75 percent of the premium, as defined in s. 627.403 . (b) For a policy providing residential coverage on a dwelling, the amount charged for the State Fire Marshal regulatory assessment under s. 624.515 . (c) For a policy, contract, or endorsement providing personal or commercial lines coverage for the peril of flood or excess coverage for the peril of flood on any structure or the contents of personal property contained therein, an amount equal to 1.75 percent of the premium, as defined in s. 627.403 . As used in this paragraph, the term “flood” has the same meaning as provided in s. 627.715 (1)(b). For the purposes of this section, residential coverage excludes tenant coverage.",
+          "retrieved": "2026-09-23",
+          "note": null
+        }
+      ],
+      "confidence": 1.0,
+      "requires_human_review": true,
+      "unresolved_terms": [],
+      "grounding_notes": [],
+      "approved": false,
+      "reviewer_note": null
+    }
+  ],
+  "rejected": [],
+  "review_notes": [
+    "All rules are candidates. Legal/product review decides whether each applies and how it is satisfied.",
+    "The checklist is a filing-review aid and may not contain every requirement.",
+    "Terms such as 'prominently displayed' are not mechanically defined for declarations pages; the validator reports font size and weight as evidence only."
+  ]
+}

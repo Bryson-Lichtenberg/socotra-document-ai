@@ -1,0 +1,1253 @@
+{
+  "Florida (normalized)": {
+    "jurisdiction": "FL",
+    "summary": {
+      "rules": 19,
+      "routes": 38,
+      "approved_routes": 10,
+      "rules_by_class": {
+        "calculation_requirement": 3,
+        "content_requirement": 10,
+        "document_applicability": 2,
+        "presentation_requirement": 2,
+        "product_offering_requirement": 1,
+        "workflow_review": 1
+      },
+      "routes_by_sink": {
+        "data_snapshot": 6,
+        "document_selection": 3,
+        "human_review": 9,
+        "product_configuration": 1,
+        "resource_configuration": 4,
+        "template": 15
+      },
+      "rule_flags": {
+        "legacy_approval_without_approved_route": 3
+      },
+      "route_flags": {
+        "human_review_first": 8,
+        "obligation_without_validator": 21,
+        "unapproved_route": 28
+      },
+      "obligations": 65,
+      "obligations_with_validator": 33,
+      "obligations_without_validator": {
+        "calculation_correctness": 4,
+        "content_presence": 11,
+        "correct_document_selection": 3,
+        "correct_form_version": 2,
+        "presentation_prominence": 6,
+        "value_correctness": 6
+      }
+    },
+    "rules": [
+      {
+        "rule_id": "FL_AOB_ASSIGNMENT_PROHIBITION",
+        "rule_class": "content_requirement",
+        "legacy_rule_type": "document_applicability",
+        "legacy_approved": false,
+        "source_row": "p1-r1",
+        "concept_refs": [],
+        "unknown_concepts": [],
+        "routes": [
+          {
+            "sink": "human_review",
+            "target": "policy form filing review",
+            "approved": false,
+            "reviewer_note": "Contract language in the filed policy form, not a document-generation condition. Confirm the assignment clause of the form used for policies issued on or after 2023-01-01.",
+            "obligations": [
+              {
+                "obligation": "provenance_traceability",
+                "validator": "rules.traceability.trace_rules",
+                "why": "traceability record carries source, location and requirement"
+              }
+            ],
+            "flags": [
+              "unapproved_route",
+              "human_review_first"
+            ]
+          },
+          {
+            "sink": "resource_configuration",
+            "target": "policy form edition for policies issued on or after 2023-01-01",
+            "approved": false,
+            "reviewer_note": null,
+            "obligations": [
+              {
+                "obligation": "correct_form_version",
+                "validator": null,
+                "why": "no form-edition check exists"
+              }
+            ],
+            "flags": [
+              "unapproved_route",
+              "obligation_without_validator"
+            ]
+          }
+        ],
+        "flags": []
+      },
+      {
+        "rule_id": "FL_AOP_DEDUCTIBLE_OFFER",
+        "rule_class": "product_offering_requirement",
+        "legacy_rule_type": "offer_or_notice",
+        "legacy_approved": false,
+        "source_row": "p1-r2",
+        "concept_refs": [
+          {
+            "concept_id": "deductible",
+            "qualifiers": {
+              "peril": "all_other_perils"
+            }
+          }
+        ],
+        "unknown_concepts": [],
+        "routes": [
+          {
+            "sink": "product_configuration",
+            "target": "available all-other-perils deductible values",
+            "approved": false,
+            "reviewer_note": "A product fact (which deductible values can be chosen), not a document and not an underwriting decision.",
+            "obligations": [
+              {
+                "obligation": "provenance_traceability",
+                "validator": "rules.traceability.trace_rules",
+                "why": "traceability record carries source, location and requirement"
+              }
+            ],
+            "flags": [
+              "unapproved_route"
+            ]
+          }
+        ],
+        "flags": []
+      },
+      {
+        "rule_id": "FL_AOP_DEDUCTIBLE_NOTICE",
+        "rule_class": "document_applicability",
+        "legacy_rule_type": "offer_or_notice",
+        "legacy_approved": false,
+        "source_row": "p1-r2",
+        "concept_refs": [],
+        "unknown_concepts": [],
+        "routes": [
+          {
+            "sink": "document_selection",
+            "target": "AOP deductible availability notice",
+            "approved": false,
+            "reviewer_note": "The 3-year cadence needs a last-notice date; no predicate expresses it.",
+            "obligations": [
+              {
+                "obligation": "correct_document_selection",
+                "validator": null,
+                "why": "rules.evaluate.validate_rules covers synthetic selection rules only; no regulatory route reaches it"
+              },
+              {
+                "obligation": "provenance_traceability",
+                "validator": "rules.traceability.trace_rules",
+                "why": "traceability record carries source, location and requirement"
+              }
+            ],
+            "flags": [
+              "unapproved_route",
+              "obligation_without_validator"
+            ]
+          },
+          {
+            "sink": "resource_configuration",
+            "target": "OIR-approved notice form",
+            "approved": false,
+            "reviewer_note": null,
+            "obligations": [
+              {
+                "obligation": "correct_form_version",
+                "validator": null,
+                "why": "no form-edition check exists"
+              }
+            ],
+            "flags": [
+              "unapproved_route",
+              "obligation_without_validator"
+            ]
+          }
+        ],
+        "flags": []
+      },
+      {
+        "rule_id": "FL_APPLICATION_DISPLAY_CARRIER_AGENT",
+        "rule_class": "presentation_requirement",
+        "legacy_rule_type": "presentation",
+        "legacy_approved": false,
+        "source_row": "p1-r7",
+        "concept_refs": [
+          {
+            "concept_id": "insurer_identity"
+          },
+          {
+            "concept_id": "producer",
+            "qualifiers": {
+              "facet": "name_license_contact"
+            }
+          }
+        ],
+        "unknown_concepts": [],
+        "routes": [
+          {
+            "sink": "template",
+            "target": "application",
+            "approved": false,
+            "reviewer_note": "Application template, not declarations. Rejected for the declarations scope, never reviewed for the application.",
+            "obligations": [
+              {
+                "obligation": "content_presence",
+                "validator": null,
+                "why": "rules.traceability.check_document reads the requirement's document (application) only when it is a declarations page; route targets application"
+              },
+              {
+                "obligation": "presentation_prominence",
+                "validator": null,
+                "why": "rules.traceability.check_document reads the requirement's document (application) only when it is a declarations page; route targets application"
+              },
+              {
+                "obligation": "provenance_traceability",
+                "validator": "rules.traceability.trace_rules",
+                "why": "traceability record carries source, location and requirement"
+              }
+            ],
+            "flags": [
+              "unapproved_route",
+              "obligation_without_validator"
+            ]
+          }
+        ],
+        "flags": []
+      },
+      {
+        "rule_id": "FL_BINDER_COVERAGE_ID_NUMBER",
+        "rule_class": "document_applicability",
+        "legacy_rule_type": "document_content",
+        "legacy_approved": false,
+        "source_row": "p3-r1",
+        "concept_refs": [
+          {
+            "concept_id": "policy_number"
+          }
+        ],
+        "unknown_concepts": [],
+        "routes": [
+          {
+            "sink": "human_review",
+            "target": "coverage ID delivery at bind",
+            "approved": false,
+            "reviewer_note": "A generated binder or a delivery process could satisfy this; carrier decision. Legacy target policy_form is a mislabel.",
+            "obligations": [
+              {
+                "obligation": "provenance_traceability",
+                "validator": "rules.traceability.trace_rules",
+                "why": "traceability record carries source, location and requirement"
+              }
+            ],
+            "flags": [
+              "unapproved_route",
+              "human_review_first"
+            ]
+          },
+          {
+            "sink": "document_selection",
+            "target": "binder",
+            "approved": false,
+            "reviewer_note": null,
+            "obligations": [
+              {
+                "obligation": "correct_document_selection",
+                "validator": null,
+                "why": "rules.evaluate.validate_rules covers synthetic selection rules only; no regulatory route reaches it"
+              },
+              {
+                "obligation": "content_presence",
+                "validator": null,
+                "why": "no check reads document_selection for content_presence"
+              }
+            ],
+            "flags": [
+              "unapproved_route",
+              "obligation_without_validator"
+            ]
+          }
+        ],
+        "flags": []
+      },
+      {
+        "rule_id": "FL_DECLARATIONS_AGENT_SIGNATURE",
+        "rule_class": "workflow_review",
+        "legacy_rule_type": "presentation",
+        "legacy_approved": true,
+        "source_row": "p7-r4",
+        "concept_refs": [],
+        "unknown_concepts": [],
+        "routes": [
+          {
+            "sink": "human_review",
+            "target": "agent countersignature process",
+            "approved": false,
+            "reviewer_note": "Wet, electronic or facsimile countersignature is an execution process.",
+            "obligations": [
+              {
+                "obligation": "provenance_traceability",
+                "validator": "rules.traceability.trace_rules",
+                "why": "traceability record carries source, location and requirement"
+              }
+            ],
+            "flags": [
+              "unapproved_route",
+              "human_review_first"
+            ]
+          },
+          {
+            "sink": "template",
+            "target": "declarations",
+            "approved": false,
+            "reviewer_note": "Only if the carrier prints a countersignature block. The legacy approval was for declarations scope; this route is not approved.",
+            "obligations": [
+              {
+                "obligation": "content_presence",
+                "validator": null,
+                "why": "no mapped document field; the page check returns needs_review"
+              }
+            ],
+            "flags": [
+              "unapproved_route",
+              "obligation_without_validator"
+            ]
+          }
+        ],
+        "flags": [
+          "legacy_approval_without_approved_route"
+        ]
+      },
+      {
+        "rule_id": "FL_DECLARATIONS_FLOOD_DEDUCTIBLE_LIMITS_PROMINENT",
+        "rule_class": "presentation_requirement",
+        "legacy_rule_type": "presentation",
+        "legacy_approved": true,
+        "source_row": "p7-r5",
+        "concept_refs": [
+          {
+            "concept_id": "coverage_limit",
+            "qualifiers": {
+              "coverage": "flood"
+            }
+          },
+          {
+            "concept_id": "deductible",
+            "qualifiers": {
+              "peril": "flood"
+            }
+          }
+        ],
+        "unknown_concepts": [],
+        "routes": [
+          {
+            "sink": "template",
+            "target": "declarations",
+            "approved": true,
+            "reviewer_note": null,
+            "obligations": [
+              {
+                "obligation": "content_presence",
+                "validator": null,
+                "why": "no mapped document field; the page check returns needs_review"
+              },
+              {
+                "obligation": "value_correctness",
+                "validator": null,
+                "why": "no mapped document field; the page check returns needs_review"
+              },
+              {
+                "obligation": "presentation_prominence",
+                "validator": null,
+                "why": "no mapped document field; the page check returns needs_review"
+              },
+              {
+                "obligation": "provenance_traceability",
+                "validator": "rules.traceability.trace_rules",
+                "why": "traceability record carries source, location and requirement"
+              }
+            ],
+            "flags": [
+              "obligation_without_validator"
+            ]
+          },
+          {
+            "sink": "data_snapshot",
+            "target": "flood limit and flood deductible values",
+            "approved": false,
+            "reviewer_note": null,
+            "obligations": [
+              {
+                "obligation": "value_correctness",
+                "validator": null,
+                "why": "no check reads data_snapshot for value_correctness"
+              }
+            ],
+            "flags": [
+              "unapproved_route",
+              "obligation_without_validator"
+            ]
+          }
+        ],
+        "flags": []
+      },
+      {
+        "rule_id": "FL_DECLARATIONS_FLOOD_EXCLUSION_STATEMENT",
+        "rule_class": "content_requirement",
+        "legacy_rule_type": "presentation",
+        "legacy_approved": true,
+        "source_row": "p7-r6",
+        "concept_refs": [],
+        "unknown_concepts": [],
+        "routes": [
+          {
+            "sink": "template",
+            "target": "declarations",
+            "approved": true,
+            "reviewer_note": "Carrier legal confirms text and placement before it is added; regulatory language is not auto-inserted.",
+            "obligations": [
+              {
+                "obligation": "content_presence",
+                "validator": "rules.traceability.check_document",
+                "why": "finds the statement and checks bold and point size"
+              },
+              {
+                "obligation": "presentation_prominence",
+                "validator": "rules.traceability.check_document",
+                "why": "finds the statement and checks bold and point size"
+              },
+              {
+                "obligation": "provenance_traceability",
+                "validator": "rules.traceability.trace_rules",
+                "why": "traceability record carries source, location and requirement"
+              }
+            ],
+            "flags": []
+          }
+        ],
+        "flags": []
+      },
+      {
+        "rule_id": "FL_DECLARATIONS_HURRICANE_PREMIUM_SEPARATE",
+        "rule_class": "content_requirement",
+        "legacy_rule_type": "presentation",
+        "legacy_approved": true,
+        "source_row": "p7-r7",
+        "concept_refs": [
+          {
+            "concept_id": "premium_breakdown",
+            "qualifiers": {
+              "basis": "hurricane_split"
+            }
+          }
+        ],
+        "unknown_concepts": [],
+        "routes": [
+          {
+            "sink": "template",
+            "target": "declarations_or_premium_notice",
+            "approved": true,
+            "reviewer_note": null,
+            "obligations": [
+              {
+                "obligation": "content_presence",
+                "validator": "rules.traceability.check_document",
+                "why": "locates each field value on the rendered page"
+              },
+              {
+                "obligation": "value_correctness",
+                "validator": "rules.traceability.check_document",
+                "why": "rendered value equals rendering data or golden key value (not checked against rating)"
+              },
+              {
+                "obligation": "provenance_traceability",
+                "validator": "rules.traceability.trace_rules",
+                "why": "traceability record carries source, location and requirement"
+              }
+            ],
+            "flags": []
+          },
+          {
+            "sink": "data_snapshot",
+            "target": "hurricane / non-hurricane premium split from rating",
+            "approved": false,
+            "reviewer_note": null,
+            "obligations": [
+              {
+                "obligation": "calculation_correctness",
+                "validator": null,
+                "why": "nothing compares a computed value with its inputs or with rating"
+              }
+            ],
+            "flags": [
+              "unapproved_route",
+              "obligation_without_validator"
+            ]
+          }
+        ],
+        "flags": []
+      },
+      {
+        "rule_id": "FL_DECLARATIONS_PHONE_NUMBER_NOTICE",
+        "rule_class": "content_requirement",
+        "legacy_rule_type": "document_content",
+        "legacy_approved": true,
+        "source_row": "p7-r8",
+        "concept_refs": [],
+        "unknown_concepts": [],
+        "routes": [
+          {
+            "sink": "human_review",
+            "target": "placement in the issued packet",
+            "approved": false,
+            "reviewer_note": "The source allows the number elsewhere, e.g. the policy jacket.",
+            "obligations": [
+              {
+                "obligation": "provenance_traceability",
+                "validator": "rules.traceability.trace_rules",
+                "why": "traceability record carries source, location and requirement"
+              }
+            ],
+            "flags": [
+              "unapproved_route",
+              "human_review_first"
+            ]
+          },
+          {
+            "sink": "resource_configuration",
+            "target": "policy_packet",
+            "approved": false,
+            "reviewer_note": null,
+            "obligations": [
+              {
+                "obligation": "content_presence",
+                "validator": null,
+                "why": "no check reads resource_configuration for content_presence"
+              }
+            ],
+            "flags": [
+              "unapproved_route",
+              "obligation_without_validator"
+            ]
+          },
+          {
+            "sink": "template",
+            "target": "declarations",
+            "approved": false,
+            "reviewer_note": "Legacy approval assumed declarations; placement is undecided, so this route is not approved.",
+            "obligations": [
+              {
+                "obligation": "content_presence",
+                "validator": null,
+                "why": "no mapped document field; the page check returns needs_review"
+              }
+            ],
+            "flags": [
+              "unapproved_route",
+              "obligation_without_validator"
+            ]
+          }
+        ],
+        "flags": [
+          "legacy_approval_without_approved_route"
+        ]
+      },
+      {
+        "rule_id": "FL_DECLARATIONS_HURRICANE_DEDUCTIBLE_STATEMENT",
+        "rule_class": "content_requirement",
+        "legacy_rule_type": "presentation",
+        "legacy_approved": true,
+        "source_row": "p7-r9",
+        "concept_refs": [],
+        "unknown_concepts": [],
+        "routes": [
+          {
+            "sink": "template",
+            "target": "declarations",
+            "approved": true,
+            "reviewer_note": "Carrier legal confirms text and placement before it is added; regulatory language is not auto-inserted.",
+            "obligations": [
+              {
+                "obligation": "content_presence",
+                "validator": "rules.traceability.check_document",
+                "why": "finds the statement and checks bold and point size"
+              },
+              {
+                "obligation": "presentation_prominence",
+                "validator": "rules.traceability.check_document",
+                "why": "finds the statement and checks bold and point size"
+              },
+              {
+                "obligation": "provenance_traceability",
+                "validator": "rules.traceability.trace_rules",
+                "why": "traceability record carries source, location and requirement"
+              }
+            ],
+            "flags": []
+          }
+        ],
+        "flags": []
+      },
+      {
+        "rule_id": "FL_DECLARATIONS_HURRICANE_DEDUCTIBLE_DISPLAY",
+        "rule_class": "calculation_requirement",
+        "legacy_rule_type": "presentation",
+        "legacy_approved": true,
+        "source_row": "p7-r10",
+        "concept_refs": [
+          {
+            "concept_id": "deductible",
+            "qualifiers": {
+              "peril": "hurricane",
+              "facet": "amount"
+            }
+          }
+        ],
+        "unknown_concepts": [],
+        "routes": [
+          {
+            "sink": "data_snapshot",
+            "target": "hurricane deductible dollar amount (percent of Coverage A; inflation-guard adjusted value)",
+            "approved": false,
+            "reviewer_note": "Computed today by a mapping transform that no rule references.",
+            "obligations": [
+              {
+                "obligation": "calculation_correctness",
+                "validator": null,
+                "why": "nothing compares a computed value with its inputs or with rating"
+              },
+              {
+                "obligation": "value_correctness",
+                "validator": null,
+                "why": "no check reads data_snapshot for value_correctness"
+              }
+            ],
+            "flags": [
+              "unapproved_route",
+              "obligation_without_validator"
+            ]
+          },
+          {
+            "sink": "template",
+            "target": "declarations_or_renewal_notice",
+            "approved": true,
+            "reviewer_note": null,
+            "obligations": [
+              {
+                "obligation": "content_presence",
+                "validator": "rules.traceability.check_document",
+                "why": "locates each field value on the rendered page"
+              },
+              {
+                "obligation": "presentation_prominence",
+                "validator": "rules.traceability.check_document",
+                "why": "checks bold/size against body text"
+              },
+              {
+                "obligation": "provenance_traceability",
+                "validator": "rules.traceability.trace_rules",
+                "why": "traceability record carries source, location and requirement"
+              }
+            ],
+            "flags": []
+          }
+        ],
+        "flags": []
+      },
+      {
+        "rule_id": "FL_DECLARATIONS_HURRICANE_DEDUCTIBLE_INFLATION_GUARD_NOTICE",
+        "rule_class": "content_requirement",
+        "legacy_rule_type": "offer_or_notice",
+        "legacy_approved": true,
+        "source_row": "p7-r11",
+        "concept_refs": [],
+        "unknown_concepts": [],
+        "routes": [
+          {
+            "sink": "template",
+            "target": "declarations_or_renewal_notice",
+            "approved": true,
+            "reviewer_note": null,
+            "obligations": [
+              {
+                "obligation": "content_presence",
+                "validator": null,
+                "why": "no mapped document field; the page check returns needs_review"
+              },
+              {
+                "obligation": "provenance_traceability",
+                "validator": "rules.traceability.trace_rules",
+                "why": "traceability record carries source, location and requirement"
+              }
+            ],
+            "flags": [
+              "obligation_without_validator"
+            ]
+          },
+          {
+            "sink": "human_review",
+            "target": "notice wording (not prescribed by statute)",
+            "approved": false,
+            "reviewer_note": null,
+            "obligations": [],
+            "flags": [
+              "unapproved_route"
+            ]
+          }
+        ],
+        "flags": []
+      },
+      {
+        "rule_id": "FL_DECLARATIONS_ROOF_DEDUCTIBLE_DISPLAY",
+        "rule_class": "calculation_requirement",
+        "legacy_rule_type": "presentation",
+        "legacy_approved": true,
+        "source_row": "p8-r1",
+        "concept_refs": [],
+        "unknown_concepts": [],
+        "routes": [
+          {
+            "sink": "data_snapshot",
+            "target": "roof deductible dollar amount",
+            "approved": false,
+            "reviewer_note": "The product has no roof deductible, so applicability is unknown; that is a product question.",
+            "obligations": [
+              {
+                "obligation": "calculation_correctness",
+                "validator": null,
+                "why": "nothing compares a computed value with its inputs or with rating"
+              },
+              {
+                "obligation": "value_correctness",
+                "validator": null,
+                "why": "no check reads data_snapshot for value_correctness"
+              }
+            ],
+            "flags": [
+              "unapproved_route",
+              "obligation_without_validator"
+            ]
+          },
+          {
+            "sink": "template",
+            "target": "declarations_or_renewal_notice",
+            "approved": true,
+            "reviewer_note": null,
+            "obligations": [
+              {
+                "obligation": "content_presence",
+                "validator": null,
+                "why": "no mapped document field; the page check returns needs_review"
+              },
+              {
+                "obligation": "presentation_prominence",
+                "validator": null,
+                "why": "no mapped document field; the page check returns needs_review"
+              },
+              {
+                "obligation": "provenance_traceability",
+                "validator": "rules.traceability.trace_rules",
+                "why": "traceability record carries source, location and requirement"
+              }
+            ],
+            "flags": [
+              "obligation_without_validator"
+            ]
+          }
+        ],
+        "flags": []
+      },
+      {
+        "rule_id": "FL_DECLARATIONS_ROOF_DEDUCTIBLE_STATEMENT",
+        "rule_class": "content_requirement",
+        "legacy_rule_type": "presentation",
+        "legacy_approved": false,
+        "source_row": "p8-r1",
+        "concept_refs": [],
+        "unknown_concepts": [],
+        "routes": [
+          {
+            "sink": "human_review",
+            "target": "confirm scope of 627.701(4)(e)1.",
+            "approved": false,
+            "reviewer_note": "The row cites (4)(e)2.; this requirement comes from the (4)(e)1. excerpt attached as its evidence.",
+            "obligations": [
+              {
+                "obligation": "provenance_traceability",
+                "validator": "rules.traceability.trace_rules",
+                "why": "traceability record carries source, location and requirement"
+              }
+            ],
+            "flags": [
+              "unapproved_route",
+              "human_review_first"
+            ]
+          },
+          {
+            "sink": "template",
+            "target": "page_after_declarations",
+            "approved": false,
+            "reviewer_note": null,
+            "obligations": [
+              {
+                "obligation": "content_presence",
+                "validator": null,
+                "why": "prescribed text not in the rule; the page check returns needs_review"
+              },
+              {
+                "obligation": "presentation_prominence",
+                "validator": null,
+                "why": "prescribed text not in the rule; the page check returns needs_review"
+              }
+            ],
+            "flags": [
+              "unapproved_route",
+              "obligation_without_validator"
+            ]
+          },
+          {
+            "sink": "document_selection",
+            "target": "roof deductible statement page",
+            "approved": false,
+            "reviewer_note": "Alternative to the template route if the page is a separate resource.",
+            "obligations": [
+              {
+                "obligation": "correct_document_selection",
+                "validator": null,
+                "why": "rules.evaluate.validate_rules covers synthetic selection rules only; no regulatory route reaches it"
+              }
+            ],
+            "flags": [
+              "unapproved_route",
+              "obligation_without_validator"
+            ]
+          }
+        ],
+        "flags": []
+      },
+      {
+        "rule_id": "FL_DECLARATIONS_OTHER_DEDUCTIBLES_INDICATED",
+        "rule_class": "content_requirement",
+        "legacy_rule_type": "document_content",
+        "legacy_approved": true,
+        "source_row": "p8-r2",
+        "concept_refs": [
+          {
+            "concept_id": "deductible",
+            "qualifiers": {
+              "peril": "all_other_perils"
+            }
+          },
+          {
+            "concept_id": "deductible",
+            "qualifiers": {
+              "peril": "sinkhole"
+            }
+          },
+          {
+            "concept_id": "deductible",
+            "qualifiers": {
+              "peril": "flood"
+            }
+          }
+        ],
+        "unknown_concepts": [],
+        "routes": [
+          {
+            "sink": "template",
+            "target": "declarations",
+            "approved": true,
+            "reviewer_note": null,
+            "obligations": [
+              {
+                "obligation": "content_presence",
+                "validator": "rules.traceability.check_document",
+                "why": "locates each field value on the rendered page"
+              },
+              {
+                "obligation": "value_correctness",
+                "validator": "rules.traceability.check_document",
+                "why": "rendered value equals rendering data or golden key value (not checked against rating)"
+              },
+              {
+                "obligation": "provenance_traceability",
+                "validator": "rules.traceability.trace_rules",
+                "why": "traceability record carries source, location and requirement"
+              }
+            ],
+            "flags": []
+          },
+          {
+            "sink": "data_snapshot",
+            "target": "deductible values present on the policy",
+            "approved": false,
+            "reviewer_note": null,
+            "obligations": [
+              {
+                "obligation": "value_correctness",
+                "validator": null,
+                "why": "no check reads data_snapshot for value_correctness"
+              }
+            ],
+            "flags": [
+              "unapproved_route",
+              "obligation_without_validator"
+            ]
+          }
+        ],
+        "flags": []
+      },
+      {
+        "rule_id": "FL_DECLARATIONS_SINKHOLE_EXCLUSION_STATEMENT",
+        "rule_class": "content_requirement",
+        "legacy_rule_type": "presentation",
+        "legacy_approved": true,
+        "source_row": "p8-r3",
+        "concept_refs": [],
+        "unknown_concepts": [],
+        "routes": [
+          {
+            "sink": "human_review",
+            "target": "placement: declarations or separate notice",
+            "approved": false,
+            "reviewer_note": "The statute says 'inform policyholders'; declarations placement comes from the checklist.",
+            "obligations": [],
+            "flags": [
+              "unapproved_route",
+              "human_review_first"
+            ]
+          },
+          {
+            "sink": "template",
+            "target": "declarations",
+            "approved": true,
+            "reviewer_note": null,
+            "obligations": [
+              {
+                "obligation": "content_presence",
+                "validator": "rules.traceability.check_document",
+                "why": "finds the statement and checks bold and point size"
+              },
+              {
+                "obligation": "presentation_prominence",
+                "validator": "rules.traceability.check_document",
+                "why": "finds the statement and checks bold and point size"
+              },
+              {
+                "obligation": "provenance_traceability",
+                "validator": "rules.traceability.trace_rules",
+                "why": "traceability record carries source, location and requirement"
+              }
+            ],
+            "flags": []
+          }
+        ],
+        "flags": []
+      },
+      {
+        "rule_id": "FL_DECLARATIONS_LAW_AND_ORDINANCE_STATEMENT",
+        "rule_class": "content_requirement",
+        "legacy_rule_type": "document_content",
+        "legacy_approved": true,
+        "source_row": "p8-r4",
+        "concept_refs": [],
+        "unknown_concepts": [],
+        "routes": [
+          {
+            "sink": "human_review",
+            "target": "placement: static insert or declarations",
+            "approved": false,
+            "reviewer_note": "'With the policy documents' at issuance and renewal. Legacy target policy_form leaves an approved rule validated nowhere.",
+            "obligations": [
+              {
+                "obligation": "provenance_traceability",
+                "validator": "rules.traceability.trace_rules",
+                "why": "traceability record carries source, location and requirement"
+              }
+            ],
+            "flags": [
+              "unapproved_route",
+              "human_review_first"
+            ]
+          },
+          {
+            "sink": "resource_configuration",
+            "target": "policy_packet",
+            "approved": false,
+            "reviewer_note": null,
+            "obligations": [
+              {
+                "obligation": "content_presence",
+                "validator": null,
+                "why": "no check reads resource_configuration for content_presence"
+              },
+              {
+                "obligation": "presentation_prominence",
+                "validator": null,
+                "why": "no check reads resource_configuration for presentation_prominence"
+              }
+            ],
+            "flags": [
+              "unapproved_route",
+              "obligation_without_validator"
+            ]
+          },
+          {
+            "sink": "template",
+            "target": "declarations",
+            "approved": false,
+            "reviewer_note": null,
+            "obligations": [
+              {
+                "obligation": "content_presence",
+                "validator": null,
+                "why": "rules.traceability.check_document reads the requirement's document (policy_form) only when it is a declarations page; route targets declarations"
+              },
+              {
+                "obligation": "presentation_prominence",
+                "validator": null,
+                "why": "rules.traceability.check_document reads the requirement's document (policy_form) only when it is a declarations page; route targets declarations"
+              }
+            ],
+            "flags": [
+              "unapproved_route",
+              "obligation_without_validator"
+            ]
+          }
+        ],
+        "flags": [
+          "legacy_approval_without_approved_route"
+        ]
+      },
+      {
+        "rule_id": "FL_DECLARATIONS_LEGISLATIVE_DISCOUNTS",
+        "rule_class": "calculation_requirement",
+        "legacy_rule_type": "document_content",
+        "legacy_approved": true,
+        "source_row": "p8-r5",
+        "concept_refs": [
+          {
+            "concept_id": "discount_surcharge",
+            "qualifiers": {
+              "name": "legislative_premium_tax_discount"
+            }
+          },
+          {
+            "concept_id": "discount_surcharge",
+            "qualifiers": {
+              "name": "legislative_fire_marshal_assessment_discount"
+            }
+          },
+          {
+            "concept_id": "discount_surcharge",
+            "qualifiers": {
+              "name": "legislative_flood_premium_tax_discount"
+            }
+          }
+        ],
+        "unknown_concepts": [],
+        "routes": [
+          {
+            "sink": "human_review",
+            "target": "date window: template conditional or dated resource version",
+            "approved": false,
+            "reviewer_note": "Effective 2024-10-01 to 2025-09-30. The window could be a template condition or a resource effective range.",
+            "obligations": [],
+            "flags": [
+              "unapproved_route",
+              "human_review_first"
+            ]
+          },
+          {
+            "sink": "data_snapshot",
+            "target": "legislative discount amounts deducted by rating (624.5108(1))",
+            "approved": false,
+            "reviewer_note": null,
+            "obligations": [
+              {
+                "obligation": "calculation_correctness",
+                "validator": null,
+                "why": "nothing compares a computed value with its inputs or with rating"
+              },
+              {
+                "obligation": "value_correctness",
+                "validator": null,
+                "why": "no check reads data_snapshot for value_correctness"
+              }
+            ],
+            "flags": [
+              "unapproved_route",
+              "obligation_without_validator"
+            ]
+          },
+          {
+            "sink": "template",
+            "target": "declarations",
+            "approved": true,
+            "reviewer_note": "The three discounts are named by concept qualifiers on the requirement; other discount rows do not satisfy it.",
+            "obligations": [
+              {
+                "obligation": "content_presence",
+                "validator": "rules.traceability.check_document",
+                "why": "only rows named by the requirement's concept qualifiers count"
+              },
+              {
+                "obligation": "value_correctness",
+                "validator": "rules.traceability.check_document",
+                "why": "only rows named by the requirement's concept qualifiers count"
+              },
+              {
+                "obligation": "provenance_traceability",
+                "validator": "rules.traceability.trace_rules",
+                "why": "traceability record carries source, location and requirement"
+              }
+            ],
+            "flags": []
+          }
+        ],
+        "flags": []
+      }
+    ]
+  },
+  "NFIP loan-closing example": {
+    "jurisdiction": "US",
+    "summary": {
+      "rules": 2,
+      "routes": 3,
+      "approved_routes": 0,
+      "rules_by_class": {
+        "calculation_requirement": 1,
+        "content_requirement": 1
+      },
+      "routes_by_sink": {
+        "data_snapshot": 2,
+        "template": 1
+      },
+      "rule_flags": {},
+      "route_flags": {
+        "obligation_without_validator": 3,
+        "unapproved_route": 3
+      },
+      "obligations": 6,
+      "obligations_with_validator": 2,
+      "obligations_without_validator": {
+        "calculation_correctness": 1,
+        "content_presence": 1,
+        "value_correctness": 2
+      }
+    },
+    "rules": [
+      {
+        "rule_id": "NFIP_LOAN_EXCEPTION_EFFECTIVE_TIME",
+        "rule_class": "calculation_requirement",
+        "legacy_rule_type": "underwriting_eligibility",
+        "legacy_approved": false,
+        "source_row": "Section 2.C Loan Exception (No Waiting Period); Table 10",
+        "concept_refs": [
+          {
+            "concept_id": "policy_period",
+            "qualifiers": {
+              "facet": "effective_time"
+            }
+          }
+        ],
+        "unknown_concepts": [],
+        "routes": [
+          {
+            "sink": "data_snapshot",
+            "target": "policy effective date and time, and how it was determined",
+            "approved": false,
+            "reviewer_note": "Determined by the policy system; documents only read the result.",
+            "obligations": [
+              {
+                "obligation": "calculation_correctness",
+                "validator": null,
+                "why": "nothing compares a computed value with its inputs or with rating"
+              },
+              {
+                "obligation": "provenance_traceability",
+                "validator": "rules.traceability.trace_rules",
+                "why": "traceability record carries source, location and requirement"
+              }
+            ],
+            "flags": [
+              "unapproved_route",
+              "obligation_without_validator"
+            ]
+          }
+        ],
+        "flags": []
+      },
+      {
+        "rule_id": "NFIP_DECLARATIONS_LOAN_CLOSING_EFFECTIVE_TIME",
+        "rule_class": "content_requirement",
+        "legacy_rule_type": "document_content",
+        "legacy_approved": false,
+        "source_row": "Appendix I, E. Requirements, Table 2: Declarations Page Requirements, row ID 2 (Policy Term)",
+        "concept_refs": [
+          {
+            "concept_id": "policy_period",
+            "qualifiers": {
+              "facet": "effective_time"
+            }
+          }
+        ],
+        "unknown_concepts": [],
+        "routes": [
+          {
+            "sink": "template",
+            "target": "declarations",
+            "approved": false,
+            "reviewer_note": null,
+            "obligations": [
+              {
+                "obligation": "content_presence",
+                "validator": null,
+                "why": "no mapped document field; the page check returns needs_review"
+              },
+              {
+                "obligation": "value_correctness",
+                "validator": null,
+                "why": "no mapped document field; the page check returns needs_review"
+              },
+              {
+                "obligation": "provenance_traceability",
+                "validator": "rules.traceability.trace_rules",
+                "why": "traceability record carries source, location and requirement"
+              }
+            ],
+            "flags": [
+              "unapproved_route",
+              "obligation_without_validator"
+            ]
+          },
+          {
+            "sink": "data_snapshot",
+            "target": "effective-time basis produced by NFIP_LOAN_EXCEPTION_EFFECTIVE_TIME",
+            "approved": false,
+            "reviewer_note": null,
+            "obligations": [
+              {
+                "obligation": "value_correctness",
+                "validator": null,
+                "why": "no check reads data_snapshot for value_correctness"
+              }
+            ],
+            "flags": [
+              "unapproved_route",
+              "obligation_without_validator"
+            ]
+          }
+        ],
+        "flags": []
+      }
+    ]
+  }
+}

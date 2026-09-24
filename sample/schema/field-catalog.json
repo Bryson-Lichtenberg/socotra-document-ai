@@ -1,0 +1,443 @@
+[
+  {
+    "path": "policy.data.policyNumber",
+    "display_name": "Policy Number",
+    "type": "string",
+    "base_type": "string",
+    "cardinality": "one",
+    "scope": [
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.policyForm",
+    "display_name": "Policy Form",
+    "type": "string",
+    "base_type": "string",
+    "cardinality": "one",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.effectiveDate",
+    "display_name": "Policy Effective Date",
+    "type": "date",
+    "base_type": "date",
+    "cardinality": "one",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.expirationDate",
+    "display_name": "Policy Expiration Date",
+    "type": "date",
+    "base_type": "date",
+    "cardinality": "one",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.totalAnnualPremium",
+    "display_name": "Total Annual Policy Premium",
+    "type": "decimal",
+    "base_type": "decimal",
+    "cardinality": "one",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.hurricanePremium",
+    "display_name": "Hurricane Portion of Premium",
+    "type": "decimal",
+    "base_type": "decimal",
+    "cardinality": "one",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.nonHurricanePremium",
+    "display_name": "Non-Hurricane Portion of Premium",
+    "type": "decimal",
+    "base_type": "decimal",
+    "cardinality": "one",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.coverageALimit",
+    "display_name": "Coverage A Limit",
+    "type": "decimal",
+    "base_type": "decimal",
+    "cardinality": "one",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.namedInsureds",
+    "display_name": "Named Insureds",
+    "type": "Person+",
+    "base_type": "Person",
+    "cardinality": "one_or_more",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy",
+    "description": "Person items: firstName, lastName."
+  },
+  {
+    "path": "policy.data.insuredStreet",
+    "display_name": "Insured Street",
+    "type": "string",
+    "base_type": "string",
+    "cardinality": "one",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.insuredCity",
+    "display_name": "Insured City",
+    "type": "string",
+    "base_type": "string",
+    "cardinality": "one",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.insuredState",
+    "display_name": "Insured State",
+    "type": "string",
+    "base_type": "string",
+    "cardinality": "one",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.insuredPostalCode",
+    "display_name": "Insured Postal Code",
+    "type": "string",
+    "base_type": "string",
+    "cardinality": "one",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.mortgageeName",
+    "display_name": "Mortgagee Name",
+    "type": "string",
+    "base_type": "string",
+    "cardinality": "optional",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.aopDeductible",
+    "display_name": "All Other Perils Deductible",
+    "type": "decimal",
+    "base_type": "decimal",
+    "cardinality": "one",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.sinkholeDeductible",
+    "display_name": "Sinkhole Deductible",
+    "type": "string",
+    "base_type": "string",
+    "cardinality": "one",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.discountTotal",
+    "display_name": "Total Discounts and Surcharges",
+    "type": "decimal",
+    "base_type": "decimal",
+    "cardinality": "optional",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.mgaFee",
+    "display_name": "MGA Fee",
+    "type": "decimal",
+    "base_type": "decimal",
+    "cardinality": "optional",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.empaSurcharge",
+    "display_name": "EMPA Surcharge",
+    "type": "decimal",
+    "base_type": "decimal",
+    "cardinality": "optional",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.constructionType",
+    "display_name": "Construction Type",
+    "type": "string",
+    "base_type": "string",
+    "cardinality": "one",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.yearBuilt",
+    "display_name": "Year Built",
+    "type": "string",
+    "base_type": "string",
+    "cardinality": "one",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.dwellingType",
+    "display_name": "Dwelling Type",
+    "type": "string",
+    "base_type": "string",
+    "cardinality": "one",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.forms",
+    "display_name": "Forms and Endorsements",
+    "type": "Form*",
+    "base_type": "Form",
+    "cardinality": "zero_or_more",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy",
+    "description": "Form items: name, formNumber (raw form identifier, e.g. 'SAIC HO3 11 16')."
+  },
+  {
+    "path": "policy.data.mortgagees",
+    "display_name": "Mortgagees",
+    "type": "Mortgagee*",
+    "base_type": "Mortgagee",
+    "cardinality": "zero_or_more",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy",
+    "description": "Mortgagee items: name, street, city, state, postalCode."
+  },
+  {
+    "path": "policy.data.agent.name",
+    "display_name": "Agent Name",
+    "type": "string",
+    "base_type": "string",
+    "cardinality": "one",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy",
+    "description": "Demo placement. A real tenant may expose producer data outside policy data extensions."
+  },
+  {
+    "path": "policy.data.agent.licenseNumber",
+    "display_name": "Agent License Number",
+    "type": "string",
+    "base_type": "string",
+    "cardinality": "one",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.agent.street",
+    "display_name": "Agent Street",
+    "type": "string",
+    "base_type": "string",
+    "cardinality": "one",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.agent.city",
+    "display_name": "Agent City",
+    "type": "string",
+    "base_type": "string",
+    "cardinality": "one",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.agent.state",
+    "display_name": "Agent State",
+    "type": "string",
+    "base_type": "string",
+    "cardinality": "one",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.agent.postalCode",
+    "display_name": "Agent Postal Code",
+    "type": "string",
+    "base_type": "string",
+    "cardinality": "one",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.agent.phone",
+    "display_name": "Agent Phone",
+    "type": "string",
+    "base_type": "string",
+    "cardinality": "one",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.hurricaneDeductiblePercent",
+    "display_name": "Hurricane Deductible Percent",
+    "type": "decimal",
+    "base_type": "decimal",
+    "cardinality": "one",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy"
+  },
+  {
+    "path": "policy.data.hurricaneDeductibleBasis",
+    "display_name": "Hurricane Deductible Basis",
+    "type": "string",
+    "base_type": "string",
+    "cardinality": "one",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy",
+    "options": [
+      "Coverage A"
+    ]
+  },
+  {
+    "path": "policy.data.discounts",
+    "display_name": "Applied Discounts and Surcharges",
+    "type": "Discount*",
+    "base_type": "Discount",
+    "cardinality": "zero_or_more",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy",
+    "description": "Discount items: name."
+  },
+  {
+    "path": "policy.data.fees",
+    "display_name": "Policy Fees",
+    "type": "Fee*",
+    "base_type": "Fee",
+    "cardinality": "zero_or_more",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy",
+    "description": "Fee items: name, amount (decimal)."
+  },
+  {
+    "path": "policy.elements",
+    "display_name": "Coverage Elements",
+    "type": "Element*",
+    "base_type": "Element",
+    "cardinality": "zero_or_more",
+    "scope": [
+      "Q",
+      "P"
+    ],
+    "entity": "policy",
+    "description": "Coverage element items: category (property | liability | optional), type (e.g. Dwelling, WaterBackup), data.displayName, data.limit (decimal), data.premium (decimal or 'Included')."
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "note": "Human-authored expectations for the synthetic demo rulebook. The sample policy is the Florida DFS declarations data.",
+  "documents": [
+    {"staticName": "homeownersDeclarations", "displayName": "Homeowners Declarations", "jurisdictions": ["FL"]}
+  ],
+  "cases": [
+    {
+      "name": "Florida HO-3 issued, water backup selected (sample policy)",
+      "trigger": "issued",
+      "policy_patch": {},
+      "expected_actions": {"homeownersDeclarations": "generate"},
+      "expected_rows": {"optionalCoverages": {"present": ["Water Backup and Sump Overflow"]}}
+    },
+    {
+      "name": "Florida HO-3 issued, water backup not selected",
+      "trigger": "issued",
+      "policy_patch": {"remove_element_types": ["WaterBackup"]},
+      "expected_actions": {"homeownersDeclarations": "generate"},
+      "expected_rows": {"optionalCoverages": {"absent": ["Water Backup and Sump Overflow"]}}
+    }
+  ]
+}

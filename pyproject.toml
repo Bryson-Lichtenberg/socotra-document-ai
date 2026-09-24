@@ -1,0 +1,25 @@
+[project]
+name = "socotra-document-ai"
+version = "0.1.0"
+description = "Prototype: AI-assisted, human-approved implementation of Socotra dynamic documents."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.12"
+dependencies = [
+  "pydantic>=2",
+  "pymupdf",
+  "python-liquid",
+  "streamlit",
+  "pillow",
+  "rapidfuzz",
+  "openai",
+  "pytest",
+]
+
+[project.optional-dependencies]
+playwright = ["playwright"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+filterwarnings = ["ignore:builtin type .* has no __module__ attribute:DeprecationWarning"]
